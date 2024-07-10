@@ -1,0 +1,11 @@
+[
+  {
+    "key" : "datos_nuevo_usuario",
+    "dataNewUsers": {
+      "name" : "robot",
+      "lastname" : "automation",
+      "id" : "1234567890",
+      "phone" : "3000000000"
+    }
+  }
+]

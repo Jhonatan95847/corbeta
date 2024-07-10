@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serenity.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/exceptions/PaymentGatewayErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/ClickOnElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/ClickOnElementRetry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/EnterText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/RemoveText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/ScrollToElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/Wait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/WaitForElementIsClickeable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/WaitForElementIsNotVisible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/UserEcomerce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/UsersEcomerceList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/newUsers/DataNewUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/newUsers/NewUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/productList/DataProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/productList/ProductList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/questions/IsElementNotPresent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/questions/IsElementPresent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/questions/ValidateElementText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SelectProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/LoginNewUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/AddProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/SelectQuantitiProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/SelectShippingMetod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/ChangeShippingMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/DeleteProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/GoToPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/SearchResultsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/loginPages/LoginNewUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/loginPages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/loginPages/LoginRegisterPassPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/loginPages/LoginRegisterUserPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/AlkostoCardPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/BancolombiaButtonPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CashPaymentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CodensaCardPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CreditCardPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/DebitCardPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/DigitalWalletPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/PsePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentPage/ReviewAndApprovalPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentPage/ShippingAddressPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentPage/ShippingMethodPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentPage/YourDataPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/ActionsOnProducrPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/AddCarPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/SelectedProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/shopingCarPage/ActionsOnCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/shopingCarPage/ShoppingCarPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/shopingCarPage/TotalInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/DataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/GetDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/JsonUtilSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/MyReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/runners/LoginRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/BancolombiaButtonStepDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/CommonStepdefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/LoginStepdefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/PaymentMethodsStepDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ProductSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/PurchaseStatusStepDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ShippingMetodStepDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/newUser.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/productList.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/serenity.conf" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="financiero-testing-qa" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Substep Feature" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2gvvA10gIGKR9qSdvve6v712c0H" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Hook.testSomething.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/1049644474/Documents/Automatizacion/eComerce/AutomatizacionEstable/Alkosto/sap-testing-alkosto&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/1049644474/Documents/Automatizacion/Base automatizacion/financiero-testing-qa/src/main/java/org/example/Main.java&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\1049644474\Documents\Automatizacion\Base automatizacion\financiero-testing-qa\src\test\resources\drivers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\1049644474\Documents\Automatizacion\Baseautomatizacion\financiero-testing-qa\src\test\resources\data" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="co.com.colcomercio.financiero.models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.LoginRunner">
+    <configuration name="Hook.testSomething" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;co.com.colcomercio.financiero.stepdefinitions.Hook.testSomething&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;co.com.colcomercio.financiero.runners.LoginRunner&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.LoginRunner" />
+        <item itemvalue="Gradle.Hook.testSomething" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.21-corretto-11.0.21-4caba194b151-9f4ef98c" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="" />
+      <created>1716590720953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716590720953</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
