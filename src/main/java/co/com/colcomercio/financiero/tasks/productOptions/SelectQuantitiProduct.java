@@ -29,7 +29,7 @@ public class SelectQuantitiProduct implements Task {
                 //WaitUntil.the(SELECT_QUANTITY_UNO, WebElementStateMatchers.isClickable()),
                 ScrollToElement.to(SELECT_QUANTITY_UNO),
                 ClickOnElement.on(SELECT_QUANTITY_UNO),
-                ClickOnElement.on(SELECT_NUMBERONE)
+                ClickOnElement.on(SELECT_NUMBERONE.of(cantidad))
         );
     }
 

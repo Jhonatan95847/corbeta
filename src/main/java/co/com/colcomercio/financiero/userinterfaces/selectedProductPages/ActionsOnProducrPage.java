@@ -25,7 +25,7 @@ public class ActionsOnProducrPage {
     public static final Target BUTTON_CONTINUAR_HOY =Target.the("Baton continuar entrega hoy").located(By.xpath("//button[@id=\"js-sourcingAction\"]"));
     public static final Target BUTTON_CONTINUAR_HOY_NUEVO =Target.the("Baton continuar entrega hoy").located(By.xpath("//button[@id=\"js-verify-email-same-day-zones\"]"));
     public static final Target SELECT_QUANTITY_UNO =Target.the("Select cantidad").located(By.xpath("//div[@class=\"AddToCart-AddToCartAction\"]//div[@class=\"addtocart-component__select addtocart-select-quantity\"]"));
-    public static final Target SELECT_NUMBERONE =Target.the("Select numero uno").located(By.xpath("//li[@data-value=\"2\"]"));
+    public static final Target SELECT_NUMBERONE =Target.the("Select numero uno").locatedBy("//li[@data-value='{0}']");
     public static final Target VALIDATE_PRICE =Target.the("Validar precio").located(By.xpath("//span[@id=\"js-original_price\"]"));
 
 

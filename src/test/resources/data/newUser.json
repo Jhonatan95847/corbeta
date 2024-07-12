@@ -5,7 +5,9 @@
       "name" : "robot",
       "lastname" : "automation",
       "id" : "1234567890",
-      "phone" : "3000000000"
+      "phone" : "3000000000",
+      "adress" : "Calle 12 #14-33",
+      "neighborhood" : "Campina"
     }
   }
 ]

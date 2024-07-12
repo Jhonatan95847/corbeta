@@ -1,8 +1,11 @@
 package co.com.colcomercio.financiero.stepdefinitions;
 
+import co.com.colcomercio.financiero.tasks.paymetProcess.AddNewAddress;
+import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import io.cucumber.java.es.Y;
+import net.serenitybdd.screenplay.actions.ClickOnElement;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -27,6 +30,26 @@ public class PaymentMethodsStepDefinition {
                 AddProduct.goToPay(),
                 GoToPay.pay()
         );
+        switch (direccion) {
+            case "registrada":
+                theActorInTheSpotlight().attemptsTo(
+                        SameShippingMethod.selectMethod()
+                );
+                break;
+            case "nuevo usuario":
+                theActorInTheSpotlight().attemptsTo(
+                        AddNewAddress.selectAddress(documento)
+                );
+                break;
+            case "editar":
+                theActorInTheSpotlight().attemptsTo(
+                        //nuevo registrada
+                );
+                break;
+            case "seleccionar guardada":
+                //seleccionar guardada
+                break;
+        }
     }
 }
 

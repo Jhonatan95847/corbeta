@@ -11,5 +11,6 @@ public class YourDataPage extends PageObject {
     public static final Target EITBOX_LASTNAME_TUSDATOS =Target.the("Campo Apellido tus datos").located(By.xpath("//form[@id=\"signInPostForm\"]//input[@id=\"lastName\"]"));
     public static final Target EITBOX_PHONE_TUSDATOS =Target.the("Campo telefono tus datos").located(By.xpath("//form[@id=\"signInPostForm\"]//div[@class=\"float-input-group phone-input\"]"));
     public static final Target BUTTON_CONTINUE_TUSDATOS =Target.the("Boton continuar tus datos").located(By.xpath("//button[@id=\"js-buttonSignIn\"]"));
+    public static final Target BUTTON_EDIT_YOURDATA =Target.the("Boton continuar tus datos").located(By.xpath("//button[@id=\"js-buttonSignIn\"]"));
 
 }

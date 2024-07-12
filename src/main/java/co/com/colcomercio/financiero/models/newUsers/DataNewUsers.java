@@ -11,4 +11,7 @@ public class DataNewUsers {
     private String lastname;
     private String id;
     private String phone;
+    private String address;
+    private String neighborhood;
+
 }

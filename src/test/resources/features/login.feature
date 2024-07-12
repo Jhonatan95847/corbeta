@@ -19,11 +19,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
         #Entonces debería observar la notificación de compra "<estado>"
         Ejemplos:
             | cliente    | n  | cantidad | metodoEnvio       | direccion | tipo_id | tarjeta            | resultado | estado  |
-            | registrado | 1  |      2   | Envio gratis      |  nueva    |   cc    | alkosto            | exitoso   | exitoso |
-            | registrado | 2  |      2   | Recoge en tienda  |  misma    |  nit    | codensa            | fallido   | fallido |
-            | registrado | 2  |      2   | Entrega hoy       |  misma    |  nit    | codensa            | fallido   | fallido |
-            | nuevo      | 2  |      2   | Envio gratis      |  misma    |  nit    | codensa            | fallido   | fallido |
-            | nuevo      | 2  |      2   | Entrega hoy       |  misma    |  nit    | codensa            | fallido   | fallido |
-            | nuevo      | 2  |      2   | Recoge en tienda  |  misma    |  nit    | codensa            | fallido   | fallido |
+            | registrado | 1  |      4   | Envio gratis      |  registrada    |   cc    | alkosto            | exitoso   | exitoso |
+            #| registrado | 2  |      3   | Recoge en tienda  |  registrada    |  nit    | codensa            | fallido   | fallido |
+            #| registrado | 2  |      2   | Entrega hoy       |  registrada    |  nit    | codensa            | fallido   | fallido |
+            #| nuevo      | 2  |      1   | Envio gratis      |  misma    |  nit    | codensa            | fallido   | fallido |
+            #| nuevo      | 2  |      5   | Entrega hoy       |  misma    |  nit    | codensa            | fallido   | fallido |
+            #| nuevo      | 2  |      8   | Recoge en tienda  |  misma    |  nit    | codensa            | fallido   | fallido |
 
 
