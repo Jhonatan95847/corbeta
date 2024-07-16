@@ -1,15 +1,20 @@
 package co.com.colcomercio.financiero.stepdefinitions;
 
-import co.com.colcomercio.financiero.tasks.paymetProcess.AddNewAddress;
-import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
+import co.com.colcomercio.financiero.models.newUsers.NewUser;
+import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAddress;
+import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SameShippingMethod;
+import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
+import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSaveAddress;
 import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
+import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Y;
-import net.serenitybdd.screenplay.actions.ClickOnElement;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class PaymentMethodsStepDefinition {
+
+    private NewUser withTheData;
 
     @Y("se realiza el pago mediante {string} con tarjeta {string} cuya transacción es {string}")
     public void seRealizaElPagoMedianteConTarjetaCuyaTransacciónEs(String metodoPago, String tarjeta, String resultado) {
@@ -24,8 +29,10 @@ public class PaymentMethodsStepDefinition {
     public void seRealizaElPagoConDocumentoMedianteTarjetaCuyaTransacciónEs(String arg0, String arg1, String arg2) {
     }
 
-    @Y("desea ir a pagar con tipo de documento {string} con direccion {string}")
+    @Y("desea ir a pagar con tipo de documento {string} con dirección {string}")
     public void deseaIrAPagarConTipoDeDocumentoConDireccion(String documento, String direccion) {
+        withTheData = GetDataModel.newUser("datos_nuevo_usuario");
+
         theActorInTheSpotlight().attemptsTo(
                 AddProduct.goToPay(),
                 GoToPay.pay()
@@ -33,23 +40,29 @@ public class PaymentMethodsStepDefinition {
         switch (direccion) {
             case "registrada":
                 theActorInTheSpotlight().attemptsTo(
-                        SameShippingMethod.selectMethod()
+                        SameShippingMethod.selectMethod(withTheData)
                 );
                 break;
             case "nuevo usuario":
                 theActorInTheSpotlight().attemptsTo(
-                        AddNewAddress.selectAddress(documento)
+                        AddNewAddress.selectAddress(withTheData, documento)
                 );
                 break;
-            case "editar":
+            case "otros datos":
                 theActorInTheSpotlight().attemptsTo(
-                        //nuevo registrada
+                        OtherData.otherData(),
+                        AddNewAddress.selectAddress(withTheData, documento)
                 );
                 break;
-            case "seleccionar guardada":
-                //seleccionar guardada
+            case "guardada":
+                theActorInTheSpotlight().attemptsTo(
+                        SelectSaveAddress.selectSave()
+                );
                 break;
         }
+        theActorInTheSpotlight().attemptsTo(
+                SameShippingMethod.selectMethod(withTheData)
+        );
     }
 }
 

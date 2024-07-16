@@ -1,4 +1,4 @@
-package co.com.colcomercio.financiero.tasks.paymetProcess;
+package co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.EnterText;
@@ -12,18 +12,17 @@ import static jdk.internal.org.jline.utils.Log.error;
 
 public class AddNewAddress implements Task {
 
-    private final String editar;
     private final String tipoID;
     private final NewUser newUser;
 
-    public AddNewAddress(String editar, String tipoID, NewUser newUser) {
-        this.editar = editar;
+    public AddNewAddress(String tipoID, NewUser newUser) {
         this.tipoID = tipoID;
         this.newUser = newUser;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
 
         actor.attemptsTo(
                 ClickOnElement.on(LIST_TIPO_ID)
@@ -76,7 +75,7 @@ public class AddNewAddress implements Task {
 
     }
 
-    public static AddNewAddress selectAddress(String tipoID) {
-        return Tasks.instrumented(AddNewAddress.class, tipoID);
+    public static AddNewAddress selectAddress(NewUser newUser, String tipoID) {
+        return Tasks.instrumented(AddNewAddress.class, tipoID, newUser);
     }
 }

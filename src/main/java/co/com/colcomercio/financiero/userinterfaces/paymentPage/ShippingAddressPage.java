@@ -27,6 +27,7 @@ public class ShippingAddressPage extends PageObject {
     public static final Target BUTTON_CONFIRMAR_ADDRES =Target.the("Boton Confirmar Adress").located(By.xpath("//button[@id=\"continueAddress\"]"));
     public static final Target BUTTON_INGRESAR_OTROS_DATOS =Target.the("Boton Ingresar otros datos").located(By.xpath("//div[@class=\"secondStepActions\"]//span[contains(text(),'Ingresar otros datos')]"));
     public static final Target BUTTON_DIRECCION_GUARDADA =Target.the("Boton Direccion guardada").located(By.xpath("//div[@class=\"secondStepActions\"]//span[contains(text(),'Seleccionar otra dirección guardada')]"));
+    public static final Target RADIOBUTTON_DIRECCION_GUARDADA =Target.the("Radiobuton Direccion guardada").located(By.xpath("//label[@for=\"11153045028887\"]//label"));
 
 
 }

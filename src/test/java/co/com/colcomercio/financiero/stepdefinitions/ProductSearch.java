@@ -27,7 +27,7 @@ public class ProductSearch {
         );
     }
 
-    @Cuando("el cliente {string} busca un producto y selecciona {string} y {string}")
+    @Cuando("el cliente {string} busca un producto y selecciona cantidad {string} y método de envío {string}")
     public void elClienteBuscaUnProductoYSeleccionaY(String cliente, String cantidad, String metodoEnvio) {
         withTheData = GetDataModel.productList("lista_de_productos");
 

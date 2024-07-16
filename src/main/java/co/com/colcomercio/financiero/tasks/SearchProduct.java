@@ -30,6 +30,7 @@ public class SearchProduct implements Task {
         logger.info("########################BUSCANDO PRODUCTO########################");
         actor.attemptsTo(
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
+                WaitUntil.the(BUTTON_SEARCH_BAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 ClickOnElement.on(BUTTON_SEARCH_BAR),
                 WaitUntil.the(VALIDATE_PRICE, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),

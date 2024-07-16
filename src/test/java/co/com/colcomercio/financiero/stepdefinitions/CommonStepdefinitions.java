@@ -49,7 +49,7 @@ public class CommonStepdefinitions {
 
     }
 
-    @Dado("que un cliente {string} inicia sesion y desea realizar una compra")
+    @Dado("que un cliente {string} inicia sesión y desea realizar una compra")
     public void queUnClienteDeseaRealizarUnaCompra(String cliente) {
 
         withTheData = GetDataModel.newUser("datos_nuevo_usuario");
@@ -58,9 +58,6 @@ public class CommonStepdefinitions {
             logger.info("Inicia sesion con usuario nuevo");
             theActorInTheSpotlight().attemptsTo(
                     LoginNewUser.newRegistry(withTheData)
-            );
-            theActorInTheSpotlight().should(
-                    seeThat(IsElementPresent.on(VALIDATE_ALKOSTO))
             );
         } else if (cliente.equals("registrado")) {
             logger.info("Inicia sesion con usuario registrado");

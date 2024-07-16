@@ -26,4 +26,8 @@ public class ShippingMetodStepDefinition {
     @Y("se realiza el pago con documento {string} mediante efectivo {string} cuya transacción es {string}")
     public void seRealizaElPagoConDocumentoMedianteEfectivoCuyaTransacciónEs(String arg0, String arg1, String arg2) {
     }
+
+    @Y("realiza el pago mediante tarjeta {string} de la franquicia {string}")
+    public void realizaElPagoMedianteTarjetaDeLaFranquicia(String tarjeta, String franqicia) {
+    }
 }
