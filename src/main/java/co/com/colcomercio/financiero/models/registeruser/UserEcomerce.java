@@ -1,4 +1,4 @@
-package co.com.colcomercio.financiero.models;
+package co.com.colcomercio.financiero.models.registeruser;
 
 import lombok.Data;
 import lombok.Getter;

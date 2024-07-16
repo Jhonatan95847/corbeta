@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,10 +25,10 @@ public class SearchProduct implements Task {
 
     public SearchProduct(ProductList productList) {this.productList = productList;}
 
-
+    @Step("Buscando el producto")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("########################BUSCANDO PRODUCTO########################");
+        logger.info("################################BUSCANDO PRODUCTO##############################");
         actor.attemptsTo(
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
                 WaitUntil.the(BUTTON_SEARCH_BAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),

@@ -2,6 +2,7 @@ package co.com.colcomercio.financiero.tasks.paymetProcess.payMethod;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.thucydides.core.annotations.Step;
 
 public class SelectPayMethod implements Task {
 
@@ -11,6 +12,7 @@ public class SelectPayMethod implements Task {
         this.payMethod = payMethod;
     }
 
+    @Step("Seleccionando metod de envio")
     @Override
     public <T extends Actor> void performAs(T t) {
         switch (payMethod) {

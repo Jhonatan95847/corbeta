@@ -1,6 +1,6 @@
 package co.com.colcomercio.financiero.stepdefinitions;
 
-import co.com.colcomercio.financiero.models.UserEcomerce;
+import co.com.colcomercio.financiero.models.registeruser.UserEcomerce;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.tasks.login.Login;
 import co.com.colcomercio.financiero.tasks.login.LoginNewUser;

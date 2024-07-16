@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,9 +22,10 @@ public class SelectShippingMetod implements Task {
         this.metodo = metodo;
         this.cliente = cliente;
     }
+    @Step("Seleccionando el metodo de envio")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("########################SELECCIONANDO METODO DE ENVIO########################");
+        logger.info("##########################SELECCIONANDO METODO DE ENVIO#########################");
         switch (metodo) {
             case "Envio gratis":
                 actor.attemptsTo(

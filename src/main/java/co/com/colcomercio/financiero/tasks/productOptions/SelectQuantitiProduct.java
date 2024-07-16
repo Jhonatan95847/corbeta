@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,9 +22,10 @@ public class SelectQuantitiProduct implements Task {
     public SelectQuantitiProduct(String cantidad){
         this.cantidad = cantidad;
     }
+    @Step("Seleccionando la cantidad de productos")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("########################SELECCIONANDO CANTIDAD########################");
+        logger.info("#############################SELECCIONANDO CANTIDAD############################");
         WaitForElementIsClickeable.with().duration(10);
         actor.attemptsTo(
                 //WaitUntil.the(SELECT_QUANTITY_UNO, WebElementStateMatchers.isClickable()),

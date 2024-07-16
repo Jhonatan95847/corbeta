@@ -2,8 +2,8 @@ package co.com.colcomercio.financiero.utils;
 
 import java.util.Optional;
 
-import co.com.colcomercio.financiero.models.UserEcomerce;
-import co.com.colcomercio.financiero.models.UsersEcomerceList;
+import co.com.colcomercio.financiero.models.registeruser.UserEcomerce;
+import co.com.colcomercio.financiero.models.registeruser.UsersEcomerceList;
 
 public class UserRepository {
     private static UsersEcomerceList usersEcomerceList;

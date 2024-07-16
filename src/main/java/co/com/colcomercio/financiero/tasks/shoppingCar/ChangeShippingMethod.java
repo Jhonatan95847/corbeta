@@ -6,19 +6,27 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.shopingCarPage.ActionsOnCar.*;
 
 public class ChangeShippingMethod implements Task {
+    private static final Logger logger = LogManager.getLogger(ChangeShippingMethod.class);
+
     private String cambiarMetodo;
 
     public ChangeShippingMethod(String cambiarMetodo) {
         this.cambiarMetodo = cambiarMetodo;
     }
 
+    @Step("Cambiando metodo de envio desde el carrito")
     @Override
     public <T extends Actor> void performAs(T actor) {
+        logger.info("#############################CAMBIANDO METODO DE ENVIO###########################");
+
         switch (cambiarMetodo) {
             case "Envio gratis":
                 actor.attemptsTo(

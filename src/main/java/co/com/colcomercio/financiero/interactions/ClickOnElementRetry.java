@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.Step;
 
 
 public class ClickOnElementRetry implements Interaction {
@@ -18,7 +19,7 @@ public class ClickOnElementRetry implements Interaction {
         return Tasks.instrumented(ClickOnElementRetry.class, element);
     }
 
-
+    @Step("Reintentado hacer click en el elemento")
     @Override
     public <T extends Actor> void performAs(T actor) {
         for (int retry = 0; retry < 3; retry++) {

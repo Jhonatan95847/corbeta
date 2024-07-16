@@ -17,15 +17,6 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 public class ProductSearch {
 
     private ProductList withTheData;
-    @Cuando("realiza la busqueda de un productos y cantidad {string}")
-    public void realizaLaBusquedaDeYCantidad( String cantidad) {
-        withTheData = GetDataModel.productList("lista_de_productos");
-
-        theActorInTheSpotlight().attemptsTo(
-                SearchProduct.addProduct(withTheData),
-                SelectProduct.productSelect()
-        );
-    }
 
     @Cuando("el cliente {string} busca un producto y selecciona cantidad {string} y método de envío {string}")
     public void elClienteBuscaUnProductoYSeleccionaY(String cliente, String cantidad, String metodoEnvio) {

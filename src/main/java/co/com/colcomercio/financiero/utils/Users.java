@@ -1,6 +1,6 @@
 package co.com.colcomercio.financiero.utils;
 
-import co.com.colcomercio.financiero.models.UsersEcomerceList;
+import co.com.colcomercio.financiero.models.registeruser.UsersEcomerceList;
 import java.io.FileNotFoundException;
 
 public class Users {

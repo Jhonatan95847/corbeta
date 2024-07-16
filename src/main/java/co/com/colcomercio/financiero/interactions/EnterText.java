@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,7 +23,7 @@ public class EnterText implements Interaction {
     public static EnterText intoField(String text, Target target) {
         return Tasks.instrumented(EnterText.class, text, target);
     }
-
+    @Step("Ingresando el texto en el campo")
     @Override
     public <T extends Actor> void performAs(T actor) {
         if (target.isVisibleFor(actor)){
