@@ -8,17 +8,19 @@ public class ShippingAddressPage extends PageObject {
     public static final Target VALIDATE_DIRECCION_ENVIO =Target.the("Texto tus datos").located(By.xpath("//a//div[text()=' Dirección de envío']"));
     public static final Target RADIOBUTTON_SAVEADDRESS =Target.the("RadioButton direccion gurdada").located(By.xpath(""));
     public static final Target CHECK_OTROS_DATOS =Target.the("Check otros datos").located(By.xpath(""));
-    public static final Target LIST_TIPO_ID =Target.the("Lista tipo Id").located(By.xpath("//form[@id=\"addressForm\"]//div[@class=\"float-select js-float-select js-float-group float-small\"]"));
+    public static final Target LIST_TIPO_ID =Target.the("Lista tipo Id").located(By.xpath("//form[@id=\"addressForm\"]//div[@class=\"float-select js-float-select js-float-group float-small\"]|//form[@id=\"addressForm\"]//div[@class=\"float-select js-float-select js-float-group float-small active-click\"]"));
 
-    public static final Target EDITBOX_NUMBERID_ADDRESS =Target.the("Campo Numero Id direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"idNumber\"]"));
-    public static final Target EDITBOX_NAME_ADDRES =Target.the("Campo nombre direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"firstName\"]"));
-    public static final Target EDITBOX_LASTNAME_ADDRES =Target.the("Campo apellido direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"lastName\"]"));
-    public static final Target EDITBOX_PHONE_ADDRES =Target.the("Campo telefono direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"phone\"]"));
-    public static final Target LIST_DEPARTAMENT_ADDRES =Target.the("Lista Departamento direccion").located(By.xpath("//*[@id=\"i18nAddressForm\"]//div[5]/div[1]/div"));
-    public static final Target LIST_CITY_ADDRES =Target.the("Lista Ciudad direccion").located(By.xpath("//*[@id=\"i18nAddressForm\"]//div[5]/div[2]/div"));
+    public static final Target EDITBOX_NUMBERID_ADDRESS =Target.the("Campo Numero Id direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"idNumber\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_idNumber\"]"));
+    public static final Target EDITBOX_NAME_ADDRES =Target.the("Campo nombre direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"firstName\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_firstName\"]"));
+    public static final Target EDITBOX_LASTNAME_ADDRES =Target.the("Campo apellido direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"lastName\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_lastName\"]"));
+    public static final Target EDITBOX_NAMECOMPANY_ADDRES =Target.the("Campo nombre direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"companyName\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_companyName\"]"));
+    public static final Target EDITBOX_NAMEDELIVERY_ADDRES =Target.the("Campo apellido direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"deliveryName\"]"));
+    public static final Target EDITBOX_PHONE_ADDRES =Target.the("Campo telefono direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"phone\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_phone\"]"));
+    public static final Target LIST_DEPARTAMENT_ADDRES =Target.the("Lista Departamento direccion").located(By.xpath("//*[@id=\"i18nAddressForm\"]//div[5]/div[1]/div|//*[@id=\"js-form-billing-data-hide\"]/div[2]/div[1]/div/div/div"));
+    public static final Target LIST_CITY_ADDRES =Target.the("Lista Ciudad direccion").located(By.xpath("//*[@id=\"i18nAddressForm\"]//div[5]/div[2]/div|//*[@id=\"js-form-billing-data-hide\"]/div[2]/div[2]/div/div/div"));
     public static final Target SELECT_LIST_ADDRES =Target.the("Select Departamento y Ciudad direccion").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'{0}')]");
-    public static final Target EDITBOX_SHIPPING_ADDRES =Target.the("Campo direccion envio").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"line1\"]"));
-    public static final Target EDITBOX_BARRIO_ADDRES =Target.the("Campo barrio direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"district\"]"));
+    public static final Target EDITBOX_SHIPPING_ADDRES =Target.the("Campo direccion envio").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"line1\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_line1\"]"));
+    public static final Target EDITBOX_BARRIO_ADDRES =Target.the("Campo barrio direccion").located(By.xpath("//form[@id=\"addressForm\"]//input[@name=\"district\"]|//form[@id=\"addressForm\"]//input[@name=\"billTo_district\"]"));
     public static final Target CHECK_SAVE_ADDRESS =Target.the("Check guardar direccion").located(By.xpath("//div[@class=\"checkbox-saveaddress mobile-siwtch-checkbox\"]//label[@class=\"control-label add-address-left-label\"]"));
     public static final Target RADIOBUTTON_MISMOS_DATOS =Target.the("Radiobutton mismos datos").located(By.xpath("//form[@id=\"addressForm\"]//input[@id=\"yes-same\"]"));
     public static final Target RADIOBUTTON_OTROS_DATOS =Target.the("Radiobutton otros datos").located(By.xpath("//form[@id=\"addressForm\"]//input[@id=\"no-same\"]"));

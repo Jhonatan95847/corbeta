@@ -1,6 +1,8 @@
 package co.com.colcomercio.financiero.stepdefinitions;
 
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
+import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
+import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.TarjetaAlkosto;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAddress;
 import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
@@ -14,6 +16,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class PaymentMethodsStepDefinition {
     private NewUser withTheData;
+    private PaymentCard whithTheCardData;
 
     @Y("desea ir a pagar con tipo de documento {string} con dirección {string}")
     public void deseaIrAPagarConTipoDeDocumentoConDireccion(String documento, String direccion) {
@@ -53,7 +56,12 @@ public class PaymentMethodsStepDefinition {
     }
 
     @Y("realiza el pago mediante tarjeta {string} de la franquicia {string}")
-    public void realizaElPagoMedianteTarjetaDeLaFranquicia(String arg0, String arg1) {
+    public void realizaElPagoMedianteTarjetaDeLaFranquicia(String tarjeta, String franquicia) {
+        whithTheCardData = GetDataModel.paymentCard("tarjeta_alkosto");
+
+        theActorInTheSpotlight().attemptsTo(
+                TarjetaAlkosto.tarjetaAlkosto(tarjeta,whithTheCardData)
+        );
     }
 }
 

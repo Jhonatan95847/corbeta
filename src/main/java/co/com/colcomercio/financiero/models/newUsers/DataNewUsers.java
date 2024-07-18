@@ -9,7 +9,11 @@ import lombok.Setter;
 public class DataNewUsers {
     private String name;
     private String lastname;
-    private String id;
+    private String cc;
+    private String ce;
+    private String rut;
+    private String nit;
+    private String pas;
     private String phone;
     private String address;
     private String neighborhood;

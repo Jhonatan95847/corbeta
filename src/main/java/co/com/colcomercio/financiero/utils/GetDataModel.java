@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.utils;
 
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
+import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import co.com.colcomercio.financiero.models.productList.ProductList;
 
 import java.util.List;
@@ -18,6 +19,12 @@ public class GetDataModel {
     public static ProductList productList(String key) {
         List<ProductList> data = MyReader.ofInformationWith("src/test/resources/data/productList.json")
                 .andModel(ProductList.class);
+        return data.stream().filter(t -> t.getKey().equals(key)).findFirst().get();
+    }
+
+    public static PaymentCard paymentCard(String key) {
+        List<PaymentCard> data = MyReader.ofInformationWith("src/test/resources/data/paymentCard.json")
+                .andModel(PaymentCard.class);
         return data.stream().filter(t -> t.getKey().equals(key)).findFirst().get();
     }
 }

@@ -27,12 +27,17 @@ Característica: Medio de Pago - Tarjeta Alkosto
         #Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
         #Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
-            | cliente    |  cantidad | metodoEnvio       | direccion      | tipo_id | tarjeta            | franquicia| resultado |
-            | nuevo      |       4   | Envio gratis      |  nuevo usuario |  CC     | alkosto            | visa      | exitoso   |
-            | registrado |       3   | Recoge en tienda  |  registrada    |  CC     | codensa            | mastercad | fallido   |
-            | registrado |       2   | Entrega hoy       |  otros datos   |  CC     | codensa            | diners    | fallido   |
-            | registrado |       1   | Envio gratis      |  guardada      |  CC     | codensa            | fallido   |             |
-            #| nuevo      |       5   | Entrega hoy       |  misma    |  nit    | codensa            | fallido   |
-            #| nuevo      |       8   | Recoge en tienda  |  misma    |  nit    | codensa            | fallido   |
-
+            | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | tarjeta            | franquicia| resultado |
+            | nuevo      |      4   | Envio gratis      |  nuevo usuario |  CC     | alkosto            | visa      | exitoso   |
+            | nuevo      |      3   | Recoge en tienda  |  nuevo usuario |  CC     | codensa            | mastercad | fallido   |
+            | nuevo      |      2   | Entrega hoy       |  nuevo usuario |  CC     | codensa            | diners    | fallido   |
+            | registrado |      1   | Envio gratis      |  guardada      |  CC     | codensa            | fallido   |           |
+            | registrado |      1   | Recoge en tienda  |  guardada      |  CC     | codensa            | fallido   |           |
+            | registrado |      1   | Entrega hoy       |  guardada      |  CC     | codensa            | fallido   |           |
+            | registrado |      3   | Envio gratis      |  otros datos   |  CC     | codensa            | fallido   |           |
+            | registrado |      3   | Recoge en tienda  |  otros datos   |  CC     | codensa            | fallido   |           |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  CC     | codensa            | fallido   |           |
+            | registrado |      8   | Envio gratis      |  registrada    |  CC     | codensa            | fallido   |           |
+            | registrado |      8   | Recoge en tienda  |  registrada    |  CC     | codensa            | fallido   |           |
+            | registrado |      8   | Entrega hoy       |  registrada    |  CC     | codensa            | fallido   |           |
 

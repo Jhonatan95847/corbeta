@@ -3,11 +3,15 @@
     "key" : "datos_nuevo_usuario",
     "dataNewUsers": {
       "name" : "robot",
-      "lastname" : "automation",
-      "id" : "1234567890",
+      "lastname" : "automation testing",
+      "cc" : "1234567890",
+      "ce" : "1234567",
+      "rut" : "12345678901-2",
+      "nit" : "812345678-1",
+      "pas" : "12345678901234",
       "phone" : "3000000000",
       "address" : "CL 84 # 24 - 78",
-      "neighborhood" : "Campina"
+      "neighborhood" : "Polo club"
     }
   }
 ]

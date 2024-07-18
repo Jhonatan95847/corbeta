@@ -1,0 +1,11 @@
+[
+  {
+    "key" : "tarjeta_alkosto",
+    "dataPaymentCard": {
+      "cardNumber" : "5370686837362844",
+      "expirationDate" : "1226",
+      "cvv" : "666",
+      "name" : "APROVED"
+    }
+  }
+]

@@ -33,7 +33,7 @@ public class SameShippingMethod implements Task {
             actor.attemptsTo(
                     WaitUntil.the(EDITTEXT_NUMBERID_ENVIO, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                     ScrollToElement.to(EDITTEXT_NUMBERID_ENVIO),
-                    EnterText.intoField(newUser.getDataNewUsers().getId(),EDITTEXT_NUMBERID_ENVIO),
+                    EnterText.intoField(newUser.getDataNewUsers().getCc(),EDITTEXT_NUMBERID_ENVIO),
                     ClickOnElement.on(BUTTON_CONTINUAR_ENVIO)
             );
         } else {
