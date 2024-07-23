@@ -13,7 +13,7 @@ public class Users {
         try {
             userEcommerceList = JsonUtilSingleton.getUsersList();
         } catch (FileNotFoundException e) {
-            System.err.println("No se encontro archivo json en la ruta especificada");
+
         }
         return userEcommerceList;
     }

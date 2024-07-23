@@ -1,32 +1,29 @@
 package co.com.colcomercio.financiero.interactions;
 
-import net.serenitybdd.core.pages.WebElementFacade;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Interaction;
 
-public class Wait {
-    public static boolean forElement(WebElementFacade element,long time){
-        boolean result = false;
-        for(int i=0;i<time/2;i++){
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            if(element.isCurrentlyVisible()){
-                result=true;
-                break;
-            }
-            if (i == 5){
-                break;
-            }
-        }
-        return result;
+import net.serenitybdd.screenplay.Tasks;
+
+
+public class Wait implements Interaction {
+    private final int timeWait;
+
+    public Wait(int timeWait) {
+        this.timeWait = timeWait;
     }
 
-    public static void relativeTime(long time){
+    @Override
+    public <T extends Actor> void performAs(T t) {
         try {
-            Thread.sleep(time*1000);
+            Thread.sleep(timeWait * 1_000L);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            Thread.currentThread().interrupt();
         }
+
+    }
+
+    public static Wait withDuration(int timeWait) {
+        return Tasks.instrumented(Wait.class, timeWait);
     }
 }

@@ -39,12 +39,8 @@ public class WaitForElementIsClickeable implements Interaction {
             return this;
         }
 
-        public WaitWith and() {
-            return this;
-        }
-
-        public WaitForElementIsClickeable duration(int duration) {
-            return Tasks.instrumented(WaitForElementIsClickeable.class, this.element, duration);
+        public void duration(int duration) {
+            Tasks.instrumented(WaitForElementIsClickeable.class, this.element, duration);
         }
     }
 }

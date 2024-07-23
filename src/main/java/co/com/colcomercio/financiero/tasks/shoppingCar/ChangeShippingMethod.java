@@ -4,14 +4,13 @@ import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.shopingCarPage.ActionsOnCar.*;
+import static jdk.internal.org.jline.utils.Log.error;
 
 public class ChangeShippingMethod implements Task {
     private static final Logger logger = LogManager.getLogger(ChangeShippingMethod.class);
@@ -49,6 +48,9 @@ public class ChangeShippingMethod implements Task {
                         ClickOnElement.on(RADIOBUTTON_ADDRESS),
                         ClickOnElement.on(BUTTON_CONTINUAR_HOY)
                 );
+                break;
+            default:
+                error();
                 break;
         }
     }

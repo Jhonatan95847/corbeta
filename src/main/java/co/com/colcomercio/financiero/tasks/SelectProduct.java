@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.tasks;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.Wait;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -11,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.SearchResultsPage.BUTTON_FIRST_RESULT;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class SelectProduct implements Task {
 
@@ -20,6 +22,7 @@ public class SelectProduct implements Task {
     public <T extends Actor> void performAs(T actor) {
 logger.info("################################SELECCIONANDO EL PRODUCTO##############################");
         actor.attemptsTo(
+                Wait.withDuration(LOW_TIME),
                 WaitUntil.the(BUTTON_FIRST_RESULT, WebElementStateMatchers.isVisible()).forNoMoreThan(30).seconds(),
                 //WaitUntil.the(BUTTON_FIRST_RESULT, WebElementStateMatchers.isClickable()),
                 ClickOnElement.on(BUTTON_FIRST_RESULT)

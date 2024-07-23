@@ -7,5 +7,50 @@
       "cvv" : "666",
       "name" : "APROVED"
     }
+  },
+  {
+    "key" : "tarjeta_codensa",
+    "dataPaymentCard": {
+      "cardNumber" : "5907120000000009",
+      "expirationDate" : "1226",
+      "cvv" : "666",
+      "name" : "APROVED"
+    }
+  },
+  {
+    "key" : "tarjeta_visa",
+    "dataPaymentCard": {
+      "cardNumber" : "4111111111111111",
+      "expirationDate" : "1226",
+      "cvv" : "666",
+      "name" : "APROVED"
+    }
+  },
+  {
+    "key" : "tarjeta_diners",
+    "dataPaymentCard": {
+      "cardNumber" : "36032400000007",
+      "expirationDate" : "1226",
+      "cvv" : "666",
+      "name" : "APROVED"
+    }
+  },
+  {
+    "key" : "tarjeta_mastercard",
+    "dataPaymentCard": {
+      "cardNumber" : "5120697176068275",
+      "expirationDate" : "1226",
+      "cvv" : "666",
+      "name" : "APROVED"
+    }
+  },
+  {
+    "key" : "tarjeta_amex",
+    "dataPaymentCard": {
+      "cardNumber" : "376414000000009",
+      "expirationDate" : "1226",
+      "cvv" : "666",
+      "name" : "APROVED"
+    }
   }
 ]

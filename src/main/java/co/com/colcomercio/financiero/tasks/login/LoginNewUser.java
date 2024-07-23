@@ -5,7 +5,6 @@ import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
-import co.com.colcomercio.financiero.utils.DataGenerator;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -20,14 +19,12 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYACCOUNT;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginNewUser.*;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginPage.*;
-import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.SELECT_DEPRTAMENT_SAME;
 import static co.com.colcomercio.financiero.utils.DataGenerator.DataGeneratorDate;
 
 public class LoginNewUser implements Task {
     private static final Logger logger = LogManager.getLogger(LoginNewUser.class);
 
     private final NewUser newUser;
-    private DataGenerator dataGenerator;
 
     public LoginNewUser(NewUser newUser){this.newUser = newUser;}
     String username = DataGeneratorDate();

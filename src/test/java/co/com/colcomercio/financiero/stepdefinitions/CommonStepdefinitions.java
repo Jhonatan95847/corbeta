@@ -7,6 +7,7 @@ import co.com.colcomercio.financiero.tasks.login.LoginNewUser;
 import co.com.colcomercio.financiero.userinterfaces.HomePage;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import co.com.colcomercio.financiero.utils.UserRepository;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.Dado;
 import net.serenitybdd.screenplay.actions.Open;
@@ -25,6 +26,9 @@ public class CommonStepdefinitions {
 
     private static final Logger logger = LogManager.getLogger(LoginStepdefinitions.class);
     HomePage homePage;
+
+
+
     @Before
     public void setUp() {
         logger.info("***********************************************************************************************************");
@@ -58,5 +62,10 @@ public class CommonStepdefinitions {
                     Login.inMyProfile(false,actualUser.get())
             );
         }
+    }
+
+    @After
+    public void tearDown() {
+        OnStage.drawTheCurtain();
     }
 }

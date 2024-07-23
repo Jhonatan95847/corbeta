@@ -1,9 +1,6 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress;
 
-import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.interactions.EnterText;
-import co.com.colcomercio.financiero.interactions.ScrollToElement;
-import co.com.colcomercio.financiero.interactions.SelectID;
+import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import net.serenitybdd.screenplay.Actor;
@@ -16,10 +13,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class AddNewAddress implements Task {
 
-    private final String tipoID;private static final Logger logger = LogManager.getLogger(AddNewAddress.class);
+    private final String tipoID;
+    private static final Logger logger = LogManager.getLogger(AddNewAddress.class);
 
     private NewUser newUser;
 
@@ -35,6 +34,7 @@ public class AddNewAddress implements Task {
 
         logger.info("#########################AGREGANDO UNA NUEVA DIRECCION#########################");
         actor.attemptsTo(
+                Wait.withDuration(LOW_TIME),
                 WaitUntil.the(LIST_TIPO_ID, WebElementStateMatchers.isVisible()).forNoMoreThan(30).seconds(),
                 ScrollToElement.to(LIST_TIPO_ID),
                 ClickOnElement.on(LIST_TIPO_ID),
@@ -50,15 +50,18 @@ public class AddNewAddress implements Task {
         );
         if (CHECK_SAVE_ADDRESS.isVisibleFor(actor)){
             actor.attemptsTo(
-                    ClickOnElement.on(CHECK_SAVE_ADDRESS),
+                    //ClickOnElement.on(CHECK_SAVE_ADDRESS),
                     ClickOnElement.on(BUTTON_CONTINUAR_ADDRES),
+                    Wait.withDuration(LOW_TIME),
                     WaitUntil.the(RADIOBUTTON_CONFIRMAR_ADDRES, WebElementStateMatchers.isVisible()).forNoMoreThan(30).seconds(),
                     ClickOnElement.on(RADIOBUTTON_CONFIRMAR_ADDRES),
-                    ClickOnElement.on(BUTTON_CONFIRMAR_ADDRES)
+                    ClickOnElement.on(BUTTON_CONFIRMAR_ADDRES),
+                    Wait.withDuration(LOW_TIME)
             );
         }else {
             actor.attemptsTo(
-                    ClickOnElement.on(BUTTON_CONTINUAR_ADDRES)
+                    ClickOnElement.on(BUTTON_CONTINUAR_ADDRES),
+                    Wait.withDuration(LOW_TIME)
             );
 
         }

@@ -7,8 +7,6 @@ import co.com.colcomercio.financiero.tasks.login.LoginNewUser;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Cuando;
 
-
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 

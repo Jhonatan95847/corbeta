@@ -2,6 +2,7 @@ package co.com.colcomercio.financiero.tasks;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.EnterText;
+import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.models.productList.ProductList;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
@@ -17,6 +18,7 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_SEARCH_BAR;
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.EDITBOX_SEARCH_BAR;
 import static co.com.colcomercio.financiero.userinterfaces.SearchResultsPage.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class SearchProduct implements Task {
 
@@ -30,9 +32,10 @@ public class SearchProduct implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("################################BUSCANDO PRODUCTO##############################");
         actor.attemptsTo(
+                Wait.withDuration(LOW_TIME),
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
-                WaitUntil.the(BUTTON_SEARCH_BAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
-                ClickOnElement.on(BUTTON_SEARCH_BAR),
+                //WaitUntil.the(BUTTON_SEARCH_BAR, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds(),
+                Wait.withDuration(LOW_TIME),
                 ClickOnElement.on(BUTTON_SEARCH_BAR),
                 WaitUntil.the(VALIDATE_PRICE, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),

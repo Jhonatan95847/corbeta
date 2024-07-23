@@ -32,7 +32,7 @@ public class ClickOnElement implements Interaction {
                     Click.on(element)
             );
         } else {
-            logger.info("No se encontro el elemento: " + element);
+            logger.error("No se encontro el elemento: " + element);
         }
 
     }

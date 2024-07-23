@@ -9,6 +9,7 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSaveAddress;
 import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
+import co.com.colcomercio.financiero.utils.CardDaraProvider;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Y;
 
@@ -57,10 +58,10 @@ public class PaymentMethodsStepDefinition {
 
     @Y("realiza el pago mediante tarjeta {string} de la franquicia {string}")
     public void realizaElPagoMedianteTarjetaDeLaFranquicia(String tarjeta, String franquicia) {
-        whithTheCardData = GetDataModel.paymentCard("tarjeta_alkosto");
-
+        PaymentCard cardData = CardDaraProvider.getCardData(franquicia);
         theActorInTheSpotlight().attemptsTo(
-                TarjetaAlkosto.tarjetaAlkosto(tarjeta,whithTheCardData)
+                TarjetaAlkosto.tarjetaAlkosto(tarjeta,cardData)
+                //ReviewAndAproval.review()
         );
     }
 }

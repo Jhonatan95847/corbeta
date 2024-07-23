@@ -4,7 +4,9 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 
+import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.SELECT_CREDITCARD_METHOD;
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.SELECT_PAY_METHOD;
+import static jdk.internal.org.jline.utils.Log.error;
 
 public class SelectPayMethod implements Interaction {
     private final String payMethod;
@@ -31,9 +33,9 @@ public class SelectPayMethod implements Interaction {
                         ClickOnElement.on(SELECT_PAY_METHOD.of("Crédito Fácil CODENSA GlobalPay"))
                 );
                 break;
-            case "credito":
+                case "credito":
                 actor.attemptsTo(
-                        ClickOnElement.on(SELECT_PAY_METHOD.of("Tarjeta de Crédito"))
+                        ClickOnElement.on(SELECT_CREDITCARD_METHOD)
                 );
                 break;
             case "debito":
@@ -60,6 +62,9 @@ public class SelectPayMethod implements Interaction {
                 actor.attemptsTo(
                         ClickOnElement.on(SELECT_PAY_METHOD.of("Bancolombia"))
                 );
+                break;
+            default:
+                error();
                 break;
         }
     }

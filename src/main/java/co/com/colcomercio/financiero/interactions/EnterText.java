@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 public class EnterText implements Interaction {
 
-    private static final Logger logger = LogManager.getLogger(ClickOnElement.class);
+    private static final Logger logger = LogManager.getLogger(EnterText.class);
     private final String text;
     private final Target target;
 
@@ -32,7 +32,7 @@ public class EnterText implements Interaction {
                 Enter.theValue(text).into(target)
             );
         }else {
-            logger.info("No se encontro el elemento" + target);
+            logger.error("No se encontro el elemento" + target);
         }
 
     }

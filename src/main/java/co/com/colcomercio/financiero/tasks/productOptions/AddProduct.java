@@ -1,7 +1,7 @@
 package co.com.colcomercio.financiero.tasks.productOptions;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.tasks.SelectProduct;
+import co.com.colcomercio.financiero.interactions.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.BUTTON_ADD_CAR;
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.AddCarPage.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class AddProduct implements Task {
     private static final Logger logger = LogManager.getLogger(AddProduct.class);
@@ -23,7 +24,7 @@ public class AddProduct implements Task {
 
         actor.attemptsTo(
                 WaitUntil.the(BUTTON_ADD_CAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
-
+                Wait.withDuration(LOW_TIME),
                 ClickOnElement.on(BUTTON_ADD_CAR)
         );
         if(TEXT_GARANTIA.isVisibleFor(actor)){

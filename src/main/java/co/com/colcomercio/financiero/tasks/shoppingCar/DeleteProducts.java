@@ -1,11 +1,10 @@
 package co.com.colcomercio.financiero.tasks.shoppingCar;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYCAR;
 import static co.com.colcomercio.financiero.userinterfaces.shopingCarPage.ActionsOnCar.BUTTON_DELETE_PRODUCT;
 import static co.com.colcomercio.financiero.userinterfaces.shopingCarPage.ActionsOnCar.VALIDATE_NAME_PRODUCT;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class DeleteProducts implements Task {
     private static final Logger logger = LogManager.getLogger(DeleteProducts.class);
@@ -22,16 +22,18 @@ public class DeleteProducts implements Task {
         logger.info("#########################BORRANDO PRODUCTOS DEL CARRITO########################");
 
         actor.attemptsTo(
-                //WaitUntil.the(BUTTON_MYCAR, WebElementStateMatchers.isClickable()),
+                Wait.withDuration(LOW_TIME),
                 ClickOnElement.on(BUTTON_MYCAR)
         );
-        if (VALIDATE_NAME_PRODUCT.isVisibleFor(actor)){
-            do {
+
+
+            while (VALIDATE_NAME_PRODUCT.isVisibleFor(actor)){
                 actor.attemptsTo(
-                        ClickOnElement.on(BUTTON_DELETE_PRODUCT)
+                        ClickOnElement.on(BUTTON_DELETE_PRODUCT),
+                        Wait.withDuration(LOW_TIME)
                 );
-            }while (VALIDATE_NAME_PRODUCT.isVisibleFor(actor));
-        }
+            }
+
     }
     public static DeleteProducts delete() {
         return Tasks.instrumented(DeleteProducts.class);
