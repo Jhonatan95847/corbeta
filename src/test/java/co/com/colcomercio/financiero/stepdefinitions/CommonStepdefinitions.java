@@ -1,12 +1,7 @@
 package co.com.colcomercio.financiero.stepdefinitions;
 
-import co.com.colcomercio.financiero.models.registeruser.UserEcomerce;
-import co.com.colcomercio.financiero.models.newUsers.NewUser;
-import co.com.colcomercio.financiero.tasks.login.Login;
-import co.com.colcomercio.financiero.tasks.login.LoginNewUser;
+
 import co.com.colcomercio.financiero.userinterfaces.HomePage;
-import co.com.colcomercio.financiero.utils.GetDataModel;
-import co.com.colcomercio.financiero.utils.UserRepository;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.Dado;
@@ -20,10 +15,6 @@ import org.apache.logging.log4j.Logger;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class CommonStepdefinitions {
-
-    public static final ThreadLocal<UserEcomerce> actualUser = ThreadLocal.withInitial(() -> null);
-    private NewUser withTheData;
-
     private static final Logger logger = LogManager.getLogger(LoginStepdefinitions.class);
     HomePage homePage;
 
@@ -35,33 +26,13 @@ public class CommonStepdefinitions {
         logger.info("*********************[ Configuration ] - Initializing driver configuration*********************************");
         logger.info("***********************************************************************************************************");
         OnStage.setTheStage(new OnlineCast());
-        UserEcomerce user = UserRepository.getUser();
-        actualUser.set(user);
     }
 
     @Dado("que el Cliente Colcomercio ingresa al storefront")
     public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar() {
         theActorCalled("actor").wasAbleTo(
-                Open.browserOn().thePageNamed("pages.alkosto")
+                Open.browserOn().  thePageNamed("pages.alkosto")
         );
-    }
-
-    @Dado("que un cliente {string} inicia sesión y desea realizar una compra")
-    public void queUnClienteDeseaRealizarUnaCompra(String cliente) {
-
-        withTheData = GetDataModel.newUser("datos_nuevo_usuario");
-
-        if (cliente.equals("nuevo")){
-            logger.info("Inicia sesion con usuario nuevo");
-            theActorInTheSpotlight().attemptsTo(
-                    LoginNewUser.newRegistry(withTheData)
-            );
-        } else if (cliente.equals("registrado")) {
-            logger.info("Inicia sesion con usuario registrado");
-            OnStage.theActorInTheSpotlight().wasAbleTo(
-                    Login.inMyProfile(false,actualUser.get())
-            );
-        }
     }
 
     @After

@@ -19,6 +19,7 @@ import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_SEARC
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.EDITBOX_SEARCH_BAR;
 import static co.com.colcomercio.financiero.userinterfaces.SearchResultsPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MEDIUM_TIME;
 
 public class SearchProduct implements Task {
 
@@ -37,7 +38,7 @@ public class SearchProduct implements Task {
                 //WaitUntil.the(BUTTON_SEARCH_BAR, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds(),
                 Wait.withDuration(LOW_TIME),
                 ClickOnElement.on(BUTTON_SEARCH_BAR),
-                WaitUntil.the(VALIDATE_PRICE, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(VALIDATE_PRICE, WebElementStateMatchers.isVisible()).forNoMoreThan(MEDIUM_TIME).seconds(),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_NAME_PRODUCT)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_IMAGE_PRODUCT)).isTrue(),

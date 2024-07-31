@@ -15,7 +15,10 @@ public class HomePage extends PageObject {
     public static final Target EDITBOX_SEARCH_BAR = Target.the("Barra de busqueda").located(By.xpath("//input[@id=\"autocomplete-0-input\"]"));
     public static final Target VALIDATE_ALKOSTO = Target.the("Imagen Alkosto").located(By.xpath("//img[@title=\"Alkosto\"]"));
     public static final Target VALIDATE_BANNER = Target.the("Banner Alkosto").located(By.xpath("//ul[@id=\"banner\"]"));
-    public static final Target VALIDATE_CATEGORIES = Target.the("Banner Alkosto").located(By.xpath("//ul[@class=\"main-navigation__container js-main-navigation-categories\"]"));
+    public static final Target VALIDATE_CATEGORIES = Target.the("Banner categorias").located(By.xpath("//ul[@class=\"main-navigation__container js-main-navigation-categories\"]"));
+    public static final Target BUTTON_DETALLES_PAGO = Target.the("Button detalles de pago").located(By.xpath("//div[@class=\"account-selector--information\"]//h4[contains(text(),'Detalles de pago')]/ancestor::div[2]"));
+    public static final Target BUTTON_ELIMINAR_TARJETA = Target.the("Button Eliminar tarjeta").located(By.xpath("//section[@class=\"account-block\"]//div[1]//i[@title=\"Eliminar tarjeta\"]"));
+    public static final Target BUTTON_CONFIRMARELIMINAR_TARJETA = Target.the("Button Confirmar Eliminar tarjeta").located(By.xpath("//div[@id='cboxLoadedContent']/descendant::button[contains(text(),'Confirmar')]"));
 
 
 

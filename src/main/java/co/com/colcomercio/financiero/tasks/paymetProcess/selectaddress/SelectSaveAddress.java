@@ -24,11 +24,14 @@ public class SelectSaveAddress implements Task {
         logger.info("########################SELECCIONANDO UNA DIRECCION GUARDADA#######################");
 
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
+                Wait.withDuration(6),
                 WaitUntil.the(BUTTON_DIRECCION_GUARDADA, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 ScrollToElement.to(BUTTON_DIRECCION_GUARDADA),
                 ClickOnElement.on(BUTTON_DIRECCION_GUARDADA),
+                ScrollToElement.to(RADIOBUTTON_DIRECCION_GUARDADA),
                 ClickOnElement.on(RADIOBUTTON_DIRECCION_GUARDADA),
+                //Wait.withDuration(LOW_TIME),
+                ScrollToElement.to(RADIOBUTTON_MISMOS_DATOS),
                 Wait.withDuration(LOW_TIME),
                 ScrollToElement.to(BUTTON_CONTINUAR_GUARDADA),
                 ClickOnElement.on(BUTTON_CONTINUAR_GUARDADA)

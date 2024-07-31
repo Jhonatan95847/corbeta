@@ -2,14 +2,15 @@ package co.com.colcomercio.financiero.stepdefinitions;
 
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
-import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.TarjetaAlkosto;
+import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCards;
+import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCash;
+import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayDigitalWallet;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAddress;
 import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSaveAddress;
 import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
-import co.com.colcomercio.financiero.utils.CardDaraProvider;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Y;
 
@@ -58,10 +59,25 @@ public class PaymentMethodsStepDefinition {
 
     @Y("realiza el pago mediante tarjeta {string} de la franquicia {string}")
     public void realizaElPagoMedianteTarjetaDeLaFranquicia(String tarjeta, String franquicia) {
-        PaymentCard cardData = CardDaraProvider.getCardData(franquicia);
+        whithTheCardData = GetDataModel.paymentCard(franquicia);
         theActorInTheSpotlight().attemptsTo(
-                TarjetaAlkosto.tarjetaAlkosto(tarjeta,cardData)
+                PayCards.tarjetaAlkosto(tarjeta,whithTheCardData)
                 //ReviewAndAproval.review()
+        );
+    }
+
+    @Y("realiza el pago mediante billetera digital {string}")
+    public void realizaElPagoMedianteBilleteraDigital(String billetera) {
+        theActorInTheSpotlight().attemptsTo(
+                PayDigitalWallet.paymentCard(billetera)
+                //ReviewAndAproval.review()
+        );
+    }
+
+    @Y("realiza el pago mediante efectivo con {string}")
+    public void realizaElPagoMedianteEfectivoCon(String efectivo) {
+        theActorInTheSpotlight().attemptsTo(
+                PayCash.payCash(efectivo)
         );
     }
 }

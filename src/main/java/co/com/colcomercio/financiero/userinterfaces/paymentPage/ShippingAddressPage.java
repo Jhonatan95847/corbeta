@@ -24,13 +24,14 @@ public class ShippingAddressPage extends PageObject {
     public static final Target CHECK_SAVE_ADDRESS =Target.the("Check guardar direccion").located(By.xpath("//div[@class=\"checkbox-saveaddress mobile-siwtch-checkbox\"]//label[@class=\"control-label add-address-left-label\"]"));
     public static final Target RADIOBUTTON_MISMOS_DATOS =Target.the("Radiobutton mismos datos").located(By.xpath("//form[@id=\"addressForm\"]//input[@id=\"yes-same\"]"));
     public static final Target RADIOBUTTON_OTROS_DATOS =Target.the("Radiobutton otros datos").located(By.xpath("//form[@id=\"addressForm\"]//input[@id=\"no-same\"]"));
-    public static final Target BUTTON_CONTINUAR_ADDRES =Target.the("Boton Continuar Adress final").located(By.xpath("//button[@id=\"continueAddress\"]"));
+    public static final Target BUTTON_CONTINUAR_ADDRES =Target.the("Boton Continuar Adress final").located(By.xpath("//div[@class=\"col-md-offset-6 col-md-6 col-xs-12 no-padding\"]//button[@id=\"continueAddress\"]"));
     public static final Target RADIOBUTTON_CONFIRMAR_ADDRES =Target.the("Radiobuton seleccionar Adress modal").located(By.xpath("//*[@id=\"new-address-sugestion\"]//div[3]/div[2]//label"));
     public static final Target BUTTON_CONFIRMAR_ADDRES =Target.the("Boton Confirmar Adress modal").located(By.xpath("//button[contains(text(),'Confirmar Direcc')]"));
     public static final Target BUTTON_INGRESAR_OTROS_DATOS =Target.the("Boton Ingresar otros datos").located(By.xpath("//div[@class=\"secondStepActions\"]//span[contains(text(),'Ingresar otros datos')]"));
     public static final Target BUTTON_DIRECCION_GUARDADA =Target.the("Boton Direccion guardada").located(By.xpath("//div[@class=\"editSecondStepSelectSavedAddress\"]"));
     public static final Target RADIOBUTTON_DIRECCION_GUARDADA =Target.the("Radiobuton Direccion guardada").located(By.xpath("//*[@id=\"addressbook-shipping\"]/label[3]"));
-    public static final Target BUTTON_CONTINUAR_GUARDADA =Target.the("Continuar Direccion guardada").located(By.xpath("//button[@id=\"continueAddress\"]"));
+    public static final Target BUTTON_CONTINUAR_GUARDADA =Target.the("Continuar Direccion guardada").located(By.xpath("//button[@id=\"addressSubmit\"]"));
+    public static final Target TEXT_CONTINUAR_GUARDADA =Target.the("Texto datos de facturacion").located(By.xpath("//div[@class=\"container-radio-same-adress\"]//span[contains(text(),'Datos')]"));
 
 
 }

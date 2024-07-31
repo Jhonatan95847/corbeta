@@ -2,7 +2,7 @@ package co.com.colcomercio.financiero.tasks.login;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
-import co.com.colcomercio.financiero.models.registeruser.UserEcomerce;
+import co.com.colcomercio.financiero.models.users.Users;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -22,18 +22,16 @@ import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegis
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Login implements Task {
-    private boolean softLogin;
-    private UserEcomerce userEcomerce;
+    private final Users userEcomerce;
     private static final Logger logger = LogManager.getLogger(Login.class);
 
 
-    public Login(boolean softLogin, UserEcomerce userEcomerce){
-        this.softLogin = softLogin;
+    public Login( Users userEcomerce){
         this.userEcomerce = userEcomerce;
     }
 
-    public static Login inMyProfile(boolean flag, UserEcomerce userEcomerce) {
-        return instrumented(Login.class, flag, userEcomerce);
+    public static Login inMyProfile( Users users) {
+        return instrumented(Login.class, users);
     }
 
     @Step("Iniciando sesión con un usuario registrado")
@@ -45,8 +43,10 @@ public class Login implements Task {
                 WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
                 Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
-                Enter.theValue(userEcomerce.getEmail()).into(EDITBOX_EMAIL),
+                Enter.theValue(userEcomerce.getDataUsers().getEmail()).into(EDITBOX_EMAIL),
+                ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
                 ClickOnElement.on(BUTTON_CONTINUE_LOGIN),
+                ScrollToElement.to(BUTTON_LOGIN_MAIL),
                 WaitUntil.the(BUTTON_LOGIN_GOOGLE, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(IsElementPresent.on(BUTTON_LOGIN_GOOGLE)).isTrue(),
                 Ensure.that(IsElementPresent.on(BUTTON_LOGIN_FACEBOOK)).isTrue(),
@@ -57,7 +57,7 @@ public class Login implements Task {
                 WaitUntil.the(BUTTON_LOGIN_MAIL, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 ClickOnElement.on(BUTTON_LOGIN_MAIL),
                 WaitUntil.the(EDITBOX_PASSWORD, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
-                Enter.theValue(userEcomerce.getPasswordEcomerce()).into(EDITBOX_PASSWORD),
+                Enter.theValue(userEcomerce.getDataUsers().getPasswordMail()).into(EDITBOX_PASSWORD),
                 ScrollToElement.to(BUTTON_CONTINUE_PASS),
                 ClickOnElement.on(BUTTON_CONTINUE_PASS)
         );

@@ -38,11 +38,13 @@ public class LoginNewUser implements Task {
                 Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
                 Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
                 EnterText.intoField("alkosto" + username + "@gmail.com", EDITBOX_EMAIL),
+                ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
                 ClickOnElement.on(BUTTON_CONTINUE_LOGIN),
                 WaitUntil.the(EITBOX_NAME, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 EnterText.intoField(newUser.getDataNewUsers().getName(),EITBOX_NAME),
                 EnterText.intoField(newUser.getDataNewUsers().getLastname(),EITBOX_LASTNAME),
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EITBOX_PHONE),
+                ScrollToElement.to(CHECK_CONDITIONS),
                 ClickOnElement.on(CHECK_CONDITIONS),
                 ScrollToElement.to(BUTTON_CONTINUE_NEW),
                 ClickOnElement.on(BUTTON_CONTINUE_NEW)

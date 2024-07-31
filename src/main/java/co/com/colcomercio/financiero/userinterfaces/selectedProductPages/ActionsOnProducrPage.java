@@ -8,7 +8,7 @@ public class ActionsOnProducrPage extends PageObject {
     public static final Target BUTTON_ADD_CAR =Target.the("Boton agregar al carrito").located(By.xpath("//div[@class=\"product-main-info\"]//button[@id=\"addToCartButton\"]"));
     public static final Target BUTTON_FREESHIPPING =Target.the("Boton Envio gratis").located(By.xpath("//label[@for=\"delivery_ship-to-address\"]"));
     //RECOGER EN TIENDA
-    public static final Target BUTTON_STORE_PICKUP =Target.the("Boton Recoger en tienda").located(By.xpath("//label[@for=\"delivery_pickup-in-alkosto\"]"));
+    public static final Target BUTTON_STORE_PICKUP =Target.the("Boton Recoger en tienda").located(By.xpath("//div[contains(text(),'Recoge ')]"));
     public static final Target SELECT_CITY_PICKUP =Target.the("Select Ciudad recogida").located(By.xpath("//div[@class=\"modal-body__filters--city\"]//div[@class=\"float-select js-float-select active-click\"]"));
     public static final Target SELECT_BOGOTA =Target.the("Select Ciudad Bogota").located(By.xpath("//div[@class=\"modal-body__filters--city\"]//ul//li[contains(text(),'bogotá')]"));
     public static final Target RADIOBUTTON_TIENDA =Target.the("Radiobutton tienda").located(By.xpath("//div[@class=\"form-check custom-radio radio-green\"]//label[@for=\"AKB68-pickup\"]"));

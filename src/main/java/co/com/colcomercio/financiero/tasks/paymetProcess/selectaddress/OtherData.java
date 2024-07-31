@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -18,6 +19,7 @@ public class OtherData implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#######################SELECCIONANDO INGRESAR OTROS DATOS######################");
         actor.attemptsTo(
+                ScrollToElement.to(BUTTON_INGRESAR_OTROS_DATOS),
                 ClickOnElement.on(BUTTON_INGRESAR_OTROS_DATOS)
         );
     }

@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class AddCarPage extends PageObject {
-    public static final Target BUTTON_GO_TO_PAY =Target.the("Boton Ir al carrito y pagar").located(By.xpath("//div[@class=\"modal-content modal-alkosto\"]//a[contains(text(),'Ir al carrito y pagar')]"));
+    public static final Target BUTTON_GO_TO_PAY =Target.the("Boton Ir al carrito y pagar").located(By.xpath("(//div[@class=\"modal-footer\"]//a)[1]"));
     public static final Target BUTTON_CONTINUE_BUY =Target.the("Boton Continuar compra").located(By.xpath("//div[@class=\"modal-content modal-alkosto\"]//span[contains(text(),'Continuar comprando')]"));
     public static final Target BUTTON_CLOSE =Target.the("Boton Cerrar").located(By.xpath("//div[@class=\"modal-content modal-alkosto\"]//button[@class=\"close js-sf-keep-shopping\"]"));
     public static final Target TEXT_GARANTIA =Target.the("Text Quiere agregar garantia").located(By.xpath("//div[contains(text(),'¿Quieres proteger tu producto con un (1) año')]"));

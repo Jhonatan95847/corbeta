@@ -1,55 +1,55 @@
 [
   {
-    "key" : "tarjeta_alkosto",
+    "key" : "alkosto",
     "dataPaymentCard": {
       "cardNumber" : "5370686837362844",
       "expirationDate" : "1226",
-      "cvv" : "666",
+      "cvv" : "777",
       "name" : "APROVED"
     }
   },
   {
-    "key" : "tarjeta_codensa",
+    "key" : "codensa",
     "dataPaymentCard": {
       "cardNumber" : "5907120000000009",
       "expirationDate" : "1226",
-      "cvv" : "666",
+      "cvv" : "777",
       "name" : "APROVED"
     }
   },
   {
-    "key" : "tarjeta_visa",
+    "key" : "visa",
     "dataPaymentCard": {
       "cardNumber" : "4111111111111111",
       "expirationDate" : "1226",
-      "cvv" : "666",
+      "cvv" : "777",
       "name" : "APROVED"
     }
   },
   {
-    "key" : "tarjeta_diners",
+    "key" : "diners",
     "dataPaymentCard": {
       "cardNumber" : "36032400000007",
       "expirationDate" : "1226",
-      "cvv" : "666",
+      "cvv" : "777",
       "name" : "APROVED"
     }
   },
   {
-    "key" : "tarjeta_mastercard",
+    "key" : "mastercard",
     "dataPaymentCard": {
       "cardNumber" : "5120697176068275",
       "expirationDate" : "1226",
-      "cvv" : "666",
+      "cvv" : "777",
       "name" : "APROVED"
     }
   },
   {
-    "key" : "tarjeta_amex",
+    "key" : "amex",
     "dataPaymentCard": {
       "cardNumber" : "376414000000009",
       "expirationDate" : "1226",
-      "cvv" : "666",
+      "cvv" : "7777",
       "name" : "APROVED"
     }
   }

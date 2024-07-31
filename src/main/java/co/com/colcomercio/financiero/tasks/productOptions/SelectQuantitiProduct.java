@@ -1,8 +1,6 @@
 package co.com.colcomercio.financiero.tasks.productOptions;
 
-import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.interactions.ScrollToElement;
-import co.com.colcomercio.financiero.interactions.WaitForElementIsClickeable;
+import co.com.colcomercio.financiero.interactions.*;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -11,6 +9,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
+import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.SelectedProductPage.BUTTON_DISPONIBILITY;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class SelectQuantitiProduct implements Task {
 
@@ -24,11 +24,13 @@ public class SelectQuantitiProduct implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("#############################SELECCIONANDO CANTIDAD############################");
-        WaitForElementIsClickeable.with().duration(10);
         actor.attemptsTo(
-                //WaitUntil.the(SELECT_QUANTITY_UNO, WebElementStateMatchers.isClickable()),
-                ScrollToElement.to(SELECT_QUANTITY_UNO),
+                Wait.withDuration(LOW_TIME),
+                //ScrollToPosition.to(0,900),
+                ScrollToElement.to(BUTTON_DISPONIBILITY),
+                ScrollToElement.to(BUTTON_ADD_CAR),
                 ClickOnElement.on(SELECT_QUANTITY_UNO),
+                ScrollToElement.to(SELECT_NUMBERONE.of(cantidad)),
                 ClickOnElement.on(SELECT_NUMBERONE.of(cantidad))
         );
     }

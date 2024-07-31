@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.tasks.productOptions;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -34,11 +35,13 @@ public class SelectShippingMetod implements Task {
         switch (metodo) {
             case "Envio gratis":
                 actor.attemptsTo(
+                        ScrollToElement.to(BUTTON_FREESHIPPING),
                         ClickOnElement.on(BUTTON_FREESHIPPING)
                 );
                 break;
             case "Recoge en tienda":
                 actor.attemptsTo(
+                        ScrollToElement.to(BUTTON_STORE_PICKUP),
                         ClickOnElement.on(BUTTON_STORE_PICKUP),
                         Wait.withDuration(LOW_TIME),
                         ClickOnElement.on(SELECT_CITY_PICKUP),
@@ -50,6 +53,7 @@ public class SelectShippingMetod implements Task {
             case "Entrega hoy":
                 if (cliente.equals("registrado")){
                     actor.attemptsTo(
+                            ScrollToElement.to(BUTTON_SAME_DAY),
                             ClickOnElement.on(BUTTON_SAME_DAY),
                             Wait.withDuration(LOW_TIME),
                             ClickOnElement.on(RADIOBUTTON_ADDRESS),
@@ -57,6 +61,7 @@ public class SelectShippingMetod implements Task {
                     );
                 } else if (cliente.equals("nuevo")) {
                     actor.attemptsTo(
+                            ScrollToElement.to(BUTTON_SAME_DAY),
                             ClickOnElement.on(BUTTON_SAME_DAY),
                             Wait.withDuration(LOW_TIME),
                             WaitUntil.the(SELECT_DEPRTAMENT_SAME, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),

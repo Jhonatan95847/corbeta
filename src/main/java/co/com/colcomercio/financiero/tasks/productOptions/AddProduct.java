@@ -23,8 +23,9 @@ public class AddProduct implements Task {
         logger.info("##########################AGREGANDO PROEDUCO EN EL MODAL#######################");
 
         actor.attemptsTo(
-                WaitUntil.the(BUTTON_ADD_CAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                //WaitUntil.the(BUTTON_ADD_CAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 Wait.withDuration(LOW_TIME),
+                //ScrollToElement.to(BUTTON_ADD_CAR),
                 ClickOnElement.on(BUTTON_ADD_CAR)
         );
         if(TEXT_GARANTIA.isVisibleFor(actor)){
@@ -33,6 +34,7 @@ public class AddProduct implements Task {
             );
         }
         actor.attemptsTo(
+                Wait.withDuration(LOW_TIME),
                 WaitUntil.the(BUTTON_GO_TO_PAY, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 ClickOnElement.on(BUTTON_GO_TO_PAY)
         );

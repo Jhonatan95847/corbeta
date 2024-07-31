@@ -5,6 +5,7 @@ import co.com.colcomercio.financiero.tasks.SearchProduct;
 import co.com.colcomercio.financiero.tasks.SelectProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectQuantitiProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectShippingMetod;
+import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteCard;
 import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteProducts;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Cuando;
@@ -21,6 +22,7 @@ public class ProductSearch {
 
         theActorInTheSpotlight().attemptsTo(
                 DeleteProducts.delete(),
+                DeleteCard.delete(),
                 SearchProduct.addProduct(withTheData),
                 SelectProduct.productSelect(),
                 SelectShippingMetod.selectMethod(metodoEnvio,cliente),
