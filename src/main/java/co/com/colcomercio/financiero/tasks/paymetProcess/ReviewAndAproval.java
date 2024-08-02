@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import net.serenitybdd.screenplay.Actor;
@@ -21,8 +22,10 @@ public class ReviewAndAproval implements Task {
         logger.info("###########################IR A PAGAR DESDE EL CARRITO#########################");
 
         actor.attemptsTo(
+
                 Wait.withDuration(LOW_TIME),
                 WaitUntil.the(BUTTON_CONTINIAR_APROVADO, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                ScrollToElement.to(BUTTON_CONTINIAR_APROVADO),
                 ClickOnElement.on(BUTTON_CONTINIAR_APROVADO)
         );
     }

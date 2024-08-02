@@ -35,10 +35,8 @@ public class AddDataGlobalPay implements Interaction {
                 ClickOnElement.on(SELECT_GLOBALPAY.of("1")),
                 ClickOnElement.on(LIST_TIPOID_GLOBALPAY),
                 ClickOnElement.on(SELECT_GLOBALPAY.of("CC")),
-                EnterText.intoField("12345678", EDITBOX_NUMID_GLOBALPAY),
-                ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                //ClickOnElement.on(CHECK_SAVECARD),
-                ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
+                EnterText.intoField("12345678", EDITBOX_NUMID_GLOBALPAY)
+
         );
     }
     public static AddDataGlobalPay addData(PaymentCard paymentCard){

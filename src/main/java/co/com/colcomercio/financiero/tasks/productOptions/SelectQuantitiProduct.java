@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.tasks.productOptions;
 
 import co.com.colcomercio.financiero.interactions.*;
+import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -31,7 +32,10 @@ public class SelectQuantitiProduct implements Task {
                 ScrollToElement.to(BUTTON_ADD_CAR),
                 ClickOnElement.on(SELECT_QUANTITY_UNO),
                 ScrollToElement.to(SELECT_NUMBERONE.of(cantidad)),
-                ClickOnElement.on(SELECT_NUMBERONE.of(cantidad))
+                ClickOnElement.on(SELECT_NUMBERONE.of(cantidad)),
+                Wait.withDuration(2),
+                AddProduct.goToPay(),
+                GoToPay.pay()
         );
     }
 

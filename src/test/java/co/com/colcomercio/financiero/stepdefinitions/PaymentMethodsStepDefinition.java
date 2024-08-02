@@ -2,6 +2,7 @@ package co.com.colcomercio.financiero.stepdefinitions;
 
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
+import co.com.colcomercio.financiero.tasks.paymetProcess.ReviewAndAproval;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCards;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCash;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayDigitalWallet;
@@ -24,10 +25,6 @@ public class PaymentMethodsStepDefinition {
     public void deseaIrAPagarConTipoDeDocumentoConDireccion(String documento, String direccion) {
         withTheData = GetDataModel.newUser("datos_nuevo_usuario");
 
-        theActorInTheSpotlight().attemptsTo(
-                AddProduct.goToPay(),
-                GoToPay.pay()
-        );
         switch (direccion) {
             case "registrada":
                 theActorInTheSpotlight().attemptsTo(
@@ -61,8 +58,8 @@ public class PaymentMethodsStepDefinition {
     public void realizaElPagoMedianteTarjetaDeLaFranquicia(String tarjeta, String franquicia) {
         whithTheCardData = GetDataModel.paymentCard(franquicia);
         theActorInTheSpotlight().attemptsTo(
-                PayCards.tarjetaAlkosto(tarjeta,whithTheCardData)
-                //ReviewAndAproval.review()
+                PayCards.tarjetaAlkosto(tarjeta,whithTheCardData),
+                ReviewAndAproval.review()
         );
     }
 

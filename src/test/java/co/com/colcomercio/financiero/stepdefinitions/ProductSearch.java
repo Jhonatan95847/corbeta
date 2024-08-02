@@ -9,6 +9,7 @@ import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteCard;
 import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteProducts;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -26,6 +27,17 @@ public class ProductSearch {
                 SearchProduct.addProduct(withTheData),
                 SelectProduct.productSelect(),
                 SelectShippingMetod.selectMethod(metodoEnvio,cliente),
+                SelectQuantitiProduct.selectQuantity(cantidad)
+        );
+    }
+
+    @Dado("que un cliente busca un producto y selecciona cantidad {string} y método de envío {string}")
+    public void queUnClienteBuscaUnProductoYSeleccionaCantidadYMétodoDeEnvío(String cantidad, String metodoEnvio) {
+        withTheData = GetDataModel.productList("lista_de_productos");
+        theActorInTheSpotlight().attemptsTo(
+                SearchProduct.addProduct(withTheData),
+                SelectProduct.productSelect(),
+                SelectShippingMetod.selectMethod(metodoEnvio,"nuevo"),
                 SelectQuantitiProduct.selectQuantity(cantidad)
         );
     }

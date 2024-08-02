@@ -4,7 +4,13 @@ import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.models.users.Users;
 import co.com.colcomercio.financiero.tasks.login.Login;
 import co.com.colcomercio.financiero.tasks.login.LoginNewUser;
+import co.com.colcomercio.financiero.tasks.login.SoftLogin;
+import co.com.colcomercio.financiero.tasks.login.SoftLoginNewUser;
+import co.com.colcomercio.financiero.tasks.paymetProcess.AddYourData;
+import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
+import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import co.com.colcomercio.financiero.utils.GetDataModel;
+import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import net.serenitybdd.screenplay.actors.OnStage;
 import org.apache.logging.log4j.LogManager;
@@ -37,6 +43,19 @@ public class LoginStepdefinitions {
         }
     }
 
+    @Cuando("inicia sesion y desea realizar la compra como un cliente {string}")
+    public void iniciaSesionYDeseaRealizarLaCompraComoUnCliente(String cliente) {
+        withTheUserData = GetDataModel.users("usuario_registrado");
+        if (cliente.equals("registrado")){
+            theActorInTheSpotlight().attemptsTo(
+                    SoftLogin.inMyProfile(withTheUserData)
+            );
+        } else if (cliente.equals("nuevo")) {
+            theActorInTheSpotlight().attemptsTo(
+                    SoftLoginNewUser.newRegistry(),
+                    AddYourData.addYourData()
+            );
+        }
 
-
+    }
 }

@@ -5,6 +5,8 @@ import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+
+import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static jdk.internal.org.jline.utils.Log.error;
 
@@ -28,8 +30,10 @@ public class PayCards implements Task {
                 actor.attemptsTo(
                         Wait.withDuration(LOW_TIME),
                         SelectPayMethod.payMethod(payMethod),
-                        AddDataPayU.addData(paymentCard)
-
+                        AddDataPayU.addData(paymentCard),
+                        ClickOnElement.on(CHECK_USARCORREO),
+                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
+                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
                 );
                 break;
             case "debito":
@@ -37,7 +41,9 @@ public class PayCards implements Task {
                 actor.attemptsTo(
                         Wait.withDuration(LOW_TIME),
                         SelectPayMethod.payMethod(payMethod),
-                        AddDataGlobalPay.addData(paymentCard)
+                        AddDataGlobalPay.addData(paymentCard),
+                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
+                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
                 );
                 break;
 
@@ -46,7 +52,11 @@ public class PayCards implements Task {
                 actor.attemptsTo(
                         Wait.withDuration(LOW_TIME),
                         SelectPayMethod.payMethod(payMethod),
-                        AddDataPayU.addData(paymentCard)
+                        AddDataPayU.addData(paymentCard),
+                        ClickOnElement.on(CHECK_USARCORREO),
+                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
+                        ClickOnElement.on(CHECK_SAVECARD_CREDITO),
+                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
 
                 );
                 break;
@@ -55,7 +65,10 @@ public class PayCards implements Task {
                 actor.attemptsTo(
                         Wait.withDuration(LOW_TIME),
                         SelectPayMethod.payMethod(payMethod),
-                        AddDataGlobalPay.addData(paymentCard)
+                        AddDataGlobalPay.addData(paymentCard),
+                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
+                        ClickOnElement.on(CHECK_SAVECARD_DEBITO),
+                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
                 );
                 break;
             default:

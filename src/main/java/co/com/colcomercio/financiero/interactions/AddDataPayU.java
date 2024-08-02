@@ -39,11 +39,7 @@ public class AddDataPayU implements Interaction {
                 ClickOnElement.on(LIST_CUOTASID_PAYU.of("Tipo id")),
                 //Wait.withDuration(1),
                 ClickOnElement.on(SELECT_PAYU.of("CC")),
-                EnterText.intoField("12345678", EDITBOX_NUMID_PAYU),
-                ClickOnElement.on(CHECK_USARCORREO),
-                //ClickOnElement.on(CHECK_SAVECARD),
-                ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
+                EnterText.intoField("12345678", EDITBOX_NUMID_PAYU)
         );
     }
     public static AddDataPayU addData(PaymentCard paymentCard) {
