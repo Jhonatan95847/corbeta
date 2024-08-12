@@ -1,6 +1,8 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.payMethod;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.EnterText;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.SelectPayMethod;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,8 +10,7 @@ import net.serenitybdd.screenplay.Tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.DigitalWalletPage.RADIOBUTTON_DAVIPLATA;
-import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.DigitalWalletPage.RADIOBUTTON_NEQUI;
+import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.DigitalWalletPage.*;
 
 public class PayDigitalWallet implements Task {
 
@@ -24,21 +25,23 @@ public class PayDigitalWallet implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("##############################PAGANDO MEDIANTE BILLETERA DIGITAL##############################");
         actor.attemptsTo(
-                SelectPayMethod.payMethod(payMethod)
+                SelectPayMethod.payMethod(payMethod),
+                ScrollToElement.to(RADIOBUTTON_NEQUI)
         );
-        if (payMethod.equals("nequi")){
+        if (payMethod.equals("Nequi")){
             actor.attemptsTo(
                     ClickOnElement.on(RADIOBUTTON_NEQUI)
             );
-        } else if (payMethod.equals("daviplata")) {
+        } else if (payMethod.equals("Daviplata")) {
             actor.attemptsTo(
                     ClickOnElement.on(RADIOBUTTON_DAVIPLATA)
             );
         }
         actor.attemptsTo(
-            //ClickOnElement.on(EDITBOX_FIRSTLABEL_CARD.of("Tipo id")),
-            //ClickOnElement.on(EDITBOX_FIRSTSELECT_CUOTAS.of("CC")),
-            //EnterText.intoField("12345678",EDITBOX_INPUTONE_CARD.of("Número"))
+            ClickOnElement.on(SELECT_TIPOID_BILLETERA),
+            ClickOnElement.on(LIST_TIPOID_BILLETERA.of("C.C")),
+            EnterText.intoField("12345678",EDITBOX_ID_BILLETERA),
+            ClickOnElement.on(BUTTON_CONTINUAR_BILLETERA)
         );
     }
     public static PayDigitalWallet paymentCard(String payMethod) {

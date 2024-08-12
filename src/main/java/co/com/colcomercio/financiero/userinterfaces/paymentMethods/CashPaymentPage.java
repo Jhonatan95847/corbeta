@@ -6,5 +6,6 @@ public class CashPaymentPage extends PageObject {
     public static final Target RADIOBUTTON_SURED =Target.the("Radio buton SuRed").locatedBy("(//label[@for=\"sured\"])[1]");
     public static final Target RADIOBUTTON_DEPOSITO =Target.the("Radio buton Deposito").locatedBy("(//label[@for=\"bankdeposit\"])[1]");
     public static final Target RADIOBUTTON_EFECTY =Target.the("Radio buton Efecty").locatedBy("(//label[@for=\"efecty\"])[1]");
+    public static final Target BUTTON_CPNTINUAR_EFECTIVO =Target.the("Boton Continuar efectivo").locatedBy("//div[@class=\"z-content z-active\"]//i");
 
 }

@@ -23,52 +23,39 @@ public class PayCards implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
+        actor.attemptsTo(
+                Wait.withDuration(LOW_TIME),
+                SelectPayMethod.payMethod(payMethod)
+        );
         switch (payMethod) {
-            case "credito":
-            case "codensa":
+            case "Tarjeta de Crédito":
+            case "Crédito Fácil CODENSA":
                 actor.attemptsTo(
-                        Wait.withDuration(LOW_TIME),
-                        SelectPayMethod.payMethod(payMethod),
                         AddDataPayU.addData(paymentCard),
-                        ClickOnElement.on(CHECK_USARCORREO),
-                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
+                        ClickOnElement.on(CHECK_USARCORREO)
                 );
                 break;
-            case "debito":
-            case "alkosto":
+            case "Tarjeta de Crédito o Debito con CVV":
+            case "Tarjeta Alkosto":
                 actor.attemptsTo(
-                        Wait.withDuration(LOW_TIME),
-                        SelectPayMethod.payMethod(payMethod),
-                        AddDataGlobalPay.addData(paymentCard),
-                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
+                        AddDataGlobalPay.addData(paymentCard)
                 );
                 break;
-
             case "credito guardada":
             //case "codensa guardada":
                 actor.attemptsTo(
-                        Wait.withDuration(LOW_TIME),
-                        SelectPayMethod.payMethod(payMethod),
                         AddDataPayU.addData(paymentCard),
                         ClickOnElement.on(CHECK_USARCORREO),
                         ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                        ClickOnElement.on(CHECK_SAVECARD_CREDITO),
-                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
-
+                        ClickOnElement.on(CHECK_SAVECARD_CREDITO)
                 );
                 break;
             case "debito guardada":
             case "alkosto guardada":
                 actor.attemptsTo(
-                        Wait.withDuration(LOW_TIME),
-                        SelectPayMethod.payMethod(payMethod),
                         AddDataGlobalPay.addData(paymentCard),
                         ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                        ClickOnElement.on(CHECK_SAVECARD_DEBITO),
-                        ClickOnElement.on(BUTTON_CONTINUAR_REVISAR)
+                        ClickOnElement.on(CHECK_SAVECARD_DEBITO)
                 );
                 break;
             default:
@@ -76,9 +63,11 @@ public class PayCards implements Task {
                 break;
         }
         actor.attemptsTo(
-
+                ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
+                ClickOnElement.on(BUTTON_CONTINUAR_REVISAR),
                 Wait.withDuration(LOW_TIME)
         );
+
     }
 
     public static PayCards tarjetaAlkosto(String payMethod, PaymentCard paymentCard) {

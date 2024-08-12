@@ -27,10 +27,7 @@ public class DeleteProducts implements Task {
                 Wait.withDuration(LOW_TIME),
                 ClickOnElement.on(BUTTON_MYCAR),
                 Wait.withDuration(LOW_TIME)
-                //ScrollToPosition.to(0,100)
         );
-
-
             while (VALIDATE_NAME_PRODUCT.isVisibleFor(actor)){
                 actor.attemptsTo(
                         ScrollToElement.to(BUTTON_DELETE_PRODUCT),
@@ -38,7 +35,6 @@ public class DeleteProducts implements Task {
                         Wait.withDuration(MEDIUM_TIME)
                 );
             }
-
     }
     public static DeleteProducts delete() {
         return Tasks.instrumented(DeleteProducts.class);

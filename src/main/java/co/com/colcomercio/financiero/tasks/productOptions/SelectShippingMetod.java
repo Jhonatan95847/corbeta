@@ -1,13 +1,9 @@
 package co.com.colcomercio.financiero.tasks.productOptions;
 
-import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.interactions.ScrollToElement;
-import co.com.colcomercio.financiero.interactions.Wait;
+import co.com.colcomercio.financiero.interactions.*;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -43,37 +39,16 @@ public class SelectShippingMetod implements Task {
                 actor.attemptsTo(
                         ScrollToElement.to(BUTTON_STORE_PICKUP),
                         ClickOnElement.on(BUTTON_STORE_PICKUP),
-                        Wait.withDuration(LOW_TIME),
-                        ClickOnElement.on(SELECT_CITY_PICKUP),
-                        ClickOnElement.on(SELECT_BOGOTA),
-                        ClickOnElement.on(RADIOBUTTON_TIENDA),
-                        ClickOnElement.on(BUTTON_SELECT_TIENDA)
+                        PickupInStore.pickup()
                 );
                 break;
             case "Entrega hoy":
-                if (cliente.equals("registrado")){
-                    actor.attemptsTo(
-                            ScrollToElement.to(BUTTON_SAME_DAY),
-                            ClickOnElement.on(BUTTON_SAME_DAY),
-                            Wait.withDuration(LOW_TIME),
-                            ClickOnElement.on(RADIOBUTTON_ADDRESS),
-                            ClickOnElement.on(BUTTON_CONTINUAR_HOY)
-                    );
-                } else if (cliente.equals("nuevo")) {
-                    actor.attemptsTo(
-                            ScrollToElement.to(BUTTON_SAME_DAY),
-                            ClickOnElement.on(BUTTON_SAME_DAY),
-                            Wait.withDuration(LOW_TIME),
-                            WaitUntil.the(SELECT_DEPRTAMENT_SAME, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
-                            ClickOnElement.on(SELECT_DEPRTAMENT_SAME),
-                            ClickOnElement.on(SELECT_BOGOTADC),
-                            ClickOnElement.on(SELECT_CITY_SAME),
-                            ClickOnElement.on(SELECT_BOGOTACITY),
-                            ClickOnElement.on(SELECT_ZONE_SAME),
-                            ClickOnElement.on(SELECT_CHAPZONE),
-                            ClickOnElement.on(BUTTON_CONTINUAR_HOY_NUEVO)
-                    );
-                }
+                actor.attemptsTo(
+                        ScrollToElement.to(BUTTON_SAME_DAY),
+                        ClickOnElement.on(BUTTON_SAME_DAY),
+                        DeliveryToday.delivery(cliente)
+                );
+
 
                 break;
             default:

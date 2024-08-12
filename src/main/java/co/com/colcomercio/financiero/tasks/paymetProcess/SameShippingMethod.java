@@ -26,7 +26,6 @@ public class SameShippingMethod implements Task {
         logger.info("######################SELECCIONANDO MISMO METODO DE ENVIO####################");
         actor.attemptsTo(
                 Wait.withDuration(7),
-                //ScrollToElement.to(VALIDATION_METODOENVIO),
                 ScrollToElement.to(BUTTON_CONTINUAR_ENVIO)
         );
         if (EDITTEXT_NUMBERID_ENVIO.isVisibleFor(actor)){

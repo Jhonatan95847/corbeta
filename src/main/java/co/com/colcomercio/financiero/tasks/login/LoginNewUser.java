@@ -3,6 +3,7 @@ package co.com.colcomercio.financiero.tasks.login;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
+import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
@@ -20,6 +21,7 @@ import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYACC
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginNewUser.*;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginPage.*;
 import static co.com.colcomercio.financiero.utils.DataGenerator.DataGeneratorDate;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class LoginNewUser implements Task {
     private static final Logger logger = LogManager.getLogger(LoginNewUser.class);
@@ -28,10 +30,10 @@ public class LoginNewUser implements Task {
 
     public LoginNewUser(NewUser newUser){this.newUser = newUser;}
     String username = DataGeneratorDate();
-    @Step("Iniciaando sesión con un usuario nuevo")
+    @Step("Iniciando sesión con un usuario nuevo")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO####################");
+        logger.info("####################INICIANDO SESION CON USUARIO NUEVO####################");
         actor.attemptsTo(
                 ClickOnElement.on(BUTTON_MYACCOUNT),
                 //WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.()),
@@ -47,8 +49,8 @@ public class LoginNewUser implements Task {
                 ScrollToElement.to(CHECK_CONDITIONS),
                 ClickOnElement.on(CHECK_CONDITIONS),
                 ScrollToElement.to(BUTTON_CONTINUE_NEW),
-                ClickOnElement.on(BUTTON_CONTINUE_NEW)
-                //WaitFor.seconds(5)
+                ClickOnElement.on(BUTTON_CONTINUE_NEW),
+                Wait.withDuration(LOW_TIME)
         );
     }
     public static LoginNewUser newRegistry(NewUser newUser) {

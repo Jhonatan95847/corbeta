@@ -3,10 +3,12 @@ package co.com.colcomercio.financiero.stepdefinitions;
 import co.com.colcomercio.financiero.models.productList.ProductList;
 import co.com.colcomercio.financiero.tasks.SearchProduct;
 import co.com.colcomercio.financiero.tasks.SelectProduct;
+import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectQuantitiProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectShippingMetod;
 import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteCard;
 import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteProducts;
+import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -27,7 +29,9 @@ public class ProductSearch {
                 SearchProduct.addProduct(withTheData),
                 SelectProduct.productSelect(),
                 SelectShippingMetod.selectMethod(metodoEnvio,cliente),
-                SelectQuantitiProduct.selectQuantity(cantidad)
+                SelectQuantitiProduct.selectQuantity(cantidad),
+                AddProduct.goToPay(),
+                GoToPay.pay()
         );
     }
 

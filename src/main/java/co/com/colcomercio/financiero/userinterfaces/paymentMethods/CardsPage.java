@@ -18,7 +18,7 @@ public class CardsPage extends PageObject {
     public static final Target CHECK_SAVECARD_CREDITO =Target.the("Gurdar tarjera credito").locatedBy("(//label[@for=\"checkboxSaveCard\"])[2]");
     public static final Target CHECK_SAVECARD_DEBITO =Target.the("Gurdar tarjera debito").locatedBy("//label[@for=\"checkboxSaveCardGlobalPay\"]");
     public static final Target CHECK_USARCORREO =Target.the("Usar datos de correo").locatedBy("//div[@class=\"z-content z-active\"]//div[contains(text(),'Usar Correo')]");
-    public static final Target BUTTON_CONTINUAR_REVISAR =Target.the("Boton guardar y revisar").locatedBy("//div[@class=\"z-content z-active\"]//div[contains(@class,('action col-xs-12'))]//button[contains(text(),' Continuar y revisar pedido ')]");
+    public static final Target BUTTON_CONTINUAR_REVISAR =Target.the("Boton guardar y revisar").locatedBy("//div[@class=\"z-content z-active\"]//div[contains(@class,('action col-xs-12'))]//button[contains(text(),' Continuar ')]");
     public static final Target BUTTON_AGREGARNUEVA_TARJETA =Target.the("Boton agregar nueva tarjeta").locatedBy("//div[@class=\"z-content z-active\"]//span[contains(text(),'Agregar nueva')]");
     public static final Target CHECK_SELECT_TARJETA_CREDITO =Target.the("Check select tarjeta guardada").locatedBy("//div[@class=\"brand__checkbox\"]//label[@for=\"0\"]");
     public static final Target EDITBOX_CVC_TARJETAGUARDADA_CREDITO =Target.the("Campo CVC tarjeta guardada").locatedBy("//input[@name=\"ccv_registered_card\"]");

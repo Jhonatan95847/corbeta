@@ -1,6 +1,7 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.payMethod;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.SelectPayMethod;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -26,18 +27,21 @@ public class PayCash implements Task {
                 SelectPayMethod.payMethod(payMethod)
         );
         switch (payMethod) {
-            case "sured":
+            case "Su Red":
                 actor.attemptsTo(
+                        ScrollToElement.to(RADIOBUTTON_SURED),
                         ClickOnElement.on(RADIOBUTTON_SURED)
                 );
                 break;
-            case "deposito":
+            case "Consignación":
                 actor.attemptsTo(
+                        ScrollToElement.to(RADIOBUTTON_DEPOSITO),
                         ClickOnElement.on(RADIOBUTTON_DEPOSITO)
                 );
                 break;
-            case "efecty":
+            case "Efecty":
                 actor.attemptsTo(
+                        ScrollToElement.to(RADIOBUTTON_EFECTY),
                         ClickOnElement.on(RADIOBUTTON_EFECTY)
                 );
                 break;
@@ -45,6 +49,10 @@ public class PayCash implements Task {
                 error();
                 break;
         }
+        actor.attemptsTo(
+                ScrollToElement.to(BUTTON_CPNTINUAR_EFECTIVO),
+                ClickOnElement.on(BUTTON_CPNTINUAR_EFECTIVO)
+        );
     }
     public static PayCash payCash(String payMethod) {
         return Tasks.instrumented(PayCash.class, payMethod);

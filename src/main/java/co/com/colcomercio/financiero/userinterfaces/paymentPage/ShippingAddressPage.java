@@ -29,9 +29,12 @@ public class ShippingAddressPage extends PageObject {
     public static final Target BUTTON_CONFIRMAR_ADDRES =Target.the("Boton Confirmar Adress modal").located(By.xpath("//button[contains(text(),'Confirmar Direcc')]"));
     public static final Target BUTTON_INGRESAR_OTROS_DATOS =Target.the("Boton Ingresar otros datos").located(By.xpath("//div[@class=\"secondStepActions\"]//span[contains(text(),'Ingresar otros datos')]"));
     public static final Target BUTTON_DIRECCION_GUARDADA =Target.the("Boton Direccion guardada").located(By.xpath("//div[@class=\"editSecondStepSelectSavedAddress\"]"));
-    public static final Target RADIOBUTTON_DIRECCION_GUARDADA =Target.the("Radiobuton Direccion guardada").located(By.xpath("//*[@id=\"addressbook-shipping\"]/label[3]"));
+    public static final Target RADIOBUTTON_DIRECCION_GUARDADA =Target.the("Radiobuton Direccion guardada").located(By.xpath("(//div[@class=\"label-green-check custom-radio__text\"])[1]"));
     public static final Target BUTTON_CONTINUAR_GUARDADA =Target.the("Continuar Direccion guardada").located(By.xpath("//button[@id=\"addressSubmit\"]"));
+    public static final Target BUTTON_CONTINUAR_GUARDADA_HOY =Target.the("Continuar Direccion guardada").located(By.xpath("//button[@id=\"continueAddress\"]"));
     public static final Target TEXT_CONTINUAR_GUARDADA =Target.the("Texto datos de facturacion").located(By.xpath("//div[@class=\"container-radio-same-adress\"]//span[contains(text(),'Datos')]"));
+    public static final Target TEXT_ASEGURAR_SOFTLOGIN =Target.the("Texto Queremos asegurar que eres tu").located(By.xpath("//span[contains(text(),' Queremos asegurarnos que realmente eres tú ')]"));
+    public static final Target BUTTON_CONTINUARDIR_SOFTLOGIN =Target.the("Boton continuar softlogin otros datos").located(By.xpath("//div[@id=\"modalToEditSecondStepData\"]//button[contains(text(),'Continuar')]"));
 
 
 }

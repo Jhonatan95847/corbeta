@@ -2,6 +2,7 @@ package co.com.colcomercio.financiero.stepdefinitions;
 
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
+import co.com.colcomercio.financiero.models.users.Users;
 import co.com.colcomercio.financiero.tasks.paymetProcess.ReviewAndAproval;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCards;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCash;
@@ -10,8 +11,6 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAdd
 import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSaveAddress;
-import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
-import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Y;
 
@@ -20,10 +19,12 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 public class PaymentMethodsStepDefinition {
     private NewUser withTheData;
     private PaymentCard whithTheCardData;
+    private Users dataRegisterUser;
 
     @Y("desea ir a pagar con tipo de documento {string} con dirección {string}")
     public void deseaIrAPagarConTipoDeDocumentoConDireccion(String documento, String direccion) {
         withTheData = GetDataModel.newUser("datos_nuevo_usuario");
+        dataRegisterUser = GetDataModel.users("usuario_registrado");
 
         switch (direccion) {
             case "registrada":
@@ -39,14 +40,14 @@ public class PaymentMethodsStepDefinition {
                 break;
             case "otros datos":
                 theActorInTheSpotlight().attemptsTo(
-                        OtherData.otherData(),
+                        OtherData.otherData(dataRegisterUser),
                         AddNewAddress.selectAddress(withTheData, documento),
                         SameShippingMethod.selectMethod(withTheData)
                 );
                 break;
             case "guardada":
                 theActorInTheSpotlight().attemptsTo(
-                        SelectSaveAddress.selectSave(),
+                        SelectSaveAddress.selectSave(dataRegisterUser),
                         SameShippingMethod.selectMethod(withTheData)
                 );
                 break;
@@ -66,15 +67,16 @@ public class PaymentMethodsStepDefinition {
     @Y("realiza el pago mediante billetera digital {string}")
     public void realizaElPagoMedianteBilleteraDigital(String billetera) {
         theActorInTheSpotlight().attemptsTo(
-                PayDigitalWallet.paymentCard(billetera)
-                //ReviewAndAproval.review()
+                PayDigitalWallet.paymentCard(billetera),
+                ReviewAndAproval.review()
         );
     }
 
     @Y("realiza el pago mediante efectivo con {string}")
     public void realizaElPagoMedianteEfectivoCon(String efectivo) {
         theActorInTheSpotlight().attemptsTo(
-                PayCash.payCash(efectivo)
+                PayCash.payCash(efectivo),
+                ReviewAndAproval.review()
         );
     }
 }

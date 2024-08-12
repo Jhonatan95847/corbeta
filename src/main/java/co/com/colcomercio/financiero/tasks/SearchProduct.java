@@ -2,14 +2,12 @@ package co.com.colcomercio.financiero.tasks;
 
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.EnterText;
-import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.models.productList.ProductList;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
@@ -20,6 +18,7 @@ import static co.com.colcomercio.financiero.userinterfaces.HomePage.EDITBOX_SEAR
 import static co.com.colcomercio.financiero.userinterfaces.SearchResultsPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.financiero.utils.WaitingTime.MEDIUM_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SearchProduct implements Task {
 
@@ -33,12 +32,12 @@ public class SearchProduct implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("################################BUSCANDO PRODUCTO##############################");
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
+                WaitUntil.the(EDITBOX_SEARCH_BAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
                 //WaitUntil.the(BUTTON_SEARCH_BAR, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds(),
-                Wait.withDuration(LOW_TIME),
+                WaitUntil.the(BUTTON_SEARCH_BAR, isVisible()).forNoMoreThan(10).seconds(),
                 ClickOnElement.on(BUTTON_SEARCH_BAR),
-                WaitUntil.the(VALIDATE_PRICE, WebElementStateMatchers.isVisible()).forNoMoreThan(MEDIUM_TIME).seconds(),
+                WaitUntil.the(VALIDATE_PRICE, isVisible()).forNoMoreThan(MEDIUM_TIME).seconds(),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_NAME_PRODUCT)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_IMAGE_PRODUCT)).isTrue(),

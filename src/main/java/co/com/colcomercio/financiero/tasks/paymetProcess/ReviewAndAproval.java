@@ -3,7 +3,6 @@ package co.com.colcomercio.financiero.tasks.paymetProcess;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
-import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -19,7 +18,7 @@ public class ReviewAndAproval implements Task {
     private static final Logger logger = LogManager.getLogger(ReviewAndAproval.class);
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("###########################IR A PAGAR DESDE EL CARRITO#########################");
+        logger.info("###########################REVISAR Y APROVAR#########################");
 
         actor.attemptsTo(
 
