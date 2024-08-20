@@ -5,7 +5,6 @@ import co.com.colcomercio.financiero.interactions.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
@@ -14,6 +13,8 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.BUTTON_ADD_CAR;
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.AddCarPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class AddProduct implements Task {
     private static final Logger logger = LogManager.getLogger(AddProduct.class);
@@ -24,9 +25,11 @@ public class AddProduct implements Task {
 
         actor.attemptsTo(
                 //WaitUntil.the(BUTTON_ADD_CAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
-                Wait.withDuration(LOW_TIME),
+                //Wait.withDuration(LOW_TIME),
                 //ScrollToElement.to(BUTTON_ADD_CAR),
-                ClickOnElement.on(BUTTON_ADD_CAR)
+                WaitUntil.the(BUTTON_ADD_CAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                ClickOnElement.on(BUTTON_ADD_CAR),
+                Wait.withDuration(MICRO_TIME)
         );
         if(TEXT_GARANTIA.isVisibleFor(actor)){
             actor.attemptsTo(
@@ -34,9 +37,10 @@ public class AddProduct implements Task {
             );
         }
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
-                WaitUntil.the(BUTTON_GO_TO_PAY, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                //Wait.withDuration(LOW_TIME),
+                WaitUntil.the(BUTTON_GO_TO_PAY, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_GO_TO_PAY)
+                //Wait.withDuration(7)
         );
     }
     public static AddProduct goToPay() {

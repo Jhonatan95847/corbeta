@@ -5,12 +5,14 @@ import co.com.colcomercio.financiero.interactions.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class DeleteCard implements Task {
     private static final Logger logger = LogManager.getLogger(DeleteCard.class);
@@ -19,7 +21,7 @@ public class DeleteCard implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#########################BORRANDO TARJETAS GUARDADAS########################");
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
+                WaitUntil.the(BUTTON_MYACCOUNT, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_MYACCOUNT)
         );
         if(BUTTON_DETALLES_PAGO.isVisibleFor(actor)){
@@ -32,7 +34,7 @@ public class DeleteCard implements Task {
                     ClickOnElement.on(BUTTON_ELIMINAR_TARJETA),
                     Wait.withDuration(1),
                     ClickOnElement.on(BUTTON_CONFIRMARELIMINAR_TARJETA),
-                    Wait.withDuration(LOW_TIME)
+                    Wait.withDuration(5)
             );
         }
     }

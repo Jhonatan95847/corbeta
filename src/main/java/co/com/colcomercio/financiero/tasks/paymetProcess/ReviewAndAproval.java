@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ReviewAndApprovalPage.BUTTON_CONTINIAR_APROVADO;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class ReviewAndAproval implements Task {
     private static final Logger logger = LogManager.getLogger(ReviewAndAproval.class);
@@ -22,9 +23,9 @@ public class ReviewAndAproval implements Task {
 
         actor.attemptsTo(
 
-                Wait.withDuration(LOW_TIME),
-                WaitUntil.the(BUTTON_CONTINIAR_APROVADO, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                Wait.withDuration(MICRO_TIME),
                 ScrollToElement.to(BUTTON_CONTINIAR_APROVADO),
+                WaitUntil.the(BUTTON_CONTINIAR_APROVADO, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_CONTINIAR_APROVADO)
         );
     }

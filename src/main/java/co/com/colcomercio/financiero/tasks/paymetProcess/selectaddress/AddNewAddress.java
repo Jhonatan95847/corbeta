@@ -6,7 +6,6 @@ import co.com.colcomercio.financiero.utils.GetDataModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
@@ -14,6 +13,8 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class AddNewAddress implements Task {
 
@@ -34,11 +35,12 @@ public class AddNewAddress implements Task {
 
         logger.info("#########################AGREGANDO UNA NUEVA DIRECCION#########################");
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
-                WaitUntil.the(LIST_TIPO_ID, WebElementStateMatchers.isVisible()).forNoMoreThan(30).seconds(),
+                //Wait.withDuration(LOW_TIME),
+                WaitUntil.the(LIST_TIPO_ID, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(LIST_TIPO_ID),
                 ClickOnElement.on(LIST_TIPO_ID),
                 SelectID.type(newUser,tipoID),
+                ScrollToElement.to(EDITBOX_PHONE_ADDRES),
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EDITBOX_PHONE_ADDRES),
                 ScrollToElement.to(LIST_DEPARTAMENT_ADDRES),
                 ClickOnElement.on(LIST_DEPARTAMENT_ADDRES),
@@ -47,22 +49,23 @@ public class AddNewAddress implements Task {
                 ClickOnElement.on(SELECT_LIST_ADDRES.of("Bogotá dc")),
                 EnterText.intoField(newUser.getDataNewUsers().getAddress(),EDITBOX_SHIPPING_ADDRES),
                 EnterText.intoField(newUser.getDataNewUsers().getNeighborhood(),EDITBOX_BARRIO_ADDRES),
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(MICRO_TIME)
         );
         if (CHECK_SAVE_ADDRESS.isVisibleFor(actor)){
             actor.attemptsTo(
-                    Wait.withDuration(1),
+                    //Wait.withDuration(1),
+                    //WaitUntil.the(RADIOBUTTON_MISMOS_DATOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     ScrollToElement.to(RADIOBUTTON_MISMOS_DATOS),
                     //Wait.withDuration(1),
                     ScrollToElement.to(BUTTON_CONTINUAR_ADDRES),
                     ClickOnElement.on(BUTTON_CONTINUAR_ADDRES),
-                    Wait.withDuration(LOW_TIME),
-                    WaitUntil.the(RADIOBUTTON_CONFIRMAR_ADDRES, WebElementStateMatchers.isVisible()).forNoMoreThan(30).seconds(),
+                    Wait.withDuration(5),
+                    WaitUntil.the(RADIOBUTTON_CONFIRMAR_ADDRES, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     ClickOnElement.on(RADIOBUTTON_CONFIRMAR_ADDRES),
                     //Wait.withDuration(1),
                     ScrollToElement.to(BUTTON_CONFIRMAR_ADDRES),
                     ClickOnElement.on(BUTTON_CONFIRMAR_ADDRES),
-                    Wait.withDuration(LOW_TIME)
+                    Wait.withDuration(MICRO_TIME)
             );
         }else {
             actor.attemptsTo(

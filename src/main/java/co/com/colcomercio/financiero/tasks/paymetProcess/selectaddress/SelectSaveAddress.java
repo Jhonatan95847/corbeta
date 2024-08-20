@@ -8,7 +8,6 @@ import co.com.colcomercio.financiero.models.users.Users;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
@@ -17,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterUserPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SelectSaveAddress implements Task {
     private final Users userEcomerce;
@@ -32,10 +33,10 @@ public class SelectSaveAddress implements Task {
         logger.info("########################SELECCIONANDO UNA DIRECCION GUARDADA#######################");
 
         actor.attemptsTo(
-                WaitUntil.the(BUTTON_DIRECCION_GUARDADA, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(BUTTON_DIRECCION_GUARDADA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(BUTTON_DIRECCION_GUARDADA),
                 ClickOnElement.on(BUTTON_DIRECCION_GUARDADA),
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(MICRO_TIME)
         );
         if (BUTTON_LOGIN_FACEBOOK.isVisibleFor(actor)){
             actor.attemptsTo(
@@ -43,10 +44,10 @@ public class SelectSaveAddress implements Task {
             );
         }
         actor.attemptsTo(
-                Wait.withDuration(3),
+                WaitUntil.the(RADIOBUTTON_DIRECCION_GUARDADA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(RADIOBUTTON_DIRECCION_GUARDADA),
                 ClickOnElement.on(RADIOBUTTON_DIRECCION_GUARDADA),
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(MICRO_TIME)
         );
         if (BUTTON_CONTINUAR_GUARDADA_HOY.isVisibleFor(actor)){
             actor.attemptsTo(

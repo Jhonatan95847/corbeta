@@ -14,6 +14,8 @@ import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegis
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterPassPage.EDITBOX_PASSWORD;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterUserPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterUserPage.BUTTON_LOGIN_MAIL;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class AddPassLogin implements Interaction {
     private final Users userEcomerce;
@@ -32,13 +34,15 @@ public class AddPassLogin implements Interaction {
                 Ensure.that(IsElementPresent.on(BUTTON_LOGIN_EMAILVAL)).isTrue(),
                 Ensure.that(IsElementPresent.on(BUTTON_LOGIN_SMS)).isTrue(),
                 //Ensure.that(IsElementPresent.on(TEXT_FIND_ACOUNT)).isTrue(),
-                WaitUntil.the(BUTTON_LOGIN_MAIL, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(BUTTON_LOGIN_MAIL, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(BUTTON_LOGIN_MAIL),
                 ClickOnElement.on(BUTTON_LOGIN_MAIL),
-                WaitUntil.the(EDITBOX_PASSWORD, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(EDITBOX_PASSWORD, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Enter.theValue(userEcomerce.getDataUsers().getPasswordMail()).into(EDITBOX_PASSWORD),
+                Wait.withDuration(MICRO_TIME),
                 ScrollToElement.to(BUTTON_CONTINUE_PASS),
-                ClickOnElement.on(BUTTON_CONTINUE_PASS)
+                ClickOnElement.on(BUTTON_CONTINUE_PASS),
+                Wait.withDuration(MICRO_TIME)
         );
     }
 

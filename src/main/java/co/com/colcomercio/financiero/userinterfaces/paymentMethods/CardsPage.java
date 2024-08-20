@@ -16,7 +16,7 @@ public class CardsPage extends PageObject {
     public static final  Target LIST_CUOTASID_PAYU = Target.the("Lista cuotas y tipo ID global pay").locatedBy("(//div[@class=\"z-content z-active\"]//div[@class=\"cuotas col-xs-12 col-md-12\"]//label[contains(text(),'{0}')]/ancestor::div[2])[1]");
     public static final  Target SELECT_PAYU = Target.the("Select payu").locatedBy("//div[@class=\"z-content z-active\"]//div[@class=\"cuotas col-xs-12 col-md-12\"]//li[@data-value='{0}']");
     public static final Target CHECK_SAVECARD_CREDITO =Target.the("Gurdar tarjera credito").locatedBy("(//label[@for=\"checkboxSaveCard\"])[2]");
-    public static final Target CHECK_SAVECARD_DEBITO =Target.the("Gurdar tarjera debito").locatedBy("//label[@for=\"checkboxSaveCardGlobalPay\"]");
+    public static final Target CHECK_SAVECARD_DEBITO =Target.the("Gurdar tarjera debito").locatedBy("//div[@class=\"z-content z-active\"]//div[@class=\"form-check mobile-siwtch-checkbox\"]//label");
     public static final Target CHECK_USARCORREO =Target.the("Usar datos de correo").locatedBy("//div[@class=\"z-content z-active\"]//div[contains(text(),'Usar Correo')]");
     public static final Target BUTTON_CONTINUAR_REVISAR =Target.the("Boton guardar y revisar").locatedBy("//div[@class=\"z-content z-active\"]//div[contains(@class,('action col-xs-12'))]//button[contains(text(),' Continuar ')]");
     public static final Target BUTTON_AGREGARNUEVA_TARJETA =Target.the("Boton agregar nueva tarjeta").locatedBy("//div[@class=\"z-content z-active\"]//span[contains(text(),'Agregar nueva')]");
@@ -28,5 +28,10 @@ public class CardsPage extends PageObject {
     public static final Target EDITBOX_CVC_TARJETAGUARDADA_GLOBALPAY =Target.the("Campo CVC guardada Global pay").locatedBy("//input[@name=\"ccv_registered_card_globalpay\"]");
     public static final Target SELECT_CUOTAS_TARJETAGUARDADA_GLOBALPAY =Target.the("Select cuotas guardada Global pay").locatedBy("//label[@for=\"selected_globalpay_installments\"]");
     public static final Target LIST_CUOTAS_TARJETAGUARDADA_GLOBALPAY =Target.the("List cuotas guardada Global pay").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[@data-value=\"{0}\"]");
+    public static final Target CHECK_TARJETA_GUARDADA_GLOBALPAY =Target.the("Check tarjeta guardada global pay").locatedBy("//div[@class=\"z-content z-active\"]//label[@class=\"form-check-label label-saved-card\"]");
+    public static final Target CVC_TARJETA_GUARDADA =Target.the("CVC tarjeta guardada global pay").locatedBy("(//div[@class=\"z-content z-active\"]//label[contains(text(),'{0}')]/following-sibling::input)[1]");
+    public static final Target CUOTA_TARJETA_GUARDADA =Target.the("Cuota tarjeta guardada global pay").locatedBy("(//div[@class=\"z-content z-active\"]//label[contains(text(),'Cuota')])[1]");
+    public static final Target SELECTCUOTA_TARJETA_GUARDADA =Target.the("Select Cuota tarjeta guardada global pay").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[@data-value=\"1\"]");
+    public static final Target BUTTON_CONTINAR_SAVE =Target.the("Boton continuar tarjeta guardada global pay").locatedBy("//div[@class=\"z-content z-active\"]//button[contains(text(),' Continuar ')]");
 
 }

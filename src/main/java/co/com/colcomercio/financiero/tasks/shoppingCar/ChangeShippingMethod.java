@@ -4,13 +4,16 @@ import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.shopingCarPage.ActionsOnCar.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static jdk.internal.org.jline.utils.Log.error;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class ChangeShippingMethod implements Task {
     private static final Logger logger = LogManager.getLogger(ChangeShippingMethod.class);
@@ -35,7 +38,7 @@ public class ChangeShippingMethod implements Task {
             case "Recoge en tienda":
                 actor.attemptsTo(
                         ClickOnElement.on(RADIOBUTTON_STORE),
-                        //WaitUntil.the(SELECT_CITY_PICKUP, WebElementStateMatchers.isClickable()),
+                        WaitUntil.the(SELECT_CITY_PICKUP, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ClickOnElement.on(SELECT_CITY_PICKUP),
                         ClickOnElement.on(SELECT_BOGOTA),
                         ClickOnElement.on(RADIOBUTTON_TIENDA),

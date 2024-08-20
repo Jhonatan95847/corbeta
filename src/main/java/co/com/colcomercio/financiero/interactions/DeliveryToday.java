@@ -3,9 +3,11 @@ package co.com.colcomercio.financiero.interactions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class DeliveryToday implements Interaction {
 
@@ -18,12 +20,16 @@ public class DeliveryToday implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         if (cliente.equals("registrado")){
             actor.attemptsTo(
-                    Wait.withDuration(LOW_TIME),
+                    WaitUntil.the(RADIOBUTTON_ADDRESS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     ClickOnElement.on(RADIOBUTTON_ADDRESS),
                     ClickOnElement.on(BUTTON_CONTINUAR_HOY)
             );
         } else if (cliente.equals("nuevo")) {
             actor.attemptsTo(
+                    //WaitUntil.the(RADIOBUTTON_ADDRESS_CITY, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                    //ClickOnElement.on(RADIOBUTTON_ADDRESS_CITY),
+                    //ClickOnElement.on(BUTTON_CONTINUAR_HOY_CITY)
+                    ///forma antigua
                     Wait.withDuration(LOW_TIME),
                     ClickOnElement.on(SELECT_DEPRTAMENT_SAME),
                     ClickOnElement.on(SELECT_BOGOTADC),

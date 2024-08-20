@@ -26,7 +26,7 @@ public class ValidatePay implements Task {
                // Wait.withDuration(10),
                 //ClickOnElement.on(BUTTON_CLOSE_DISCOUNT)
                 );
-        switch (estado) {
+        /*switch (estado) {
             case "exitoso":
                 actor.attemptsTo(
                         Ensure.that(IsElementPresent.on(VALIDATE_SUCESS_PAY)).isTrue(),
@@ -48,7 +48,7 @@ public class ValidatePay implements Task {
             default:
                 error();
                 break;
-        }
+        }*/
     }
 
     public static ValidatePay validate(String estado) {

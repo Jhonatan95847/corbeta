@@ -14,7 +14,6 @@ import org.apache.logging.log4j.Logger;
 
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
-import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 
 public class OtherData implements Task {
     private final Users userEcomerce;
@@ -32,7 +31,7 @@ public class OtherData implements Task {
         actor.attemptsTo(
                 ScrollToElement.to(BUTTON_INGRESAR_OTROS_DATOS),
                 ClickOnElement.on(BUTTON_INGRESAR_OTROS_DATOS),
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(2)
                 // si es por soft login y se selecciona otros datos o guadada se debe loguear completamete
         );
         if (TEXT_ASEGURAR_SOFTLOGIN.isVisibleFor(actor)){

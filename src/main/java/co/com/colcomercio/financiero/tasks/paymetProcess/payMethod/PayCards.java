@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.*;
-import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static jdk.internal.org.jline.utils.Log.error;
 
 public class PayCards implements Task {
@@ -24,7 +23,7 @@ public class PayCards implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
+                Wait.withDuration(5),
                 SelectPayMethod.payMethod(payMethod)
         );
         switch (payMethod) {
@@ -41,23 +40,6 @@ public class PayCards implements Task {
                         AddDataGlobalPay.addData(paymentCard)
                 );
                 break;
-            case "credito guardada":
-            //case "codensa guardada":
-                actor.attemptsTo(
-                        AddDataPayU.addData(paymentCard),
-                        ClickOnElement.on(CHECK_USARCORREO),
-                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                        ClickOnElement.on(CHECK_SAVECARD_CREDITO)
-                );
-                break;
-            case "debito guardada":
-            case "alkosto guardada":
-                actor.attemptsTo(
-                        AddDataGlobalPay.addData(paymentCard),
-                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
-                        ClickOnElement.on(CHECK_SAVECARD_DEBITO)
-                );
-                break;
             default:
                 error();
                 break;
@@ -65,11 +47,9 @@ public class PayCards implements Task {
         actor.attemptsTo(
                 ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
                 ClickOnElement.on(BUTTON_CONTINUAR_REVISAR),
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(5)
         );
-
     }
-
     public static PayCards tarjetaAlkosto(String payMethod, PaymentCard paymentCard) {
         return Tasks.instrumented(PayCards.class, payMethod, paymentCard);
     }

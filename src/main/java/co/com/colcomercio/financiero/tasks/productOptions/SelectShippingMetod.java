@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
-import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 import static jdk.internal.org.jline.utils.Log.error;
 
 public class SelectShippingMetod implements Task {
@@ -26,7 +26,7 @@ public class SelectShippingMetod implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("##########################SELECCIONANDO METODO DE ENVIO#########################");
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(MICRO_TIME)
         );
         switch (metodo) {
             case "Envio gratis":

@@ -42,7 +42,9 @@ public class ProductSearch {
                 SearchProduct.addProduct(withTheData),
                 SelectProduct.productSelect(),
                 SelectShippingMetod.selectMethod(metodoEnvio,"nuevo"),
-                SelectQuantitiProduct.selectQuantity(cantidad)
+                SelectQuantitiProduct.selectQuantity(cantidad),
+                AddProduct.goToPay(),
+                GoToPay.pay()
         );
     }
 }

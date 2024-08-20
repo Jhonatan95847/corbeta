@@ -7,6 +7,7 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.ReviewAndAproval;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCards;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCash;
 import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayDigitalWallet;
+import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PaySaveCards;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAddress;
 import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
@@ -14,6 +15,7 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSav
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Y;
 
+import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class PaymentMethodsStepDefinition {
@@ -51,6 +53,9 @@ public class PaymentMethodsStepDefinition {
                         SameShippingMethod.selectMethod(withTheData)
                 );
                 break;
+            default:
+                error();
+                break;
         }
 
     }
@@ -78,6 +83,16 @@ public class PaymentMethodsStepDefinition {
                 PayCash.payCash(efectivo),
                 ReviewAndAproval.review()
         );
+    }
+
+    @Y("realiza el pago mediante tarjeta guardada {string} de la franquicia {string}")
+    public void realizaElPagoMedianteTarjetaGuardadaDeLaFranquicia(String tarjeta, String franquicia) {
+        whithTheCardData = GetDataModel.paymentCard(franquicia);
+        theActorInTheSpotlight().attemptsTo(
+                PaySaveCards.pay(tarjeta,whithTheCardData),
+                ReviewAndAproval.review()
+        );
+
     }
 }
 

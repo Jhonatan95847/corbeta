@@ -10,17 +10,15 @@ import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYACCOUNT;
-import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginPage.EDITBOX_EMAIL;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.SoftLoginPage.BUTTON_CONTINUE_SOFT;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.SoftLoginPage.EDITBOX_EMAIL_SOFT;
-import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SoftLogin implements Task {
 
     private final Users userEcomerce;
-    private static final Logger logger = LogManager.getLogger(Login.class);
+    private static final Logger logger = LogManager.getLogger(SoftLogin.class);
 
 
     public SoftLogin( Users userEcomerce){
@@ -35,7 +33,7 @@ public class SoftLogin implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO SOFTLOGIN####################");
         actor.attemptsTo(
-                Wait.withDuration(LOW_TIME),
+                Wait.withDuration(MICRO_TIME),
                 Enter.theValue(userEcomerce.getDataUsers().getEmail()).into(EDITBOX_EMAIL_SOFT),
                 ClickOnElement.on(BUTTON_CONTINUE_SOFT)
         );

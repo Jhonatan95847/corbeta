@@ -16,6 +16,7 @@ public class ActionsOnProducrPage extends PageObject {
     //MISMO DIA REGISTRADO
     public static final Target BUTTON_SAME_DAY =Target.the("Boton Entrega hoy").located(By.xpath("//label[@for=\"delivery_same-day-delivery\"]"));
     public static final Target RADIOBUTTON_ADDRESS =Target.the("Radiobutton seleccionar direccion hoy").located(By.xpath("(//div[@data-line1=\"CL 84 # 24 - 78\"]//label)[2]"));
+    public static final Target RADIOBUTTON_ADDRESS_CITY =Target.the("Radiobutton seleccionar direccion hoy Ciudad").located(By.xpath("//div[@class=\"form-check custom-radio\"]//label[@for=\"Bogotá\"]"));
     //MISMO DIA NUEVO
     public static final Target SELECT_DEPRTAMENT_SAME =Target.the("Select Departamento cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--department\"]//div[@class=\"float-select js-float-select\"]"));
     public static final Target SELECT_BOGOTADC =Target.the("Select Departamento Bogota").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Bogota DC')]"));
@@ -24,6 +25,7 @@ public class ActionsOnProducrPage extends PageObject {
     public static final Target SELECT_ZONE_SAME =Target.the("Select Zona cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--zones js-localities-zones\"]//div[@class=\"float-select js-float-select active-click\"]"));
     public static final Target SELECT_CHAPZONE =Target.the("Select Zona Chapinero").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Localidad nueva de Suba')]"));
     public static final Target BUTTON_CONTINUAR_HOY =Target.the("Baton continuar entrega hoy").located(By.xpath("//button[@id=\"js-sourcingAction\"]"));
+    public static final Target BUTTON_CONTINUAR_HOY_CITY =Target.the("Baton continuar entrega hoy ciudad").located(By.xpath("//button[@id=\"same-day-delivery-choose-city\"]"));
     public static final Target BUTTON_CONTINUAR_HOY_NUEVO =Target.the("Baton continuar entrega hoy").located(By.xpath("//button[@id=\"js-verify-email-same-day-zones\"]"));
     public static final Target SELECT_QUANTITY_UNO =Target.the("Select cantidad").located(By.xpath("//div[@class=\"AddToCart-AddToCartAction\"]//div[@class=\"addtocart-component__select addtocart-select-quantity\"]"));
     public static final Target SELECT_NUMBERONE =Target.the("Select numero uno").locatedBy("//li[@data-value='{0}']");

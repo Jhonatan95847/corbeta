@@ -10,7 +10,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
@@ -22,6 +21,8 @@ import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginNewUs
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginPage.*;
 import static co.com.colcomercio.financiero.utils.DataGenerator.DataGeneratorDate;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class LoginNewUser implements Task {
     private static final Logger logger = LogManager.getLogger(LoginNewUser.class);
@@ -36,13 +37,14 @@ public class LoginNewUser implements Task {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO####################");
         actor.attemptsTo(
                 ClickOnElement.on(BUTTON_MYACCOUNT),
+                WaitUntil.the(TEXT_LOGIN, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.()),
                 Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
                 Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
                 EnterText.intoField("alkosto" + username + "@gmail.com", EDITBOX_EMAIL),
                 ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
                 ClickOnElement.on(BUTTON_CONTINUE_LOGIN),
-                WaitUntil.the(EITBOX_NAME, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(EITBOX_NAME, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField(newUser.getDataNewUsers().getName(),EITBOX_NAME),
                 EnterText.intoField(newUser.getDataNewUsers().getLastname(),EITBOX_LASTNAME),
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EITBOX_PHONE),
@@ -50,7 +52,7 @@ public class LoginNewUser implements Task {
                 ClickOnElement.on(CHECK_CONDITIONS),
                 ScrollToElement.to(BUTTON_CONTINUE_NEW),
                 ClickOnElement.on(BUTTON_CONTINUE_NEW),
-                Wait.withDuration(LOW_TIME)
+                Wait.withDuration(MICRO_TIME)
         );
     }
     public static LoginNewUser newRegistry(NewUser newUser) {
