@@ -3,11 +3,9 @@ package co.com.colcomercio.financiero.stepdefinitions;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import co.com.colcomercio.financiero.models.users.Users;
+import co.com.colcomercio.financiero.tasks.paymetProcess.ProcesPSEPay;
 import co.com.colcomercio.financiero.tasks.paymetProcess.ReviewAndAproval;
-import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCards;
-import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayCash;
-import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PayDigitalWallet;
-import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.PaySaveCards;
+import co.com.colcomercio.financiero.tasks.paymetProcess.payMethod.*;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAddress;
 import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
@@ -69,11 +67,12 @@ public class PaymentMethodsStepDefinition {
         );
     }
 
-    @Y("realiza el pago mediante billetera digital {string}")
-    public void realizaElPagoMedianteBilleteraDigital(String billetera) {
+    @Y("realiza el pago mediante billetera digital {string} cuyo resultado es {string}")
+    public void realizaElPagoMedianteBilleteraDigital(String billetera, String resultado) {
         theActorInTheSpotlight().attemptsTo(
                 PayDigitalWallet.paymentCard(billetera),
-                ReviewAndAproval.review()
+                ReviewAndAproval.review(),
+                ProcesPSEPay.pay(resultado)
         );
     }
 
@@ -82,6 +81,7 @@ public class PaymentMethodsStepDefinition {
         theActorInTheSpotlight().attemptsTo(
                 PayCash.payCash(efectivo),
                 ReviewAndAproval.review()
+
         );
     }
 
@@ -93,6 +93,15 @@ public class PaymentMethodsStepDefinition {
                 ReviewAndAproval.review()
         );
 
+    }
+
+    @Y("realiza el pago mediante PSE cuya transacción es {string}")
+    public void realizaElPagoMediantePSE(String resultado) {
+        theActorInTheSpotlight().attemptsTo(
+                PayPSE.pay(),
+                ReviewAndAproval.review(),
+                ProcesPSEPay.pay(resultado)
+        );
     }
 }
 

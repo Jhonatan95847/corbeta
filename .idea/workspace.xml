@@ -4,56 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="Ajustes Softlogin dividir tareas en interacciones y ajustes a otros metodos de pago">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PaySaveCards.java" afterDir="false" />
+    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="Pago con tarjetas guardadas y ajustes de tiempo y ajustes pago efectivo y billetera">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/EnterByDigit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ProcesPSEPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayPSE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/exceptions/PaymentGatewayErrorException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddDataGlobalPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddDataGlobalPay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddDataPayU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddDataPayU.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddEmailLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddEmailLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddPassLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddPassLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/ClickOnElementRetry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/DeliveryToday.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/DeliveryToday.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/PickupInStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/PickupInStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/RemoveText.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/SelectPayMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/SelectPayMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/WaitForElementIsNotVisible.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SelectProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SelectProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/LoginNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/LoginNewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/SoftLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/SoftLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/AddYourData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/AddYourData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ReviewAndAproval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ReviewAndAproval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/SameShippingMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/SameShippingMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ValidatePay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ValidatePay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PaySaveCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PaySaveCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/SelectPayMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/AddNewAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/AddNewAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/OtherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/OtherData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/SelectSaveAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/SelectSaveAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/SelectQuantitiProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/SelectQuantitiProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/SelectShippingMetod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/SelectShippingMetod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/ChangeShippingMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/ChangeShippingMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/DeleteCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/DeleteCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/DeleteProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/DeleteProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/GoToPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/shoppingCar/GoToPay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/loginPages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/loginPages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/AlkostoCardPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CardsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CardsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CodensaCardPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/CreditCardPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/DebitCardPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/ActionsOnProducrPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/ActionsOnProducrPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/PsePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/paymentMethods/PsePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/JsonUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/JsonUtilSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/UserRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/WaitingTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/WaitingTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/runners/LoginRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/runners/LoginRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/BancolombiaButtonStepDefinition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ProductSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ProductSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/PaymentMethodsStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/PaymentMethodsStepDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ShippingMetodStepDefinition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/paymentCard.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/paymentCard.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/productList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/productList.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/alkosto_card.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/alkosto_card.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/cash_payment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cash_payment.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/digital_wallet.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/digital_wallet.feature" afterDir="false" />
@@ -109,24 +91,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Hook.testSomething.executor": "Run",
-    "Gradle.LoginRunner.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/financiero-testing-qa",
-    "onboarding.tips.debug.path": "C:/Users/1049644474/Documents/Automatizacion/Base automatizacion/financiero-testing-qa/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Hook.testSomething.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/cyc-testing-qa&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/1049644474/Documents/Automatizacion/Base automatizacion/financiero-testing-qa/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\1049644474\Documents\Automatizacion\Baseautomatizacion\financiero-testing-qa\src\test\resources\drivers" />
@@ -275,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723495664248</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Pago con tarjetas guardadas y ajustes de tiempo y ajustes pago efectivo y billetera">
+      <option name="closed" value="true" />
+      <created>1724192768267</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724192768267</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,7 +288,8 @@
     <MESSAGE value="Ajustes de Scroll y tiempos de espera" />
     <MESSAGE value="Soft login y tarjetas guardadas" />
     <MESSAGE value="Ajustes Softlogin dividir tareas en interacciones y ajustes a otros metodos de pago" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes Softlogin dividir tareas en interacciones y ajustes a otros metodos de pago" />
+    <MESSAGE value="Pago con tarjetas guardadas y ajustes de tiempo y ajustes pago efectivo y billetera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pago con tarjetas guardadas y ajustes de tiempo y ajustes pago efectivo y billetera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

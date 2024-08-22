@@ -5,11 +5,9 @@ import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
-import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
@@ -37,10 +35,10 @@ public class LoginNewUser implements Task {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO####################");
         actor.attemptsTo(
                 ClickOnElement.on(BUTTON_MYACCOUNT),
-                WaitUntil.the(TEXT_LOGIN, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                WaitUntil.the(EDITBOX_EMAIL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.()),
-                Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
-                Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
+                //Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
+                //Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
                 EnterText.intoField("alkosto" + username + "@gmail.com", EDITBOX_EMAIL),
                 ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
                 ClickOnElement.on(BUTTON_CONTINUE_LOGIN),

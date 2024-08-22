@@ -5,11 +5,14 @@ import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.BUTTON_EDITAR_PAGO;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 import static jdk.internal.org.jline.utils.Log.error;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class PaySaveCards implements Task {
     private final String payMethod;
@@ -36,11 +39,11 @@ public class PaySaveCards implements Task {
                         ClickOnElement.on(CHECK_SAVECARD_CREDITO),
                         ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
                         ClickOnElement.on(BUTTON_CONTINUAR_REVISAR),
-                        Wait.withDuration(LOW_TIME),
+                        WaitUntil.the(BUTTON_EDITAR_PAGO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ScrollToElement.to(BUTTON_EDITAR_PAGO),
                         ClickOnElement.on(BUTTON_EDITAR_PAGO),
-                        Wait.withDuration(10),
-                        SelectPayMethod.payMethod(payMethod),
+                        //SelectPayMethod.payMethod(payMethod),
+                        ScrollToElement.to(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         ClickOnElement.on(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), CVC_TARJETA_GUARDADA.of("CVC")),
                         ClickOnElement.on(CUOTA_TARJETA_GUARDADA),
@@ -56,10 +59,11 @@ public class PaySaveCards implements Task {
                         //ClickOnElement.on(CHECK_SAVECARD_DEBITO),
                         ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
                         ClickOnElement.on(BUTTON_CONTINUAR_REVISAR),
-                        Wait.withDuration(LOW_TIME),
+                        WaitUntil.the(BUTTON_EDITAR_PAGO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ScrollToElement.to(BUTTON_EDITAR_PAGO),
                         ClickOnElement.on(BUTTON_EDITAR_PAGO),
-                        SelectPayMethod.payMethod(payMethod),
+                        //SelectPayMethod.payMethod(payMethod),
+                        ScrollToElement.to(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         ClickOnElement.on(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), CVC_TARJETA_GUARDADA.of("CVC")),
                         ClickOnElement.on(CUOTA_TARJETA_GUARDADA),
@@ -71,14 +75,16 @@ public class PaySaveCards implements Task {
                 break;case "Tarjeta Alkosto":
                 actor.attemptsTo(
                         AddDataGlobalPay.addData(paymentCard),
-                        ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
+                        ScrollToElement.to(CHECK_SAVECARD_DEBITO),
                         ClickOnElement.on(CHECK_SAVECARD_DEBITO),
+                        Wait.withDuration(MICRO_TIME),
                         ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
                         ClickOnElement.on(BUTTON_CONTINUAR_REVISAR),
-                        Wait.withDuration(LOW_TIME),
+                        WaitUntil.the(BUTTON_EDITAR_PAGO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ScrollToElement.to(BUTTON_EDITAR_PAGO),
                         ClickOnElement.on(BUTTON_EDITAR_PAGO),
-                        SelectPayMethod.payMethod(payMethod),
+                        //SelectPayMethod.payMethod(payMethod),
+                        ScrollToElement.to(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         ClickOnElement.on(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), CVC_TARJETA_GUARDADA.of("#")),
                         ClickOnElement.on(CUOTA_TARJETA_GUARDADA),

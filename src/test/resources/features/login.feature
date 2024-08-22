@@ -24,17 +24,22 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
         Cuando el cliente "<cliente>" busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
         Y  desea ir a pagar con tipo de documento "<tipo_id>" con dirección "<direccion>"
-        #Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
-        Y realiza el pago mediante tarjeta guardada "<tarjeta>" de la franquicia "<franquicia>"
+        Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                            | franquicia| resultado |
+            | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta de Crédito o Debito con CVV| visa      | exitoso   |
+            | registrado |      2   | Recoge en tienda  |  guardada      |  NIT     | Tarjeta de Crédito                 | visa      | exitoso        |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| amex      | exitoso    |
+            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | amex      | exitoso   |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| diners    | exitoso   |
+            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | diners    | exitoso   |
             | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
             | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | mastercard| exitoso   |
             | registrado |      2   | Entrega hoy       |  registrada    |  NIT     | Tarjeta Alkosto                    | alkosto   | exitoso   |
             | nuevo      |      2   | Entrega hoy       |  nuevo usuario |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
-            | registrado |      3   | Recoge en tienda  |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
-            | registrado |      2   | Recoge en tienda  |  guardada      |  NIT     | Tarjeta de Crédito                 | mastercard| exitoso   |
+            | registrado |      3   | Recoge en tienda  |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| diners    | exitoso   |
+            | registrado |      2   | Recoge en tienda  |  guardada      |  NIT     | Tarjeta de Crédito                 | visa      | exitoso   |
             | registrado |      2   | Recoge en tienda  |  registrada    |  NIT     | Tarjeta Alkosto                    | alkosto   | exitoso   |
             | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
             | registrado |      3   | Envio gratis      |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |

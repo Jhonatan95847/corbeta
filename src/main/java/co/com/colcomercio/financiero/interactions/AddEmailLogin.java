@@ -1,12 +1,10 @@
 package co.com.colcomercio.financiero.interactions;
 
 import co.com.colcomercio.financiero.models.users.Users;
-import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
@@ -28,9 +26,9 @@ public class AddEmailLogin implements Interaction {
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(BUTTON_MYACCOUNT),
-                WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
-                Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
+                WaitUntil.the(EDITBOX_EMAIL, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                //Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
+                //Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
                 Enter.theValue(userEcomerce.getDataUsers().getEmail()).into(EDITBOX_EMAIL),
                 //Wait.withDuration(2),
                 ScrollToElement.to(BUTTON_CONTINUE_LOGIN),

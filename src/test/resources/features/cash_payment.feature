@@ -1,7 +1,7 @@
 # language: es
 @all
 @cashPayment
-Característica: Medio de Pago - Tarjeta Alkosto
+Característica: Medio de Pago - Efectivo
 
 
   Antecedentes:

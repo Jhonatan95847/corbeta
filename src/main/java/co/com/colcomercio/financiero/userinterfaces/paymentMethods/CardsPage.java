@@ -30,7 +30,7 @@ public class CardsPage extends PageObject {
     public static final Target LIST_CUOTAS_TARJETAGUARDADA_GLOBALPAY =Target.the("List cuotas guardada Global pay").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[@data-value=\"{0}\"]");
     public static final Target CHECK_TARJETA_GUARDADA_GLOBALPAY =Target.the("Check tarjeta guardada global pay").locatedBy("//div[@class=\"z-content z-active\"]//label[@class=\"form-check-label label-saved-card\"]");
     public static final Target CVC_TARJETA_GUARDADA =Target.the("CVC tarjeta guardada global pay").locatedBy("(//div[@class=\"z-content z-active\"]//label[contains(text(),'{0}')]/following-sibling::input)[1]");
-    public static final Target CUOTA_TARJETA_GUARDADA =Target.the("Cuota tarjeta guardada global pay").locatedBy("(//div[@class=\"z-content z-active\"]//label[contains(text(),'Cuota')])[1]");
+    public static final Target CUOTA_TARJETA_GUARDADA =Target.the("Cuota tarjeta guardada global pay").locatedBy("(//div[@class=\"z-content z-active\"]//label[contains(text(),'Cuota')])[1]/ancestor::div[2]");
     public static final Target SELECTCUOTA_TARJETA_GUARDADA =Target.the("Select Cuota tarjeta guardada global pay").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[@data-value=\"1\"]");
     public static final Target BUTTON_CONTINAR_SAVE =Target.the("Boton continuar tarjeta guardada global pay").locatedBy("//div[@class=\"z-content z-active\"]//button[contains(text(),' Continuar ')]");
 

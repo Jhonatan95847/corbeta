@@ -9,7 +9,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("https://alkostostorefront.cfll9tllxj-alkostoco2-s1-public.model-t.cc.commerce.ondemand.com/")
 public class HomePage extends PageObject {
 
-    public static final Target BUTTON_MYACCOUNT =Target.the("Boton Mi Cuenta").located(By.xpath("//li[@id=\"js-myaccount-header\"]//span[contains(text(),'My Account')]"));
+    public static final Target BUTTON_MYACCOUNT =Target.the("Boton Mi Cuenta").located(By.xpath("//li[@id=\"js-myaccount-header\"]//span[contains(text(),'Mi cuenta')]"));
     public static final Target BUTTON_MYCAR = Target.the("Boton Mi carrito").located(By.xpath("//li[@id=\"js-mycart-header\"]"));
     public static final Target BUTTON_SEARCH_BAR = Target.the("Boton busqueda").located(By.xpath("//button[@id=\"js-search-button\"]"));
     public static final Target BUTTON_SEARCH_BAR_DOS = Target.the("Boton busqueda").located(By.xpath("//*[@id=\"algoliaAutocompletev2\"]/div/form/i"));
