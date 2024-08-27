@@ -24,7 +24,7 @@ public class SoftLoginNewUser implements Task {
         return Tasks.instrumented(SoftLoginNewUser.class);
     }
 
-    @Step("Iniciando sesión con un usuario nuevo")
+    @Step("Iniciando sesión con un usuario nuevo con softlogin")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO SOFTLOGIN####################");

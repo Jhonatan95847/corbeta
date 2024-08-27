@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterPassPage.BUTTON_CONTINUE_PASS;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterPassPage.EDITBOX_PASSWORD;
@@ -23,7 +24,7 @@ public class AddPassLogin implements Interaction {
     public AddPassLogin(Users userEcomerce) {
         this.userEcomerce = userEcomerce;
     }
-
+    @Step("Agregando contraseña para iniciar sesion")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

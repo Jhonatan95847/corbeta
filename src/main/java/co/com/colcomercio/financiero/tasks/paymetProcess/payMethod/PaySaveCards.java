@@ -6,6 +6,9 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.BUTTON_EDITAR_PAGO;
@@ -15,6 +18,8 @@ import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class PaySaveCards implements Task {
+    private static final Logger logger = LogManager.getLogger(PaySaveCards.class);
+
     private final String payMethod;
     private final PaymentCard paymentCard;
 
@@ -23,8 +28,11 @@ public class PaySaveCards implements Task {
         this.payMethod = payMethod;
         this.paymentCard = paymentCard;
     }
+    @Step("Pagando mediante Tarjeta guardada")
     @Override
     public <T extends Actor> void performAs(T actor) {
+        logger.info("##############################PAGANDO MEDIANTE BOTON TARJETA GUARDADA##############################");
+
         actor.attemptsTo(
                 Wait.withDuration(LOW_TIME),
                 SelectPayMethod.payMethod(payMethod)

@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYACCOUNT;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginPage.*;
@@ -21,11 +22,12 @@ public class AddEmailLogin implements Interaction {
     public AddEmailLogin(Users userEcomerce) {
         this.userEcomerce = userEcomerce;
     }
+    @Step("Agregando correo para iniciar sesion")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
-                //TakeScreenshot.at("target/site/serenity"),
+                TakeScreenshot.at(),
                 ClickOnElement.on(BUTTON_MYACCOUNT),
                 WaitUntil.the(EDITBOX_EMAIL, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),

@@ -18,10 +18,10 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class AddProduct implements Task {
     private static final Logger logger = LogManager.getLogger(AddProduct.class);
-    @Step("Agregando el produco en el modal")
+    @Step("Agregando el produco")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("##########################AGREGANDO PROEDUCO EN EL MODAL#######################");
+        logger.info("##########################AGREGANDO PRODUCO#######################");
 
         actor.attemptsTo(
                 //WaitUntil.the(BUTTON_ADD_CAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),

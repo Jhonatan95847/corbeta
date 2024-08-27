@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,10 +23,10 @@ public class AddDataPayU implements Interaction {
     public AddDataPayU(PaymentCard paymentCard) {
         this.paymentCard = paymentCard;
     }
-
+    @Step("Agregando datos de la tarjeta pay u")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("##############################AGREGANDO DATOS DE LA TARJETA##############################");
+        logger.info("##############################AGREGANDO DATOS DE LA TARJETA PAY U##############################");
         actor.attemptsTo(
                 WaitUntil.the(EDITBOX_CVCDATENOMNUM_PAYU.of("Número de la tarjeta"), isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //Wait.withDuration(LOW_TIME),

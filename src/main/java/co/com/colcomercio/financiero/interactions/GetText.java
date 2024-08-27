@@ -19,7 +19,7 @@ public class GetText implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         String texto = Text.of(elemento).answeredBy(actor);
-        logger.info("El elemto es " + texto);
+        logger.info("El valor elemto es " + texto);
     }
 
     public static GetText ofElement(Target elemento) {

@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +25,7 @@ public class ProcesPSEPay implements Task {
     public ProcesPSEPay(String resultado) {
         this.resultado = resultado;
     }
-
+    @Step("Proceso de pago mediante PSE")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("###########################PROCESO PAGO PSE#########################");

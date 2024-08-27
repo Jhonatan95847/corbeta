@@ -28,7 +28,7 @@ public class AddNewAddress implements Task {
         this.newUser = newUser;
     }
 
-    @Step("Agregando una nueva direccion en el proceso de pago")
+    @Step("Agregando una nueva direccion")
     @Override
     public <T extends Actor> void performAs(T actor) {
         newUser = GetDataModel.newUser("datos_nuevo_usuario");

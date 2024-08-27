@@ -5,12 +5,15 @@ import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.thucydides.core.annotations.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.*;
 import static jdk.internal.org.jline.utils.Log.error;
 
 public class PayCards implements Task {
-
+    private static final Logger logger = LogManager.getLogger(PayCards.class);
     private final String payMethod;
     private final PaymentCard paymentCard;
 
@@ -20,8 +23,11 @@ public class PayCards implements Task {
         this.paymentCard = paymentCard;
     }
 
+    @Step("Pagando mediante Tarjeta")
     @Override
     public <T extends Actor> void performAs(T actor) {
+        logger.info("##############################PAGANDO MEDIANTE TARJETA##############################");
+
         actor.attemptsTo(
                 Wait.withDuration(5),
                 SelectPayMethod.payMethod(payMethod)

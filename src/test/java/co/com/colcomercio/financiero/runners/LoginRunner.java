@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags = "@tarjetaAlkostoRegistradoSoftlogin",
+        tags = "@tarjetaAlkostoNuevoSoftlogin",
         glue = {"co.com.colcomercio.financiero.stepdefinitions"},
         snippets = CucumberOptions.SnippetType.CAMELCASE)
 public class LoginRunner {
