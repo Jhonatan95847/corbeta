@@ -1,9 +1,6 @@
 package co.com.colcomercio.financiero.tasks.login;
 
-import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.interactions.EnterText;
-import co.com.colcomercio.financiero.interactions.ScrollToElement;
-import co.com.colcomercio.financiero.interactions.Wait;
+import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -12,6 +9,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 
 
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYACCOUNT;
@@ -43,6 +41,7 @@ public class LoginNewUser implements Task {
                 ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
                 ClickOnElement.on(BUTTON_CONTINUE_LOGIN),
                 WaitUntil.the(EITBOX_NAME, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                TakeScreenshot.at(),
                 EnterText.intoField(newUser.getDataNewUsers().getName(),EITBOX_NAME),
                 EnterText.intoField(newUser.getDataNewUsers().getLastname(),EITBOX_LASTNAME),
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EITBOX_PHONE),
@@ -50,7 +49,8 @@ public class LoginNewUser implements Task {
                 ClickOnElement.on(CHECK_CONDITIONS),
                 ScrollToElement.to(BUTTON_CONTINUE_NEW),
                 ClickOnElement.on(BUTTON_CONTINUE_NEW),
-                Wait.withDuration(MICRO_TIME)
+                Wait.withDuration(MICRO_TIME),
+                TakeScreenshot.at()
         );
     }
     public static LoginNewUser newRegistry(NewUser newUser) {

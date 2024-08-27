@@ -1,8 +1,6 @@
 package co.com.colcomercio.financiero.tasks;
 
-import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.interactions.EnterText;
-import co.com.colcomercio.financiero.interactions.Wait;
+import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.productList.ProductList;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.Actor;
@@ -32,6 +30,7 @@ public class SearchProduct implements Task {
         logger.info("################################BUSCANDO PRODUCTO##############################");
         actor.attemptsTo(
                 WaitUntil.the(EDITBOX_SEARCH_BAR_ADICIONAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                //TakeScreenshot.at("target/site/serenity"),
                 ClickOnElement.on(EDITBOX_SEARCH_BAR_ADICIONAL),
                 WaitUntil.the(EDITBOX_SEARCH_BAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
@@ -39,6 +38,7 @@ public class SearchProduct implements Task {
                 WaitUntil.the(BUTTON_SEARCH_BAR_DOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_SEARCH_BAR_DOS),
                 WaitUntil.the(VALIDATE_PRICE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                GetText.ofElement(VALIDATE_PRICE),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_NAME_PRODUCT)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_IMAGE_PRODUCT)).isTrue(),

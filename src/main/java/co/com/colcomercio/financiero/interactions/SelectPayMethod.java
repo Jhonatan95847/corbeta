@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class SelectPayMethod implements Interaction {
     private final String payMethod;
@@ -22,19 +23,19 @@ public class SelectPayMethod implements Interaction {
 
         if (payMethod.equals("Tarjeta de Crédito")){
             actor.attemptsTo(
-                    //Wait.withDuration(LOW_TIME),
+                    Wait.withDuration(MICRO_TIME),
                     ScrollToElement.to(SELECT_CREDITCARD_METHOD),
                     ClickOnElement.on(SELECT_CREDITCARD_METHOD)
             );
         } else if (payMethod.equals("Consignación")||payMethod.equals("Efecty")||payMethod.equals("Su Red")) {
             actor.attemptsTo(
-                    //Wait.withDuration(LOW_TIME),
+                    Wait.withDuration(MICRO_TIME),
                     ScrollToElement.to(SELECT_EFECTIVO_METHOD.of(payMethod)),
                     ClickOnElement.on(SELECT_EFECTIVO_METHOD.of(payMethod))
             );
         }else {
             actor.attemptsTo(
-                    //Wait.withDuration(LOW_TIME),
+                    Wait.withDuration(MICRO_TIME),
                     ScrollToElement.to(SELECT_PAY_METHOD.of(payMethod)),
                     ClickOnElement.on(SELECT_PAY_METHOD.of(payMethod))
             );

@@ -20,11 +20,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta          | franquicia | resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto  | alkosto    | exitoso   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto  | alkosto    | OK   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto  | alkosto    | OK   |
+      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto  | alkosto    | OK   |
+      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto  | alkosto    | OK   |
+      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto  | alkosto    | OK   |
 
 
   @tarjetaAlkostoNuevoExitosa @exitoso @tarjetaAlkosto
@@ -37,11 +37,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta          | franquicia | resultado |
-      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto  | alkosto    | exitoso   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto  | alkosto    | exitoso   |
+      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto  | alkosto    | OK   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto  | alkosto    | OK   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto  | alkosto    | OK   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto  | alkosto    | OK   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto  | alkosto    | OK   |
 
 
   @tarjetaAlkostoRegistradoExitosaTokenisada @exitoso @tarjetaAlkosto
@@ -54,11 +54,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                   | franquicia | resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto guardada  | alkosto    | OK   |
 
 
   @tarjetaAlkostoNuevoExitosaTokenisada @exitoso @tarjetaAlkosto
@@ -71,11 +71,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                   | franquicia | resultado |
-      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto guardada  | alkosto    | exitoso   |
+      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto guardada  | alkosto    | OK   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto guardada  | alkosto    | OK   |
 
  #******************************************************SOFTLOGIN*********************************************
   @tarjetaAlkostoRegistradoSoftlogin @exitoso @tarjetaAlkosto
@@ -88,11 +88,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta           | franquicia| resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | exitoso   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | OK   |
 
   @tarjetaAlkostoNuevoSoftlogin @tarjetaAlkosto @exitoso
   Esquema del escenario: Compra con T Alkosto
@@ -104,11 +104,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion     | tipo_id  | tarjeta           | franquicia| resultado |
-      | nuevo      |      3   | Entrega hoy       | nuevo usuario |  NIT     | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | nuevo      |      2   | Recoge en tienda  | nuevo usuario |  CC      | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | nuevo      |      2   | Envio gratis      | nuevo usuario |  RUT     | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | nuevo      |      2   | Entrega hoy       | nuevo usuario |  CE      | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | nuevo      |      3   | Recoge en tienda  | nuevo usuario |  PAS     | Tarjeta Alkosto   | alkosto   | exitoso   |
+      | nuevo      |      3   | Entrega hoy       | nuevo usuario |  NIT     | Tarjeta Alkosto   | alkosto   | OK   |
+      | nuevo      |      2   | Recoge en tienda  | nuevo usuario |  CC      | Tarjeta Alkosto   | alkosto   | OK   |
+      | nuevo      |      2   | Envio gratis      | nuevo usuario |  RUT     | Tarjeta Alkosto   | alkosto   | OK   |
+      | nuevo      |      2   | Entrega hoy       | nuevo usuario |  CE      | Tarjeta Alkosto   | alkosto   | OK   |
+      | nuevo      |      3   | Recoge en tienda  | nuevo usuario |  PAS     | Tarjeta Alkosto   | alkosto   | OK   |
   @tarjetaAlkostoRegistradoSoftloginTokenisada @exitoso @tarjetaAlkosto
   Esquema del escenario: Compra con T Alkosto
   Narrativa: El cliente registrado en Alkosto
@@ -119,11 +119,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta           | franquicia| resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | exitoso   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | exitoso   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | OK   |
+      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | OK   |
 
     #______________________________________________________RECHAZADAS______________________________________________
     #******************************************************HARDLOGIN*********************************************
@@ -138,11 +138,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta          | franquicia | resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto  | alkosto    | fallido   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto  | alkosto    | fallido   |
-      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto  | alkosto    | fallido   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto  | alkosto    | fallido   |
-      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto  | alkosto    | fallido   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto  | alkosto    | FAILED   |
 
 
   @tarjetaAlkostoNuevofallido @fallido @tarjetaAlkosto
@@ -155,11 +155,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta          | franquicia | resultado |
-      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto  | alkosto    | fallido   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto  | alkosto    | fallido   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto  | alkosto    | fallido   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto  | alkosto    | fallido   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto  | alkosto    | fallido   |
+      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto  | alkosto    | FAILED   |
 
   @tarjetaAlkostoRegistradofallidoTokenisada @fallido @tarjetaAlkosto
   Esquema del escenario: Compra con T Alkosto
@@ -171,11 +171,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                   | franquicia | resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto guardada  | alkosto    | fallido   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
 
 
   @tarjetaAlkostoNuevoFallidoTokenisada @fallido @tarjetaAlkosto
@@ -188,11 +188,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                   | franquicia | resultado |
-      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto guardada  | alkosto    | fallido   |
-      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto guardada  | alkosto    | fallido   |
+      | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  RUT     | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
+      | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta Alkosto guardada  | alkosto    | FAILED   |
 
   #******************************************************SOFTLOGIN*********************************************
   @tarjetaAlkostoRegistradoSoftloginFallido @exitoso @tarjetaAlkosto
@@ -205,11 +205,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta           | franquicia| resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | fallido   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | FAILED   |
 
   @tarjetaAlkostoNuevoSoftloginFallido @tarjetaAlkosto @exitoso
   Esquema del escenario: Compra con T Alkosto
@@ -221,11 +221,11 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta           | franquicia| resultado |
-      | nuevo      |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | fallido   |
-      | nuevo      |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | fallido   |
-      | nuevo      |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto   | alkosto   | fallido   |
-      | nuevo      |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | fallido   |
-      | nuevo      |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | fallido   |
+      | nuevo      |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | nuevo      |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | nuevo      |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | nuevo      |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | nuevo      |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | FAILED   |
 
   @tarjetaAlkostoRegistradoSoftloginFallidoTokenisada @exitoso @tarjetaAlkosto
   Esquema del escenario: Compra con T Alkosto
@@ -237,8 +237,8 @@ Característica: Medio de Pago - Tarjeta Alkosto
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta           | franquicia| resultado |
-      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | fallido   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | fallido   |
+      | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta Alkosto   | alkosto   | FAILED   |
+      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta Alkosto   | alkosto   | FAILED   |

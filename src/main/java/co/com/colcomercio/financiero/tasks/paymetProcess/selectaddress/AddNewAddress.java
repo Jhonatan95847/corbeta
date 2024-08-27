@@ -44,9 +44,9 @@ public class AddNewAddress implements Task {
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EDITBOX_PHONE_ADDRES),
                 ScrollToElement.to(LIST_DEPARTAMENT_ADDRES),
                 ClickOnElement.on(LIST_DEPARTAMENT_ADDRES),
-                ClickOnElement.on(SELECT_LIST_ADDRES.of("Bogota dc")),
+                ClickOnElement.on(SELECT_LIST_ADDRES.of(newUser.getDataNewUsers().getDepartment())),
                 ClickOnElement.on(LIST_CITY_ADDRES),
-                ClickOnElement.on(SELECT_LIST_ADDRES.of("Bogotá dc")),
+                ClickOnElement.on(SELECT_LIST_ADDRES.of(newUser.getDataNewUsers().getCity())),
                 EnterText.intoField(newUser.getDataNewUsers().getAddress(),EDITBOX_SHIPPING_ADDRES),
                 EnterText.intoField(newUser.getDataNewUsers().getNeighborhood(),EDITBOX_BARRIO_ADDRES),
                 Wait.withDuration(MICRO_TIME)

@@ -11,7 +11,9 @@
       "pas" : "12345678901234",
       "phone" : "3000000000",
       "address" : "CL 84 # 24 - 78",
-      "neighborhood" : "Polo club"
+      "neighborhood" : "Polo club",
+      "department" : "Bogota dc",
+      "city" : "Bogota dc"
     }
   }
 ]

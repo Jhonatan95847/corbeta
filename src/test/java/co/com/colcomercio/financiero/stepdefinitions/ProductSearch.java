@@ -47,4 +47,18 @@ public class ProductSearch {
                 GoToPay.pay()
         );
     }
+
+    @Cuando("el cliente {string} busca un producto y selecciona la cantidad {string} y método de envío {string}")
+    public void elClienteBuscaUnProductoYSeleccionaLaCantidadYMétodoDeEnvío(String cliente, String cantidad, String metodoEnvio) {
+        withTheData = GetDataModel.productList("lista_de_productos");
+        theActorInTheSpotlight().attemptsTo(
+                DeleteProducts.delete(),
+                SearchProduct.addProduct(withTheData),
+                SelectProduct.productSelect(),
+                SelectShippingMetod.selectMethod(metodoEnvio,cliente),
+                SelectQuantitiProduct.selectQuantity(cantidad),
+                AddProduct.goToPay(),
+                GoToPay.pay()
+        );
+    }
 }

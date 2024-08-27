@@ -8,11 +8,17 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.PsePage.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class ProcesPSEPay implements Task {
+    private static final Logger logger = LogManager.getLogger(ProcesPSEPay.class);
     private final String resultado;
 
     public ProcesPSEPay(String resultado) {
@@ -21,15 +27,19 @@ public class ProcesPSEPay implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        logger.info("###########################PROCESO PAGO PSE#########################");
         actor.attemptsTo(
-                Wait.withDuration(10),
+                WaitUntil.the(EDITBOX_EMAIL_PSE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField("test@test.com",EDITBOX_EMAIL_PSE),
+                Wait.withDuration(MICRO_TIME),
+                ScrollToElement.to(BUTTON_IRBANCO_PSE),
                 ClickOnElement.on(BUTTON_IRBANCO_PSE),
+                WaitUntil.the(BUTTON_DEBUG_PSE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(MICRO_TIME),
                 ScrollToElement.to(BUTTON_DEBUG_PSE),
                 ClickOnElement.on(BUTTON_DEBUG_PSE),
-                Wait.withDuration(MICRO_TIME),
-                EnterText.intoField("21/08/2024",EDITBOX_PROCESDATE),
+                WaitUntil.the(EDITBOX_PROCESDATE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                EnterText.intoField("26/08/2024",EDITBOX_PROCESDATE),
                 SelectFromOptions.byVisibleText(resultado).from(SELECT_TRANSACTIONSTATE),
                 EnterText.intoField("1234",EDITBOX_AUTORIZATION),
                 ClickOnElement.on(BUTTON_CALL),

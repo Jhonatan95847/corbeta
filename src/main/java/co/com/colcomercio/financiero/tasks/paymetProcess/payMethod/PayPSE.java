@@ -17,7 +17,6 @@ public class PayPSE implements Task {
                 actor.attemptsTo(
                         SelectPayMethod.payMethod("PSE"),
                         ClickOnElement.on(SELECT_BANCO_PSE),
-                        //ScrollToElement.to(LIST_BANCO),
                         ClickOnElement.on(LIST_BANCO),
                         ClickOnElement.on(SELECT_TIPO_CLIENTE_PSE),
                         ClickOnElement.on(LIST_TIPO_CLIENTE),
@@ -25,8 +24,6 @@ public class PayPSE implements Task {
                         ClickOnElement.on(LIST_TIPO_ID),
                         EnterText.intoField("12345678",EDITBOX_TIPO_ID),
                         ClickOnElement.on(BUTTON_CONTINUAR_PSE)
-                        //////////////
-
                 );
     }
     public static PayPSE pay(){return Tasks.instrumented(PayPSE.class);

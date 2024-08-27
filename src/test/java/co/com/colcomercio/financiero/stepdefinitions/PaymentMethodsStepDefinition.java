@@ -103,5 +103,13 @@ public class PaymentMethodsStepDefinition {
                 ProcesPSEPay.pay(resultado)
         );
     }
+
+    @Y("realiza el pago mediante boton Bancolombia")
+    public void realizaElPagoMedianteBotonBancolombia() {
+        theActorInTheSpotlight().attemptsTo(
+                PayBancolombiaButton.pay(),
+                ReviewAndAproval.review()
+        );
+    }
 }
 

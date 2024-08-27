@@ -28,7 +28,7 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                            | franquicia| resultado |
-            | nuevo      |      3   | Entrega hoy       |  nuevo usuario |  NIT     | Tarjeta de Crédito o Debito con CVV| visa      | exitoso   |
+            | registrado |      1   | Entrega hoy       |  registrada    |  NIT     | Tarjeta de Crédito o Debito con CVV| visa      | exitoso   |
             | registrado |      2   | Recoge en tienda  |  guardada      |  NIT     | Tarjeta de Crédito                 | visa      | exitoso        |
             | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| amex      | exitoso    |
             | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | amex      | exitoso   |

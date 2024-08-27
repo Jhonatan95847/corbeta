@@ -21,34 +21,37 @@ public class ValidatePay implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Wait.withDuration(10)
-                //ClickOnElement.on(BUTTON_CONTINUE_DISCOUNT),
-               // Wait.withDuration(10),
-                //ClickOnElement.on(BUTTON_CLOSE_DISCOUNT)
+                Wait.withDuration(5)
+                //TakeScreenshot.at("target/site/serenity")
+
+
                 );
-        /*switch (estado) {
-            case "exitoso":
+        switch (estado) {
+            case "OK":
                 actor.attemptsTo(
-                        Ensure.that(IsElementPresent.on(VALIDATE_SUCESS_PAY)).isTrue(),
-                        Wait.withDuration(10)
-                );
-                break;
-            case "pendiente":
-                actor.attemptsTo(
-                        Ensure.that(IsElementPresent.on(VALIDATE_PENDING_PAY)).isTrue(),
-                        Wait.withDuration(10)
+                        //ClickOnElement.on(BUTTON_CONTINUE_DISCOUNT),
+                        // Wait.withDuration(10),
+                        //ClickOnElement.on(BUTTON_CLOSE_DISCOUNT)
+                        Ensure.that(IsElementPresent.on(VALIDATE_SUCESS_PAY)).isTrue()
+                        //Wait.withDuration(10)
                 );
                 break;
-            case "fallido":
+            case "PENDING":
                 actor.attemptsTo(
-                        Ensure.that(IsElementPresent.on(VALIDATE_PENDING_PAY)).isTrue(),
-                        Wait.withDuration(10)
+                        Ensure.that(IsElementPresent.on(VALIDATE_PENDING_PAY)).isTrue()
+                        //Wait.withDuration(10)
+                );
+                break;
+            case "FAILED":
+                actor.attemptsTo(
+                        Ensure.that(IsElementPresent.on(VALIDATE_FAILED_PAY)).isTrue()
+                        //(Wait.withDuration(10)
                 );
                 break;
             default:
                 error();
                 break;
-        }*/
+        }
     }
 
     public static ValidatePay validate(String estado) {

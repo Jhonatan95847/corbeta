@@ -25,6 +25,7 @@ public class AddEmailLogin implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
+                //TakeScreenshot.at("target/site/serenity"),
                 ClickOnElement.on(BUTTON_MYACCOUNT),
                 WaitUntil.the(EDITBOX_EMAIL, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
