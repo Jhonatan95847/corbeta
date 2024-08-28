@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +24,7 @@ public class SearchProduct implements Task {
 
     public SearchProduct(ProductList productList) {this.productList = productList;}
 
-    @Step("Buscando el producto")
+    //@Step("Buscando el producto")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("################################BUSCANDO PRODUCTO##############################");

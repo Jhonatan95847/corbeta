@@ -5,14 +5,14 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.selectedProductPages.ActionsOnProducrPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.shopingCarPage.ActionsOnCar.*;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
-import static jdk.internal.org.jline.utils.Log.error;
+//import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class ChangeShippingMethod implements Task {
@@ -24,7 +24,7 @@ public class ChangeShippingMethod implements Task {
         this.cambiarMetodo = cambiarMetodo;
     }
 
-    @Step("Cambiando metodo de envio desde el carrito")
+    //@Step("Cambiando metodo de envio desde el carrito")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("#############################CAMBIANDO METODO DE ENVIO###########################");
@@ -53,7 +53,7 @@ public class ChangeShippingMethod implements Task {
                 );
                 break;
             default:
-                error();
+                //error();
                 break;
         }
     }

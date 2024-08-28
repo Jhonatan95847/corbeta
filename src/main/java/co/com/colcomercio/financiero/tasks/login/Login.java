@@ -8,7 +8,7 @@ import co.com.colcomercio.financiero.models.users.Users;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,7 +27,7 @@ public class Login implements Task {
         return instrumented(Login.class, users);
     }
 
-    @Step("Iniciando sesión con un usuario registrado")
+    //@Step("Iniciando sesión con un usuario registrado")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO####################");

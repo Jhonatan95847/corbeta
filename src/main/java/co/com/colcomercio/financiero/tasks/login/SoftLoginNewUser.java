@@ -6,7 +6,7 @@ import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +24,7 @@ public class SoftLoginNewUser implements Task {
         return Tasks.instrumented(SoftLoginNewUser.class);
     }
 
-    @Step("Iniciando sesión con un usuario nuevo con softlogin")
+    //@Step("Iniciando sesión con un usuario nuevo con softlogin")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO SOFTLOGIN####################");

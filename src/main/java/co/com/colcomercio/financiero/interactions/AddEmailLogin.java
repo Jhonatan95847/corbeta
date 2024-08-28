@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.HomePage.BUTTON_MYACCOUNT;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginPage.*;
@@ -22,7 +22,7 @@ public class AddEmailLogin implements Interaction {
     public AddEmailLogin(Users userEcomerce) {
         this.userEcomerce = userEcomerce;
     }
-    @Step("Agregando correo para iniciar sesion")
+    //@Step("Agregando correo para iniciar sesion")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

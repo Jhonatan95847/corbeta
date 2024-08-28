@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +18,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class AddProduct implements Task {
     private static final Logger logger = LogManager.getLogger(AddProduct.class);
-    @Step("Agregando el produco")
+    //@Step("Agregando el produco")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("##########################AGREGANDO PRODUCO#######################");

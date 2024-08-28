@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,7 +27,7 @@ public class LoginNewUser implements Task {
 
     public LoginNewUser(NewUser newUser){this.newUser = newUser;}
     String username = DataGeneratorDate();
-    @Step("Iniciando sesión con un usuario nuevo")
+    //@Step("Iniciando sesión con un usuario nuevo")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO####################");

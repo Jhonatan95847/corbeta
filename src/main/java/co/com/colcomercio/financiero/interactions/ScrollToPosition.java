@@ -3,7 +3,7 @@ package co.com.colcomercio.financiero.interactions;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,7 +25,7 @@ public class ScrollToPosition implements Task {
     }
 
     @Override
-    @Step("{0} scrolls to position (#x, #y)")
+    //@Step("{0} scrolls to position (#x, #y)")
     public <T extends Actor> void performAs(T actor) {
         logger.info("Scroll a la posicion");
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();

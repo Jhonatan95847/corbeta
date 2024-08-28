@@ -6,10 +6,10 @@ import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.PaymentConfirmation.*;
-import static jdk.internal.org.jline.utils.Log.error;
+//import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class ValidatePay implements Task {
@@ -18,7 +18,7 @@ public class ValidatePay implements Task {
     public ValidatePay(String estado) {
         this.estado = estado;
     }
-    @Step("Validando resultado de pago")
+    //@Step("Validando resultado de pago")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -50,7 +50,7 @@ public class ValidatePay implements Task {
                 );
                 break;
             default:
-                error();
+                //error();
                 break;
         }
     }

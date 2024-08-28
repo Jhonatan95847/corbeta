@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,7 +21,7 @@ public class AddDataGlobalPay implements Interaction {
     public AddDataGlobalPay(PaymentCard paymentCard) {
         this.paymentCard = paymentCard;
     }
-    @Step("Agregando datos de la tarjeta global pay")
+    //@Step("Agregando datos de la tarjeta global pay")
     @Override
     public <T extends Actor> void performAs(T actor) {
 

@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +23,7 @@ public class SameShippingMethod implements Task {
         this.newUser = newUser;
     }
 
-    @Step("Seleccionando el mismo metodo de envio")
+    //@Step("Seleccionando el mismo metodo de envio")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("######################SELECCIONANDO MISMO METODO DE ENVIO####################");

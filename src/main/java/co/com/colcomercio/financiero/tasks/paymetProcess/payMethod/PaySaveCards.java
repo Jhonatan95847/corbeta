@@ -1,12 +1,13 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.payMethod;
 
 import co.com.colcomercio.financiero.interactions.*;
+import co.com.colcomercio.financiero.interactions.SelectPayMethod;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +15,7 @@ import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsP
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.BUTTON_EDITAR_PAGO;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
-import static jdk.internal.org.jline.utils.Log.error;
+//import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class PaySaveCards implements Task {
@@ -28,7 +29,7 @@ public class PaySaveCards implements Task {
         this.payMethod = payMethod;
         this.paymentCard = paymentCard;
     }
-    @Step("Pagando mediante Tarjeta guardada")
+    //@Step("Pagando mediante Tarjeta guardada")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("##############################PAGANDO MEDIANTE BOTON TARJETA GUARDADA##############################");
@@ -102,7 +103,7 @@ public class PaySaveCards implements Task {
                 );
                 break;
             default:
-                error();
+                //error();
                 break;
         }
     }

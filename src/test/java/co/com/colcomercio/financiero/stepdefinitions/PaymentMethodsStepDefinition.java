@@ -13,7 +13,7 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSav
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Y;
 
-import static jdk.internal.org.jline.utils.Log.error;
+//import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class PaymentMethodsStepDefinition {
@@ -52,7 +52,7 @@ public class PaymentMethodsStepDefinition {
                 );
                 break;
             default:
-                error();
+                //error();
                 break;
         }
 

@@ -7,7 +7,7 @@ import co.com.colcomercio.financiero.interactions.SelectPayMethod;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,7 +21,7 @@ public class PayDigitalWallet implements Task {
     public PayDigitalWallet(String payMethod) {
         this.payMethod = payMethod;
     }
-    @Step("Pagando mediante billetera digital")
+    //@Step("Pagando mediante billetera digital")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("##############################PAGANDO MEDIANTE BILLETERA DIGITAL##############################");

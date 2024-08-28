@@ -8,7 +8,7 @@ import co.com.colcomercio.financiero.models.users.Users;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.thucydides.core.annotations.Step;
+//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +23,7 @@ public class OtherData implements Task {
         this.userEcomerce = userEcomerce;
     }
 
-    @Step("Seleccionar otros datos para la direccion de pago")
+    //@Step("Seleccionar otros datos para la direccion de pago")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("#######################SELECCIONANDO INGRESAR OTROS DATOS######################");
