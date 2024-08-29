@@ -1,3 +1,6 @@
+group 'co.com.colcomercio.alkosto'
+version '1.0-SNAPSHOT'
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -9,15 +12,16 @@ repositories {
 
 buildscript {
     repositories {
+        mavenCentral()
         maven {
             url "https://plugins.gradle.org/m2/"
         }
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.0"
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.30"
+        classpath "net.serenity-bdd:serenity-single-page-report:4.0.30"
     }
 }
-
 
 ext {
     serenity_version = '4.1.12'
@@ -71,43 +75,31 @@ dependencies {
     testImplementation 'org.hamcrest:hamcrest-core:1.3'
     implementation "com.oracle.database.jdbc:ojdbc8:19.18.0.0"
     implementation group: 'com.jcraft', name: 'jsch', version: '0.1.55'
-
     // Dependencias de Log4j 2
     implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
     implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
     // Dependencia opcional para la integración con SLF4J
     implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.19.0'
+
 }
-
-test {
-    useJUnitPlatform()
-
-    // Configuración para pruebas en paralelo
-    maxParallelForks = 4
-    forkEvery = 0
-    systemProperty 'junit.jupiter.execution.parallel.enabled', 'true'
-    systemProperty 'junit.jupiter.execution.parallel.mode.default', 'concurrent'
-    systemProperty 'junit.jupiter.execution.parallel.mode.classes.default', 'concurrent'
-}
-
-
-serenity {
-    // Specify the root package of any JUnit acceptance tests to appear in the Serenity report
-    testRoot = "src/test/java"
-    // Specify the root directory of any Cucumber feature files
-    requirementsDir = "src/test/resources/features"
-}
-
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
-tasks.withType(Test).configureEach {
-    testLogging.showStandardStreams = true
-    systemProperties = System.properties as Map<String, ?>
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }
 
-gradle.startParameter.continueOnFailure = true
+serenity {
+    reports = ["single-page-html"]
+}
 
-test.finalizedBy(aggregate)
+tasks.withType(Test).configureEach {
+    useJUnitPlatform {
+        excludeEngines 'cucumber'
+    }
+    systemProperties = System.properties as Map<String, ?>
+}

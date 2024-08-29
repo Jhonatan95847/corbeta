@@ -10,7 +10,6 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.AddYourData;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
-import net.serenitybdd.screenplay.actors.OnStage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,7 +34,7 @@ public class LoginStepdefinitions {
             );
         } else if (cliente.equals("registrado")) {
             logger.info("Inicia sesion con usuario registrado");
-            OnStage.theActorInTheSpotlight().wasAbleTo(
+            theActorInTheSpotlight().wasAbleTo(
                     Login.inMyProfile(withTheUserData)
             );
         }
@@ -48,6 +47,7 @@ public class LoginStepdefinitions {
         if (cliente.equals("registrado")){
             theActorInTheSpotlight().attemptsTo(
                     SoftLogin.inMyProfile(withTheUserData)
+                    //AddPassLogin.addPass(withTheUserData)
             );
         } else if (cliente.equals("nuevo")) {
             theActorInTheSpotlight().attemptsTo(

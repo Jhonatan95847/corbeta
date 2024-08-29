@@ -9,7 +9,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -40,7 +39,7 @@ public class ProcesPSEPay implements Task {
                 ScrollToElement.to(BUTTON_DEBUG_PSE),
                 ClickOnElement.on(BUTTON_DEBUG_PSE),
                 WaitUntil.the(EDITBOX_PROCESDATE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                EnterText.intoField("26/08/2024",EDITBOX_PROCESDATE),
+                EnterText.intoField("29/08/2024",EDITBOX_PROCESDATE),
                 SelectFromOptions.byVisibleText(resultado).from(SELECT_TRANSACTIONSTATE),
                 EnterText.intoField("1234",EDITBOX_AUTORIZATION),
                 ClickOnElement.on(BUTTON_CALL),

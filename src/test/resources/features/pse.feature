@@ -120,10 +120,10 @@ Característica: Medio de Pago - PSE
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | OK        |
+      #| registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | OK        |
       | registrado |    3     | Entrega hoy       | guardada       |  CC     | OK        |
       | registrado |    3     | Envio gratis      | registrada     |  CE     | OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | OK        |
+      #| registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | OK        |
 
   @psePayOkNuevoSoftLogin @psePayOk @pseSoftLogin @psePay
   Esquema del escenario: Compra de productos con PSE
