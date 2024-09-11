@@ -25,7 +25,7 @@ public class ProductSearch {
 
         theActorInTheSpotlight().attemptsTo(
                 DeleteProducts.delete(),
-                DeleteCard.delete(),
+                //DeleteCard.delete(),
                 SearchProduct.addProduct(withTheData),
                 SelectProduct.productSelect(),
                 SelectShippingMetod.selectMethod(metodoEnvio,cliente),

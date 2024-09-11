@@ -4,6 +4,7 @@ import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
+import co.com.colcomercio.financiero.utils.DateGenerator;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -39,7 +40,7 @@ public class ProcesPSEPay implements Task {
                 ScrollToElement.to(BUTTON_DEBUG_PSE),
                 ClickOnElement.on(BUTTON_DEBUG_PSE),
                 WaitUntil.the(EDITBOX_PROCESDATE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                EnterText.intoField("29/08/2024",EDITBOX_PROCESDATE),
+                EnterText.intoField(DateGenerator.getTodayDate(),EDITBOX_PROCESDATE),
                 SelectFromOptions.byVisibleText(resultado).from(SELECT_TRANSACTIONSTATE),
                 EnterText.intoField("1234",EDITBOX_AUTORIZATION),
                 ClickOnElement.on(BUTTON_CALL),

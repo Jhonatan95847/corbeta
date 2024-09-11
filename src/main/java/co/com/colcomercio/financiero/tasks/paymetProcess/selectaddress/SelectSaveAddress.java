@@ -9,7 +9,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -40,7 +39,11 @@ public class SelectSaveAddress implements Task {
         );
         if (BUTTON_LOGIN_FACEBOOK.isVisibleFor(actor)){
             actor.attemptsTo(
-                    AddPassLogin.addPass(userEcomerce)
+                    AddPassLogin.addPass(userEcomerce),
+                    WaitUntil.the(BUTTON_DIRECCION_GUARDADA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                    ScrollToElement.to(BUTTON_DIRECCION_GUARDADA),
+                    ClickOnElement.on(BUTTON_DIRECCION_GUARDADA),
+                    Wait.withDuration(MICRO_TIME)
             );
         }
         actor.attemptsTo(
