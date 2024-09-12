@@ -37,7 +37,7 @@ public class OtherData implements Task {
         if (TEXT_ASEGURAR_SOFTLOGIN.isVisibleFor(actor)){
             actor.attemptsTo(
                     ClickOnElement.on(BUTTON_CONTINUARDIR_SOFTLOGIN),
-                    AddPassLogin.addPass(userEcomerce)
+                    AddPassLogin.addPass()
             );
         }
 

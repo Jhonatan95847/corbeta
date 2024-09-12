@@ -39,7 +39,7 @@ public class SelectSaveAddress implements Task {
         );
         if (BUTTON_LOGIN_FACEBOOK.isVisibleFor(actor)){
             actor.attemptsTo(
-                    AddPassLogin.addPass(userEcomerce),
+                    AddPassLogin.addPass(),
                     WaitUntil.the(BUTTON_DIRECCION_GUARDADA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     ScrollToElement.to(BUTTON_DIRECCION_GUARDADA),
                     ClickOnElement.on(BUTTON_DIRECCION_GUARDADA),

@@ -3,6 +3,7 @@ package co.com.colcomercio.financiero.tasks.paymetProcess;
 
 import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
+import co.com.colcomercio.financiero.utils.Paralelo.LiberarUsuario;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -51,6 +52,7 @@ public class ValidatePay implements Task {
                 //error();
                 break;
         }
+        //actor.attemptsTo(LiberarUsuario.delActor());
     }
 
     public static ValidatePay validate(String estado) {

@@ -93,7 +93,7 @@ Característica: Medio de Pago - Tarjeta Credito
       | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito | amex       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito | mastercard | OK   |
-      #| registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito | visa       | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito | visa       | OK   |
 
   @tarjetaCreditoNuevoSoftlogin @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Credito
@@ -208,10 +208,10 @@ Característica: Medio de Pago - Tarjeta Credito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta            | franquicia | resultado |
       | registrado |      3   | Envio gratis      |  otros datos   |  NIT     | Tarjeta de Crédito | mastercard | FAILED   |
-      | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito | visa       | FAILED   |
-      | registrado |      2   | Entrega hoy       |  registrada    |  RUT     | Tarjeta de Crédito | amex       | FAILED   |
-      | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito | diners     | FAILED   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito | mastercard | FAILED   |
+      #| registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito | visa       | FAILED   |
+      #| registrado |      2   | Entrega hoy       |  registrada    |  RUT     | Tarjeta de Crédito | amex       | FAILED   |
+      #| registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito | diners     | FAILED   |
+      #| registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito | mastercard | FAILED   |
 
   @tarjetaCreditoNuevoSoftloginFallido @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Credito

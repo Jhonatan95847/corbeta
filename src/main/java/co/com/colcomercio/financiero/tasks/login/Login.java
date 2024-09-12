@@ -15,16 +15,10 @@ import org.apache.logging.log4j.Logger;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Login implements Task {
-    private final Users userEcomerce;
     private static final Logger logger = LogManager.getLogger(Login.class);
 
-
-    public Login( Users userEcomerce){
-        this.userEcomerce = userEcomerce;
-    }
-
-    public static Login inMyProfile( Users users) {
-        return instrumented(Login.class, users);
+    public static Login inMyProfile( ) {
+        return instrumented(Login.class);
     }
 
     //@Step("Iniciando sesión con un usuario registrado")
@@ -32,8 +26,8 @@ public class Login implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO####################");
         actor.attemptsTo(
-                AddEmailLogin.addEmail(userEcomerce),
-                AddPassLogin.addPass(userEcomerce)
+                AddEmailLogin.addEmail(),
+                AddPassLogin.addPass()
         );
     }
 }

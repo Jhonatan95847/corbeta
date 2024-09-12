@@ -2,6 +2,7 @@ package co.com.colcomercio.financiero.stepdefinitions;
 
 
 import co.com.colcomercio.financiero.userinterfaces.HomePage;
+import co.com.colcomercio.financiero.utils.Paralelo.LiberarUsuario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.Dado;
@@ -38,6 +39,7 @@ public class CommonStepdefinitions {
 
     @After
     public void tearDown() {
+        theActorInTheSpotlight().attemptsTo(LiberarUsuario.delActor());
         OnStage.drawTheCurtain();
     }
 }

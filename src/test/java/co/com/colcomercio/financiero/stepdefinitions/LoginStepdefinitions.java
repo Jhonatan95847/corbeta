@@ -25,7 +25,6 @@ public class LoginStepdefinitions {
     public void queUnClienteDeseaRealizarUnaCompra(String cliente) {
 
         withTheData = GetDataModel.newUser("datos_nuevo_usuario");
-        withTheUserData = GetDataModel.users("usuario_registrado");
 
         if (cliente.equals("nuevo")){
             logger.info("Inicia sesion con usuario nuevo");
@@ -35,7 +34,7 @@ public class LoginStepdefinitions {
         } else if (cliente.equals("registrado")) {
             logger.info("Inicia sesion con usuario registrado");
             theActorInTheSpotlight().wasAbleTo(
-                    Login.inMyProfile(withTheUserData)
+                    Login.inMyProfile()
             );
         }
     }
