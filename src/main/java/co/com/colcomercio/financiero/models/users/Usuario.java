@@ -1,4 +1,4 @@
-package co.com.colcomercio.financiero.models;
+package co.com.colcomercio.financiero.models.users;
 
 public class Usuario {
     private String email;

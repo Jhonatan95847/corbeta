@@ -1,6 +1,6 @@
 package co.com.colcomercio.financiero.utils.Paralelo;
 
-import co.com.colcomercio.financiero.models.Usuario;
+import co.com.colcomercio.financiero.models.users.Usuario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 

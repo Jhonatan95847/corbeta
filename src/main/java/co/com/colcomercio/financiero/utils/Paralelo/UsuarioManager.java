@@ -1,6 +1,6 @@
 package co.com.colcomercio.financiero.utils.Paralelo;
 
-import co.com.colcomercio.financiero.models.Usuario;
+import co.com.colcomercio.financiero.models.users.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileReader;

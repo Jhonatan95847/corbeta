@@ -1,9 +1,7 @@
 package co.com.colcomercio.financiero.interactions;
 
-import co.com.colcomercio.financiero.models.Usuario;
-import co.com.colcomercio.financiero.models.users.Users;
+import co.com.colcomercio.financiero.models.users.Usuario;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
-import co.com.colcomercio.financiero.utils.Paralelo.AsignarUsuario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
@@ -11,7 +9,6 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterPassPage.BUTTON_CONTINUE_PASS;
 import static co.com.colcomercio.financiero.userinterfaces.loginPages.LoginRegisterPassPage.EDITBOX_PASSWORD;
@@ -22,10 +19,9 @@ import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class AddPassLogin implements Interaction {
 
-    //@Step("Agregando contraseña para iniciar sesion")
     @Override
     public <T extends Actor> void performAs(T actor) {
-        //actor.attemptsTo(AsignarUsuario.alActor());
+
         Usuario usuario = actor.recall("usuario");
         actor.attemptsTo(
                 //AsignarUsuario.alActor(),

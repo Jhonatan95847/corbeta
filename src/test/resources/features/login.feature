@@ -28,6 +28,19 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                            | franquicia| resultado |
-            | registrado |      1   | Recoge en tienda  |  nuevo usuario |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
-
+            | registrado |      1   | Entrega hoy       |  registrada    |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  registrada    |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  otros datos   |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  guardada      |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  otros datos   |  CE      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  guardada      |  CE      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  registrada    |  PAS     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  otros datos   |  PAS     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  guardada      |  PAS     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  registrada    |  RUT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  RUT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  guardada      |  RUT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
 

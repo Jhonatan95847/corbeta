@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,7 +18,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class DeleteProducts implements Task {
     private static final Logger logger = LogManager.getLogger(DeleteProducts.class);
-    //@Step("Borrando productos desde el carrito")
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("#########################BORRANDO PRODUCTOS DEL CARRITO########################");

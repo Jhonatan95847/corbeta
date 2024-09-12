@@ -4,11 +4,10 @@ import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-//import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.EDITBOX_LASTNAME_ADDRES;
-//import static jdk.internal.org.jline.utils.Log.error;
+
 
 public class SelectID implements Interaction {
 
@@ -68,9 +67,8 @@ public class SelectID implements Interaction {
                         EnterText.intoField(newUser.getDataNewUsers().getLastname(),EDITBOX_LASTNAME_ADDRES)
                 );
                 break;
-            //default:
-                //error();
-                //break;
+            default:
+                break;
         }
 
     }

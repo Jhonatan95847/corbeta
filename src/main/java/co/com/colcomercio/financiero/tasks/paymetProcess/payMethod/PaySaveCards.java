@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,7 +14,6 @@ import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsP
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.SelectPayMethod.BUTTON_EDITAR_PAGO;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
-//import static jdk.internal.org.jline.utils.Log.error;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class PaySaveCards implements Task {
@@ -29,7 +27,6 @@ public class PaySaveCards implements Task {
         this.payMethod = payMethod;
         this.paymentCard = paymentCard;
     }
-    //@Step("Pagando mediante Tarjeta guardada")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("##############################PAGANDO MEDIANTE BOTON TARJETA GUARDADA##############################");
@@ -51,7 +48,6 @@ public class PaySaveCards implements Task {
                         WaitUntil.the(BUTTON_EDITAR_PAGO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ScrollToElement.to(BUTTON_EDITAR_PAGO),
                         ClickOnElement.on(BUTTON_EDITAR_PAGO),
-                        //SelectPayMethod.payMethod(payMethod),
                         ScrollToElement.to(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         ClickOnElement.on(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), CVC_TARJETA_GUARDADA.of("CVC")),
@@ -71,7 +67,6 @@ public class PaySaveCards implements Task {
                         WaitUntil.the(BUTTON_EDITAR_PAGO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ScrollToElement.to(BUTTON_EDITAR_PAGO),
                         ClickOnElement.on(BUTTON_EDITAR_PAGO),
-                        //SelectPayMethod.payMethod(payMethod),
                         ScrollToElement.to(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         ClickOnElement.on(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), CVC_TARJETA_GUARDADA.of("CVC")),
@@ -92,7 +87,7 @@ public class PaySaveCards implements Task {
                         WaitUntil.the(BUTTON_EDITAR_PAGO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                         ScrollToElement.to(BUTTON_EDITAR_PAGO),
                         ClickOnElement.on(BUTTON_EDITAR_PAGO),
-                        //SelectPayMethod.payMethod(payMethod),
+
                         ScrollToElement.to(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         ClickOnElement.on(CHECK_TARJETA_GUARDADA_GLOBALPAY),
                         EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), CVC_TARJETA_GUARDADA.of("#")),
@@ -103,8 +98,8 @@ public class PaySaveCards implements Task {
                 );
                 break;
             default:
-                //error();
                 break;
+
         }
     }
     public static PaySaveCards pay(String payMethod, PaymentCard paymentCard){

@@ -4,11 +4,9 @@ import co.com.colcomercio.financiero.interactions.AddPassLogin;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
-import co.com.colcomercio.financiero.models.users.Users;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,14 +14,9 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
 
 public class OtherData implements Task {
-    private final Users userEcomerce;
+
     private static final Logger logger = LogManager.getLogger(OtherData.class);
 
-    public OtherData(Users userEcomerce) {
-        this.userEcomerce = userEcomerce;
-    }
-
-    //@Step("Seleccionar otros datos para la direccion de pago")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("#######################SELECCIONANDO INGRESAR OTROS DATOS######################");
@@ -42,7 +35,7 @@ public class OtherData implements Task {
         }
 
     }
-    public static OtherData otherData(Users users) {
-        return Tasks.instrumented(OtherData.class, users);
+    public static OtherData otherData() {
+        return Tasks.instrumented(OtherData.class);
     }
 }

@@ -4,7 +4,6 @@ import co.com.colcomercio.financiero.interactions.AddPassLogin;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
-import co.com.colcomercio.financiero.models.users.Users;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -19,14 +18,9 @@ import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SelectSaveAddress implements Task {
-    private final Users userEcomerce;
+
     private static final Logger logger = LogManager.getLogger(SelectSaveAddress.class);
 
-    public SelectSaveAddress(Users userEcomerce) {
-        this.userEcomerce = userEcomerce;
-    }
-
-    //@Step("Seleccionando una direccion guardada")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("########################SELECCIONANDO UNA DIRECCION GUARDADA#######################");
@@ -64,8 +58,8 @@ public class SelectSaveAddress implements Task {
             );
         }
     }
-    public static SelectSaveAddress selectSave(Users user) {
-        return Tasks.instrumented(SelectSaveAddress.class, user);
+    public static SelectSaveAddress selectSave() {
+        return Tasks.instrumented(SelectSaveAddress.class);
     }
 
 }

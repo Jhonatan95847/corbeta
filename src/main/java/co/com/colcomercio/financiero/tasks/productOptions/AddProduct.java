@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,15 +17,11 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class AddProduct implements Task {
     private static final Logger logger = LogManager.getLogger(AddProduct.class);
-    //@Step("Agregando el produco")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("##########################AGREGANDO PRODUCO#######################");
 
         actor.attemptsTo(
-                //WaitUntil.the(BUTTON_ADD_CAR, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
-                //Wait.withDuration(LOW_TIME),
-                //ScrollToElement.to(BUTTON_ADD_CAR),
                 WaitUntil.the(BUTTON_ADD_CAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_ADD_CAR),
                 Wait.withDuration(MICRO_TIME)
@@ -37,10 +32,8 @@ public class AddProduct implements Task {
             );
         }
         actor.attemptsTo(
-                //Wait.withDuration(LOW_TIME),
                 WaitUntil.the(BUTTON_GO_TO_PAY, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_GO_TO_PAY)
-                //Wait.withDuration(7)
         );
     }
     public static AddProduct goToPay() {

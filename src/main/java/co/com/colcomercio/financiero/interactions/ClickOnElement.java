@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,7 +21,6 @@ public class ClickOnElement implements Interaction {
         return Tasks.instrumented(ClickOnElement.class, element);
     }
 
-    //@Step("Haciendo click en el elemento")
     @Override
     public <T extends Actor> void performAs(T actor) {
 

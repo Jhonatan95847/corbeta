@@ -2,11 +2,11 @@ package co.com.colcomercio.financiero.tasks.login;
 
 import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
+import co.com.colcomercio.financiero.utils.Paralelo.AsignarUsuario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,19 +27,19 @@ public class LoginNewUser implements Task {
 
     public LoginNewUser(NewUser newUser){this.newUser = newUser;}
     String username = DataGeneratorDate();
-    //@Step("Iniciando sesión con un usuario nuevo")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO####################");
         actor.attemptsTo(
+                AsignarUsuario.alActor(),
                 ClickOnElement.on(BUTTON_MYACCOUNT),
                 WaitUntil.the(EDITBOX_EMAIL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.()),
                 //Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
                 //Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
                 EnterText.intoField("alkosto" + username + "@gmail.com", EDITBOX_EMAIL),
-                ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
-                ClickOnElement.on(BUTTON_CONTINUE_LOGIN),
+                ScrollToElement.to(BUTTON_CONTINUE_LOGIN_NEW),
+                ClickOnElement.on(BUTTON_CONTINUE_LOGIN_NEW),
                 WaitUntil.the(EITBOX_NAME, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 TakeScreenshot.at(),
                 EnterText.intoField(newUser.getDataNewUsers().getName(),EITBOX_NAME),

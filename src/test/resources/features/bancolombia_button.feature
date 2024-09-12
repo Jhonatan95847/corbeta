@@ -11,7 +11,7 @@ Característica: Medio de Pago - Boton Bancolombia
 
   #Resultado: pendiente | exitoso
 
-  @cashPayment
+  @BancolombiaButton
   Esquema del escenario: Compra de productos con Boton Bancolombia
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante Boton Bancolombia
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -21,7 +21,7 @@ Característica: Medio de Pago - Boton Bancolombia
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Entrega hoy       | otros datos    |  NIT    | pendiente |
-      | registrado |    3     | Entrega hoy       | guardada       |  NIT    | pendiente |
-      | registrado |    3     | Entrega hoy       | registrada     |  NIT    | pendiente |
-      | nuevo      |    3     | Entrega hoy       | nuevo usuario  |  NIT    | pendiente |
+      | registrado |    3     | Entrega hoy       | otros datos    |  CC     | OK        |
+      | registrado |    3     | Entrega hoy       | guardada       |  NIT    | OK        |
+      | registrado |    3     | Entrega hoy       | registrada     |  CE     | OK        |
+      | nuevo      |    3     | Entrega hoy       | nuevo usuario  |  NIT    | OK        |

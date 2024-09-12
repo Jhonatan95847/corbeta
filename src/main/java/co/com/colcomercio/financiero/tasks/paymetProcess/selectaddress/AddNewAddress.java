@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-//import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,7 +27,6 @@ public class AddNewAddress implements Task {
         this.newUser = newUser;
     }
 
-    //@Step("Agregando una nueva direccion")
     @Override
     public <T extends Actor> void performAs(T actor) {
         newUser = GetDataModel.newUser("datos_nuevo_usuario");
