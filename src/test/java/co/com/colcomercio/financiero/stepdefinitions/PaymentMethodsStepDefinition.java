@@ -10,7 +10,10 @@ import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.AddNewAdd
 import co.com.colcomercio.financiero.tasks.paymetProcess.SameShippingMethod;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.OtherData;
 import co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress.SelectSaveAddress;
+import co.com.colcomercio.financiero.tasks.productOptions.AddProductGarantia;
+import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import co.com.colcomercio.financiero.utils.GetDataModel;
+import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Y;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -107,6 +110,14 @@ public class PaymentMethodsStepDefinition {
                 PayBancolombiaButton.pay(),
                 ReviewAndAproval.review(),
                 ProcesBancolombiaPay.payBancolombia()
+        );
+    }
+
+    @Cuando("quiere ir a pagar y selecciona garantia extendida")
+    public void quiereIrAPagarYSeleccionaGarantiaExtendida() {
+        theActorInTheSpotlight().attemptsTo(
+                AddProductGarantia.goToPay(),
+                GoToPay.pay()
         );
     }
 }

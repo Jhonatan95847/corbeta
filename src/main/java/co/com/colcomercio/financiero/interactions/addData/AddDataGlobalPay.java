@@ -1,5 +1,9 @@
-package co.com.colcomercio.financiero.interactions;
+package co.com.colcomercio.financiero.interactions.addData;
 
+import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.EnterByDigit;
+import co.com.colcomercio.financiero.interactions.EnterText;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

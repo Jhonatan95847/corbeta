@@ -6,7 +6,6 @@ import co.com.colcomercio.financiero.tasks.SelectProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectQuantitiProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectShippingMetod;
-import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteCard;
 import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteProducts;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import co.com.colcomercio.financiero.utils.GetDataModel;
@@ -59,6 +58,18 @@ public class ProductSearch {
                 SelectQuantitiProduct.selectQuantity(cantidad),
                 AddProduct.goToPay(),
                 GoToPay.pay()
+        );
+    }
+
+    @Cuando("el cliente {string} busca el producto y selecciona cantidad {string} y método de envío {string}")
+    public void elClienteBuscaElProductoYSeleccionaCantidadYMétodoDeEnvío(String cliente, String cantidad, String metodoEnvio) {
+        withTheData = GetDataModel.productList("lista_de_productos");
+        theActorInTheSpotlight().attemptsTo(
+                DeleteProducts.delete(),
+                SearchProduct.addProduct(withTheData),
+                SelectProduct.productSelect(),
+                SelectShippingMetod.selectMethod(metodoEnvio,cliente),
+                SelectQuantitiProduct.selectQuantity(cantidad)
         );
     }
 }

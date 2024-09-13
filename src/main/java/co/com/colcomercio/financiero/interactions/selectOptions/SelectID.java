@@ -1,5 +1,7 @@
-package co.com.colcomercio.financiero.interactions;
+package co.com.colcomercio.financiero.interactions.selectOptions;
 
+import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

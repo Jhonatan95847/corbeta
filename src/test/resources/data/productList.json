@@ -2,7 +2,31 @@
   {
     "key" : "lista_de_productos",
     "dataProductList": {
-      "productName" : "Juego PS5 Spider-Man: Miles Morales"
+      "productName" : "TV KALLEY 32\" Pulgadas 81 cm TV32HDG HD LED Plano TV"
+    }
+  },
+  {
+    "key" : "producto_garantia_extendida",
+    "dataProductList": {
+      "productName" : "TV KALLEY 32\" Pulgadas 81 cm TV32HDG HD LED Plano TV"
+    }
+  },
+  {
+    "key" : "producto_davivienda",
+    "dataProductList": {
+      "productName" : "iPhone 11 64 GB \"Blanco"
+    }
+  },
+  {
+    "key" : "productos_codensa",
+    "dataProductList": {
+      "productName" : "TV KALLEY 32\" Pulgadas 81 cm TV32HDG HD LED Plano TV"
+    }
+  },
+  {
+    "key" : "productos_kasado",
+    "dataProductList": {
+      "productName" : "TV TCL 55\" Pulgadas 139 cm 55P725 4K-UHD LED Plano Smart TV"
     }
   }
 ]

@@ -1,7 +1,9 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.payMethod;
 
 import co.com.colcomercio.financiero.interactions.*;
-import co.com.colcomercio.financiero.interactions.SelectPayMethod;
+import co.com.colcomercio.financiero.interactions.selectOptions.SelectPayMethod;
+import co.com.colcomercio.financiero.interactions.addData.AddDataGlobalPay;
+import co.com.colcomercio.financiero.interactions.addData.AddDataPayU;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

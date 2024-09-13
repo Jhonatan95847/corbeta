@@ -1,6 +1,6 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress;
 
-import co.com.colcomercio.financiero.interactions.AddPassLogin;
+import co.com.colcomercio.financiero.interactions.addData.AddPassLogin;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;

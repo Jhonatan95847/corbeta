@@ -1,6 +1,9 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess;
 
 import co.com.colcomercio.financiero.interactions.*;
+import co.com.colcomercio.financiero.interactions.bancolombia.EnterDynamicKey;
+import co.com.colcomercio.financiero.interactions.bancolombia.EnterKey;
+import co.com.colcomercio.financiero.interactions.selectOptions.SelectAccount;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

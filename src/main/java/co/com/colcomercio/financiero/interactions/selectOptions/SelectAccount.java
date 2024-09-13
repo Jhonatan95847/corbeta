@@ -1,4 +1,4 @@
-package co.com.colcomercio.financiero.interactions;
+package co.com.colcomercio.financiero.interactions.selectOptions;
 
 
 import net.serenitybdd.core.pages.WebElementFacade;

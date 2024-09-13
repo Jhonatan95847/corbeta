@@ -1,5 +1,8 @@
-package co.com.colcomercio.financiero.interactions;
+package co.com.colcomercio.financiero.interactions.addData;
 
+import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
+import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.models.users.Usuario;
 import co.com.colcomercio.financiero.utils.Paralelo.AsignarUsuario;
 import co.com.colcomercio.financiero.utils.TomarCapturaDePantalla;
