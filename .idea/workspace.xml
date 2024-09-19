@@ -4,42 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="Metodo de pago Boton Bancolombia y correcciones con SonarLint">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/AddProductGarantia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/garantiaExtendida.feature" afterDir="false" />
+    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="Garantia extendida y terminar feature de bancolombia, ajuste no Garantia, clasificar tareas e interacciones en paquetes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddDataGlobalPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddDataGlobalPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddDataPayU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddDataPayU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddEmailLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddEmailLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/AddPassLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddPassLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/ClickOnElementRetry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/EnterDynamicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/bancolombia/EnterDynamicKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/EnterKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/bancolombia/EnterKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/RemoveText.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/ScrollToPosition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/SelectAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/selectOptions/SelectAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/SelectID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/selectOptions/SelectID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/SelectPayMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/selectOptions/SelectPayMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/WaitForElementIsClickeable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/WaitForElementIsNotVisible.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddEmailLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddEmailLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/registeruser/UserEcomerce.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/registeruser/UsersEcomerceList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/users/DataUsers.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/users/UserEcomerce.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/users/UserEcomerceList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/models/users/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ProcesBancolombiaPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ProcesBancolombiaPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayBancolombiaButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayBancolombiaButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayCards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayCash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayCash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayDigitalWallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayDigitalWallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayPSE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PayPSE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PaySaveCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/PaySaveCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/LoginNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/LoginNewUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ValidatePay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ValidatePay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/payMethod/SelectPayMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/AddNewAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/AddNewAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/OtherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/OtherData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/SelectSaveAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/selectaddress/SelectSaveAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/productOptions/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/ActionsOnProducrPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/ActionsOnProducrPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/AddCarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/userinterfaces/selectedProductPages/AddCarPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/ConfigHelper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/JsonUtil.java" beforeDir="false" />
@@ -47,11 +31,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/UserRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/Users.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/UsuarioPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/PaymentMethodsStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/PaymentMethodsStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ProductSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ProductSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/WaitingTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/utils/WaitingTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/financiero/stepdefinitions/ShippingMetodStepDefinition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/productList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/productList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/bancolombia_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/bancolombia_button.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/alkosto_card.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/alkosto_card.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/credit_card.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/credit_card.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
     </list>
@@ -114,7 +96,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "PruebaParalelo",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/eComerce/AutomatizacionEstable/Alkosto/sap-testing-alkosto",
+    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/financiero-testing-qa",
     "onboarding.tips.debug.path": "C:/Users/1049644474/Documents/Automatizacion/Base automatizacion/financiero-testing-qa/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -312,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726177213032</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Garantia extendida y terminar feature de bancolombia, ajuste no Garantia, clasificar tareas e interacciones en paquetes">
+      <option name="closed" value="true" />
+      <created>1726262016976</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726262016976</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,7 +331,8 @@
     <MESSAGE value="Agregar fecha automatica PSE y ajustes tags de features de tarjeta debito" />
     <MESSAGE value="ejecucion en paralelo Ok soft y hard login, espera para seleccionat el metodo de pago" />
     <MESSAGE value="Metodo de pago Boton Bancolombia y correcciones con SonarLint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metodo de pago Boton Bancolombia y correcciones con SonarLint" />
+    <MESSAGE value="Garantia extendida y terminar feature de bancolombia, ajuste no Garantia, clasificar tareas e interacciones en paquetes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Garantia extendida y terminar feature de bancolombia, ajuste no Garantia, clasificar tareas e interacciones en paquetes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

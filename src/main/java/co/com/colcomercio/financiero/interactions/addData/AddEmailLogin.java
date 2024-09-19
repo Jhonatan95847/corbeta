@@ -34,8 +34,8 @@ public class AddEmailLogin implements Interaction {
                 //Ensure.that(IsElementPresent.on(TEXT_LOGIN)).isTrue(),
                 //Ensure.that(IsElementPresent.on(TEXT_PLEASE_ID)).isTrue(),
                 Enter.theValue(usuario.getemail()).into(EDITBOX_EMAIL),
-                ScrollToElement.to(BUTTON_CONTINUE_LOGIN_NEW),
-                ClickOnElement.on(BUTTON_CONTINUE_LOGIN_NEW),
+                ScrollToElement.to(BUTTON_CONTINUE_LOGIN),
+                ClickOnElement.on(BUTTON_CONTINUE_LOGIN),
                 Wait.withDuration(MICRO_TIME),
                 ScrollToElement.to(BUTTON_LOGIN_MAIL)
         );

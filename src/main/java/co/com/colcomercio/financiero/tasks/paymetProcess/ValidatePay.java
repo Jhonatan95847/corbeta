@@ -1,6 +1,8 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess;
 
 
+import co.com.colcomercio.financiero.interactions.GetText;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -19,7 +21,8 @@ public class ValidatePay implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Wait.withDuration(20)
+                Wait.withDuration(20),
+                GetText.ofElement(TEXT_NUMERO_PEDIDO)
                 //TakeScreenshot.at("target/site/serenity")
 
 
@@ -42,6 +45,7 @@ public class ValidatePay implements Task {
                 break;
             case "FAILED":
                 actor.attemptsTo(
+                        ScrollToElement.to(VALIDATE_FAILED_PAY),
                         Ensure.that(IsElementPresent.on(VALIDATE_FAILED_PAY)).isTrue()
                         //(Wait.withDuration(10)
                 );

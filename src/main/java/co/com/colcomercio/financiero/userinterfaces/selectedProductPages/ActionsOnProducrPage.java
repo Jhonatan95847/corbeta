@@ -20,10 +20,10 @@ public class ActionsOnProducrPage extends PageObject {
     //MISMO DIA NUEVO
     public static final Target SELECT_DEPRTAMENT_SAME =Target.the("Select Departamento cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--department\"]//div[@class=\"float-select js-float-select\"]"));
     public static final Target SELECT_BOGOTADC =Target.the("Select Departamento Bogota").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Bogota DC')]"));
-    public static final Target SELECT_CITY_SAME =Target.the("Select Ciudad cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--city\"]//div[@class=\"float-select js-float-select\"]"));
+    public static final Target SELECT_CITY_SAME =Target.the("Select Ciudad cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--city\"]//div[@class=\"float-select js-float-select active-click\"]"));
     public static final Target SELECT_BOGOTACITY =Target.the("Select Ciudad Bogota").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Bogotá')]"));
     public static final Target SELECT_ZONE_SAME =Target.the("Select Zona cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--zones js-localities-zones\"]//div[@class=\"float-select js-float-select active-click\"]"));
-    public static final Target SELECT_CHAPZONE =Target.the("Select Zona Chapinero").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Localidad nueva de Suba')]"));
+    public static final Target SELECT_CHAPZONE =Target.the("Select Zona Chapinero").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Barrios Unidos')]"));
     public static final Target BUTTON_CONTINUAR_HOY =Target.the("Baton continuar entrega hoy").located(By.xpath("//button[@id=\"js-sourcingAction\"]"));
     public static final Target BUTTON_CONTINUAR_HOY_CITY =Target.the("Baton continuar entrega hoy ciudad").located(By.xpath("//button[@id=\"same-day-delivery-choose-city\"]"));
     public static final Target BUTTON_CONTINUAR_HOY_NUEVO =Target.the("Baton continuar entrega hoy").located(By.xpath("//button[@id=\"js-verify-email-same-day-zones\"]"));
