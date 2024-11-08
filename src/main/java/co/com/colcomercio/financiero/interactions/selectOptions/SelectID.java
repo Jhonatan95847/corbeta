@@ -1,14 +1,15 @@
-package co.com.colcomercio.financiero.interactions;
+package co.com.colcomercio.financiero.interactions.selectOptions;
 
+import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-import net.thucydides.core.annotations.Step;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ShippingAddressPage.EDITBOX_LASTNAME_ADDRES;
-import static jdk.internal.org.jline.utils.Log.error;
+
 
 public class SelectID implements Interaction {
 
@@ -20,7 +21,7 @@ public class SelectID implements Interaction {
         this.tipoID = tipoID;
     }
 
-    @Step("Seleccionando tipo de ID")
+    //@Step("Seleccionando tipo de ID")
     @Override
     public <T extends Actor> void performAs(T actor) {
         switch (tipoID) {
@@ -69,7 +70,6 @@ public class SelectID implements Interaction {
                 );
                 break;
             default:
-                error();
                 break;
         }
 

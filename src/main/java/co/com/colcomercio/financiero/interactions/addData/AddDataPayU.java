@@ -1,5 +1,9 @@
-package co.com.colcomercio.financiero.interactions;
+package co.com.colcomercio.financiero.interactions.addData;
 
+import co.com.colcomercio.financiero.interactions.ClickOnElement;
+import co.com.colcomercio.financiero.interactions.EnterByDigit;
+import co.com.colcomercio.financiero.interactions.EnterText;
+import co.com.colcomercio.financiero.interactions.ScrollToElement;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 
 import net.serenitybdd.screenplay.Actor;
@@ -7,7 +11,6 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +26,7 @@ public class AddDataPayU implements Interaction {
     public AddDataPayU(PaymentCard paymentCard) {
         this.paymentCard = paymentCard;
     }
-    @Step("Agregando datos de la tarjeta pay u")
+    //@Step("Agregando datos de la tarjeta pay u")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("##############################AGREGANDO DATOS DE LA TARJETA PAY U##############################");

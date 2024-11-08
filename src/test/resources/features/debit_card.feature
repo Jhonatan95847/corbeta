@@ -13,7 +13,7 @@ Característica: Medio de Pago - Tarjeta Debito
   ####################################### Nueva Implementacion ############################################
   #______________________________________________________EXITOSA______________________________________________
   #******************************************************HARDLOGIN*********************************************
-  @tarjetaCreditoRegistradoExitosa @exitoso @tarjetaCredito
+  @tarjetaDebitoRegistradoExitosa @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -24,13 +24,13 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
 
 
-  @tarjetaCreditoNuevoExitosa @exitoso @tarjetaCredito
+  @tarjetaDebitoNuevoExitosa @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -47,7 +47,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
 
 
-  @tarjetaCreditoRegistradoExitosaTokenisada @exitoso @tarjetaCredito
+  @tarjetaDebitoRegistradoExitosaTokenisada @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -57,14 +57,14 @@ Característica: Medio de Pago - Tarjeta Debito
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
-      | registrado |      3   | Recoge en tienda  |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  NIT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
       | registrado |      2   | Entrega hoy       |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
 
 
-  @tarjetaCreditoNuevoExitosaTokenisada @exitoso @tarjetaCredito
+  @tarjetaDebitoNuevoExitosaTokenisada @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -81,7 +81,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
 
  #******************************************************SOFTLOGIN*********************************************
-  @tarjetaCreditoRegistradoSoftlogin @exitoso @tarjetaCredito
+  @tarjetaDebitoRegistradoSoftlogin @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -95,9 +95,9 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
 
-  @tarjetaCreditoNuevoSoftlogin @tarjetaCredito @exitoso
+  @tarjetaDebitoNuevoSoftlogin @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -113,7 +113,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | nuevo      |      2   | Entrega hoy       | nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
       | nuevo      |      3   | Recoge en tienda  | nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
 
-  @tarjetaCreditoRegistradoSoftloginTokenisada @exitoso @tarjetaCredito
+  @tarjetaDebitoRegistradoSoftloginTokenisada @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -126,13 +126,13 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
       | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
-      | registrado |      2   | Recoge en tienda  |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
 
     #______________________________________________________RECHAZADAS______________________________________________
     #******************************************************HARDLOGIN*********************************************
 
-  @tarjetaCreditoRegistradoFallido @fallido @tarjetaCredito
+  @tarjetaDebitoRegistradoFallido @fallido @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -143,13 +143,13 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
       | registrado |      3   | Envio gratis      |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Entrega hoy       |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
 
 
-  @tarjetaCreditoNuevofallido @fallido @tarjetaCredito
+  @tarjetaDebitoNuevofallido @fallido @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -165,7 +165,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
       | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
 
-  @tarjetaCreditoRegistradofallidoTokenisada @fallido @tarjetaCredito
+  @tarjetaDebitoRegistradofallidoTokenisada @fallido @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -178,11 +178,11 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
       | registrado |      2   | Entrega hoy       |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
 
 
-  @tarjetaCreditoNuevoFallidoTokenisada @fallido @tarjetaCredito
+  @tarjetaDebitoNuevoFallidoTokenisada @fallido @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -199,7 +199,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | nuevo      |      2   | Envio gratis      |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
 
   #******************************************************SOFTLOGIN*********************************************
-  @tarjetaCreditoRegistradoSoftloginFallido @exitoso @tarjetaCredito
+  @tarjetaDebitoRegistradoSoftloginFallido @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -213,9 +213,9 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
 
-  @tarjetaCreditoNuevoSoftloginFallido @tarjetaCredito @exitoso
+  @tarjetaDebitoNuevoSoftloginFallido @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -226,12 +226,12 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia| resultado |
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
       | registrado |      3   | Envio gratis      |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
 
-  @tarjetaCreditoRegistradoSoftloginFallidoTokenisada @exitoso @tarjetaCredito
+  @tarjetaDebitoRegistradoSoftloginFallidoTokenisada @exitoso @tarjetaCredito
   Esquema del escenario: Compra con T Debito
   Narrativa: El cliente registrado en Debito
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -242,7 +242,7 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |

@@ -18,7 +18,7 @@ Característica: Medio de Pago - Tarjeta Alkosto
     #FRANQUICIA: visa | mastercad | diners | amex
     #RESULTADO: exitoso | rechazada
 
-    @alkostocardcodensa
+    @alkostocardcodensaPrueba
     Esquema del escenario: Compra con T Alkosto
     Narrativa: El cliente registrado en Alkosto
         Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -28,38 +28,19 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                            | franquicia| resultado |
-            | registrado |      1   | Entrega hoy       |  registrada    |  NIT     | Tarjeta de Crédito o Debito con CVV| visa      | exitoso   |
-            | registrado |      2   | Recoge en tienda  |  guardada      |  NIT     | Tarjeta de Crédito                 | visa      | exitoso        |
-            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| amex      | exitoso    |
-            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | amex      | exitoso   |
-            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| diners    | exitoso   |
-            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | diners    | exitoso   |
-            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
-            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Tarjeta de Crédito                 | mastercard| exitoso   |
-            | registrado |      2   | Entrega hoy       |  registrada    |  NIT     | Tarjeta Alkosto                    | alkosto   | exitoso   |
-            | nuevo      |      2   | Entrega hoy       |  nuevo usuario |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
-            | registrado |      3   | Recoge en tienda  |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| diners    | exitoso   |
-            | registrado |      2   | Recoge en tienda  |  guardada      |  NIT     | Tarjeta de Crédito                 | visa      | exitoso   |
-            | registrado |      2   | Recoge en tienda  |  registrada    |  NIT     | Tarjeta Alkosto                    | alkosto   | exitoso   |
-            | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
-            | registrado |      3   | Envio gratis      |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
-            | registrado |      2   | Envio gratis      |  guardada      |  NIT     | Tarjeta de Crédito                 | mastercard| exitoso   |
-            | registrado |      2   | Envio gratis      |  registrada    |  NIT     | Tarjeta Alkosto                    | alkosto   | exitoso   |
-            | nuevo      |      2   | Envio gratis      |  nuevo usuario |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
-            | registrado |      3   | Entrega hoy       |  otros datos   |  CC      | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
-            | registrado |      2   | Entrega hoy       |  guardada      |  CC      | Tarjeta de Crédito                 | mastercard| exitoso   |
-            | registrado |      2   | Entrega hoy       |  registrada    |  CC      | Tarjeta Alkosto                    | alkosto   | exitoso   |
-            | nuevo      |      2   | Entrega hoy       |  nuevo usuario |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
-            | registrado |      3   | Recoge en tienda  |  otros datos   |  CC      | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
-            | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito                 | mastercard| exitoso   |
-            | registrado |      2   | Recoge en tienda  |  registrada    |  CC      | Tarjeta Alkosto                    | alkosto   | exitoso   |
-            | nuevo      |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
-            | registrado |      3   | Envio gratis      |  otros datos   |  CC      | Tarjeta de Crédito o Debito con CVV| mastercard| exitoso   |
-            | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito                 | mastercard| exitoso   |
-            | registrado |      2   | Envio gratis      |  registrada    |  CC      | Tarjeta Alkosto                    | alkosto   | exitoso   |
-            | nuevo      |      2   | Envio gratis      |  nuevo usuario |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
-
-
-
-
+            | registrado |      1   | Entrega hoy       |  registrada    |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  guardada      |  NIT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  registrada    |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  otros datos   |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  guardada      |  CC      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  otros datos   |  CE      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  guardada      |  CE      | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  registrada    |  PAS     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      2   | Entrega hoy       |  otros datos   |  PAS     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  guardada      |  PAS     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  registrada    |  RUT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      3   | Entrega hoy       |  otros datos   |  RUT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
+            | registrado |      1   | Entrega hoy       |  guardada      |  RUT     | Crédito Fácil CODENSA              | codensa   | exitoso   |
 

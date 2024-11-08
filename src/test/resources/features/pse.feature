@@ -24,10 +24,10 @@ Característica: Medio de Pago - PSE
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | OK        |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    | OK        |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | OK        |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | OK        |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  PAS    | OK        |
 
   @psePayOkNuevo @psePayOk @pseHardLogin @psePay
   Esquema del escenario: Compra de productos con PSE
@@ -57,7 +57,7 @@ Característica: Medio de Pago - PSE
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
       | registrado |    3     | Envio gratis      | otros datos    |  NIT    | PENDING   |
-      | registrado |    3     | Recoge en tienda  | guardada       |  CC     | PENDING   |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CC     | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  RUT    | PENDING   |
       | registrado |    3     | Entrega hoy       | otros datos    |  CE     | PENDING   |
 
@@ -88,9 +88,9 @@ Característica: Medio de Pago - PSE
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | FAILED    |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    | FAILED    |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | FAILED    |
-      | registrado |    3     | Recoge en tienda  | registrada     |  CE     | FAILED    |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CE     | FAILED    |
       | registrado |    3     | Entrega hoy       | otros datos    |  PAS    | FAILED    |
 
   @psePayFAILEDNuevo @psePayFAILED @pseHardLogin @psePay
@@ -120,10 +120,10 @@ Característica: Medio de Pago - PSE
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | OK        |
+      | registrado |    3     | Entrega hoy       | otros datos    |  NIT    | OK        |
       | registrado |    3     | Entrega hoy       | guardada       |  CC     | OK        |
       | registrado |    3     | Envio gratis      | registrada     |  CE     | OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | OK        |
+      | registrado |    3     | Envio gratis      | registrada     |  PAS    | OK        |
 
   @psePayOkNuevoSoftLogin @psePayOk @pseSoftLogin @psePay
   Esquema del escenario: Compra de productos con PSE
@@ -152,10 +152,10 @@ Característica: Medio de Pago - PSE
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | PENDING   |
+      | registrado |    3     | Envio gratis      | otros datos    |  NIT    | PENDING   |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | PENDING   |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | PENDING   |
+      | registrado |    3     | Entrega hoy       | guardada       |  PAS    | PENDING   |
 
   @psePayPENDINGNuevoSoftLogin @psePayPENDING @pseSoftLogin @psePay
   Esquema del escenario: Compra de productos con PSE
@@ -184,9 +184,9 @@ Característica: Medio de Pago - PSE
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | FAILED    |
+      | registrado |    3     | Entrega hoy       | otros datos    |  NIT    | FAILED    |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | FAILED    |
-      | registrado |    3     | Recoge en tienda  | registrada     |  CE     | FAILED    |
+      | registrado |    3     | Envio gratis      | registrada     |  CE     | FAILED    |
       | registrado |    3     | Entrega hoy       | otros datos    |  PAS    | FAILED    |
 
   @psePayFAILEDNuevoSoftLogin @psePayFAILED @pseSoftLogin @psePay

@@ -1,39 +1,29 @@
 package co.com.colcomercio.financiero.tasks.login;
 
-import co.com.colcomercio.financiero.interactions.AddEmailLogin;
-import co.com.colcomercio.financiero.interactions.AddPassLogin;
-
-import co.com.colcomercio.financiero.models.users.Users;
+import co.com.colcomercio.financiero.interactions.addData.AddEmailLogin;
+import co.com.colcomercio.financiero.interactions.addData.AddPassLogin;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-
-import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Login implements Task {
-    private final Users userEcomerce;
     private static final Logger logger = LogManager.getLogger(Login.class);
 
-
-    public Login( Users userEcomerce){
-        this.userEcomerce = userEcomerce;
+    public static Login inMyProfile( ) {
+        return instrumented(Login.class);
     }
 
-    public static Login inMyProfile( Users users) {
-        return instrumented(Login.class, users);
-    }
-
-    @Step("Iniciando sesión con un usuario registrado")
+    //@Step("Iniciando sesión con un usuario registrado")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO####################");
         actor.attemptsTo(
-                AddEmailLogin.addEmail(userEcomerce),
-                AddPassLogin.addPass(userEcomerce)
+                AddEmailLogin.addEmail(),
+                AddPassLogin.addPass()
         );
     }
 }

@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +15,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class GoToPay implements Task {
     private static final Logger logger = LogManager.getLogger(GoToPay.class);
-    @Step("Ir a pagar desde el carrito")
+    //@Step("Ir a pagar desde el carrito")
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("###########################IR A PAGAR DESDE EL CARRITO#########################");

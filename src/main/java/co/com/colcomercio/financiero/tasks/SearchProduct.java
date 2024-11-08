@@ -3,12 +3,12 @@ package co.com.colcomercio.financiero.tasks;
 import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.productList.ProductList;
 import co.com.colcomercio.financiero.questions.IsElementPresent;
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -34,11 +34,11 @@ public class SearchProduct implements Task {
                 ClickOnElement.on(EDITBOX_SEARCH_BAR_ADICIONAL),
                 WaitUntil.the(EDITBOX_SEARCH_BAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
-                Wait.withDuration(MICRO_TIME),
+                Wait.withDuration(5),
                 WaitUntil.the(BUTTON_SEARCH_BAR_DOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_SEARCH_BAR_DOS),
                 WaitUntil.the(VALIDATE_PRICE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                GetText.ofElement(VALIDATE_PRICE),
+                //GetText.ofElement(VALIDATE_PRICE),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_NAME_PRODUCT)).isTrue(),
                 Ensure.that(IsElementPresent.on(VALIDATE_IMAGE_PRODUCT)).isTrue(),

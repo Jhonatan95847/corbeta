@@ -1,13 +1,13 @@
 package co.com.colcomercio.financiero.tasks.paymetProcess.selectaddress;
 
 import co.com.colcomercio.financiero.interactions.*;
+import co.com.colcomercio.financiero.interactions.selectOptions.SelectID;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.thucydides.core.annotations.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,17 +28,17 @@ public class AddNewAddress implements Task {
         this.newUser = newUser;
     }
 
-    @Step("Agregando una nueva direccion")
     @Override
     public <T extends Actor> void performAs(T actor) {
         newUser = GetDataModel.newUser("datos_nuevo_usuario");
 
         logger.info("#########################AGREGANDO UNA NUEVA DIRECCION#########################");
         actor.attemptsTo(
-                //Wait.withDuration(LOW_TIME),
+                Wait.withDuration(5),
                 WaitUntil.the(LIST_TIPO_ID, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(LIST_TIPO_ID),
                 ClickOnElement.on(LIST_TIPO_ID),
+                Wait.withDuration(MICRO_TIME),
                 SelectID.type(newUser,tipoID),
                 ScrollToElement.to(EDITBOX_PHONE_ADDRES),
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EDITBOX_PHONE_ADDRES),
@@ -71,7 +71,7 @@ public class AddNewAddress implements Task {
             actor.attemptsTo(
                     ScrollToElement.to(BUTTON_CONTINUAR_ADDRES),
                     ClickOnElement.on(BUTTON_CONTINUAR_ADDRES),
-                    Wait.withDuration(LOW_TIME)
+                    Wait.withDuration(MICRO_TIME)
             );
 
         }
