@@ -29,14 +29,14 @@ public class SearchProduct implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("################################BUSCANDO PRODUCTO##############################");
         actor.attemptsTo(
-                //WaitUntil.the(EDITBOX_SEARCH_BAR_ADICIONAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                WaitUntil.the(EDITBOX_SEARCH_BAR_ADICIONAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //TakeScreenshot.at("target/site/serenity"),
-                //ClickOnElement.on(EDITBOX_SEARCH_BAR_ADICIONAL),
+                ClickOnElement.on(EDITBOX_SEARCH_BAR_ADICIONAL),
                 WaitUntil.the(EDITBOX_SEARCH_BAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
-                Wait.withDuration(MICRO_TIME),
-                WaitUntil.the(BUTTON_SEARCH_BAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                ClickOnElement.on(BUTTON_SEARCH_BAR),
+                Wait.withDuration(5),
+                WaitUntil.the(BUTTON_SEARCH_BAR_DOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                ClickOnElement.on(BUTTON_SEARCH_BAR_DOS),
                 WaitUntil.the(VALIDATE_PRICE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //GetText.ofElement(VALIDATE_PRICE),
                 Ensure.that(IsElementPresent.on(VALIDATE_PRICE)).isTrue(),

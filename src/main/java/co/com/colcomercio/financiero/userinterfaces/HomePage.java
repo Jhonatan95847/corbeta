@@ -8,9 +8,11 @@ public class HomePage extends PageObject {
 
     public static final Target BUTTON_MYACCOUNT =Target.the("Boton Mi Cuenta").located(By.xpath("//li[@id=\"js-myaccount-header\"]//span[contains(text(),'Mi cuenta')]"));
     public static final Target BUTTON_MYCAR = Target.the("Boton Mi carrito").located(By.xpath("//li[@id=\"js-mycart-header\"]"));
-    public static final Target BUTTON_SEARCH_BAR = Target.the("Boton busqueda").located(By.xpath("//button[@id=\"js-search-button\"]"));
-    public static final Target BUTTON_SEARCH_BAR_DOS = Target.the("Boton busqueda").located(By.xpath("//*[@id=\"algoliaAutocompletev2\"]/div/form/i"));
+    public static final Target BUTTON_SEARCH_BAR = Target.the("Boton busqueda uno").located(By.xpath("//button[@id=\"js-search-button\"]"));
+    public static final Target BUTTON_SEARCH_BAR_PROD = Target.the("Boton busqueda prod").located(By.xpath("//i[@class=\"icon alk-icon-search-mobile\"]"));
+    public static final Target BUTTON_SEARCH_BAR_DOS = Target.the("Boton busqueda dos").located(By.xpath("//*[@id=\"algoliaAutocompletev2\"]/div/form/i"));
     public static final Target EDITBOX_SEARCH_BAR = Target.the("Barra de busqueda").located(By.xpath("//input[@id=\"autocomplete-0-input\"]"));
+    public static final Target EDITBOX_SEARCH_BAR_PROD = Target.the("Barra de busqueda produccion").located(By.xpath("//input[@id=\"js-site-search-input\"]"));
     public static final Target EDITBOX_SEARCH_BAR_ADICIONAL = Target.the("Barra de busqueda paso adicional").located(By.xpath("//input[@id=\"js-algolia-site-search-input\"]"));
     public static final Target VALIDATE_ALKOSTO = Target.the("Imagen Alkosto").located(By.xpath("//img[@title=\"Alkosto\"]"));
     public static final Target VALIDATE_BANNER = Target.the("Banner Alkosto").located(By.xpath("//ul[@id=\"banner\"]"));

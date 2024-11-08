@@ -27,7 +27,7 @@ public class AddPassLogin implements Interaction {
 
         Usuario usuario = actor.recall("usuario");
         actor.attemptsTo(
-                //AsignarUsuario.alActor(),
+                Wait.withDuration(MICRO_TIME),
                 WaitUntil.the(BUTTON_LOGIN_GOOGLE, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(IsElementPresent.on(BUTTON_LOGIN_GOOGLE)).isTrue(),
                 Ensure.that(IsElementPresent.on(BUTTON_LOGIN_FACEBOOK)).isTrue(),

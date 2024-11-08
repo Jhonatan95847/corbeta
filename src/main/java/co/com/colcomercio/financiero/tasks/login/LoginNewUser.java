@@ -2,7 +2,6 @@ package co.com.colcomercio.financiero.tasks.login;
 
 import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.newUsers.NewUser;
-import co.com.colcomercio.financiero.utils.Paralelo.AsignarUsuario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -31,7 +30,6 @@ public class LoginNewUser implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO NUEVO####################");
         actor.attemptsTo(
-                AsignarUsuario.alActor(),
                 ClickOnElement.on(BUTTON_MYACCOUNT),
                 WaitUntil.the(EDITBOX_EMAIL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //WaitUntil.the(TEXT_LOGIN, WebElementStateMatchers.()),

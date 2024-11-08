@@ -26,10 +26,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    |Daviplata| OK        |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    |Daviplata| OK        |
       | registrado |    3     | Envio gratis      | guardada       |  CC     |Daviplata| OK        |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     |Daviplata| OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    |Daviplata| OK        |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  PAS    |Daviplata| OK        |
 
   @walletOkNuevo @walletOkDaviplata @walletHardLogin @digitalWallet
   Esquema del escenario: Compra de productos con billetera digital
@@ -59,7 +59,7 @@ Característica: Medio de Pago - billetera digital
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
       | registrado |    3     | Envio gratis      | otros datos    |  NIT    |Daviplata| PENDING   |
-      | registrado |    3     | Recoge en tienda  | guardada       |  CC     |Daviplata| PENDING   |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CC     |Daviplata| PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  RUT    |Daviplata| PENDING   |
       | registrado |    3     | Entrega hoy       | otros datos    |  CE     |Daviplata| PENDING   |
 
@@ -90,9 +90,9 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    |Daviplata| FAILED    |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    |Daviplata| FAILED    |
       | registrado |    3     | Envio gratis      | guardada       |  CC     |Daviplata| FAILED    |
-      | registrado |    3     | Recoge en tienda  | registrada     |  CE     |Daviplata| FAILED    |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CE     |Daviplata| FAILED    |
       | registrado |    3     | Entrega hoy       | otros datos    |  PAS    |Daviplata| FAILED    |
 
   @walletPayFAILEDNuevoDaviplata @walletPayFAILED @walletHardLogin @digitalWallet
@@ -122,10 +122,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    |Daviplata| OK        |
+      | registrado |    3     | Envio gratis      | otros datos    |  NIT    |Daviplata| OK        |
       | registrado |    3     | Entrega hoy       | guardada       |  CC     |Daviplata| OK        |
       | registrado |    3     | Envio gratis      | registrada     |  CE     |Daviplata| OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    |Daviplata| OK        |
+      | registrado |    3     | Entrega hoy       | guardada       |  PAS    |Daviplata| OK        |
 
   @walletPayOkNuevoSoftLoginDaviplata @walletPayOk @walletSoftLogin @digitalWallet
   Esquema del escenario: Compra de productos con billetera digital
@@ -154,10 +154,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    |Daviplata| PENDING   |
+      | registrado |    3     | Envio gratis      | registrada     |  NIT    |Daviplata| PENDING   |
       | registrado |    3     | Envio gratis      | guardada       |  CC     |Daviplata| PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     |Daviplata| PENDING   |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    |Daviplata| PENDING   |
+      | registrado |    3     | Entrega hoy       | otros datos    |  PAS    |Daviplata| PENDING   |
 
   @walletPayPENDINGNuevoSoftLoginDaviplata @walletPayPENDING @walletSoftLogin @digitalWallet
   Esquema del escenario: Compra de productos con billetera digital
@@ -186,9 +186,9 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    |Daviplata| FAILED    |
+      | registrado |    3     | Envio gratis      | otros datos    |  NIT    |Daviplata| FAILED    |
       | registrado |    3     | Envio gratis      | guardada       |  CC     |Daviplata| FAILED    |
-      | registrado |    3     | Recoge en tienda  | registrada     |  CE     |Daviplata| FAILED    |
+      | registrado |    3     | Entrega hoy       | registrada     |  CE     |Daviplata| FAILED    |
       | registrado |    3     | Entrega hoy       | otros datos    |  PAS    |Daviplata| FAILED    |
 
   @walletFAILEDNuevoSoftLoginDaviplata @walletFAILED @walletSoftLogin @digitalWallet
@@ -220,10 +220,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Nequi   | OK        |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    | Nequi   | OK        |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Nequi   | OK        |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | Nequi   | OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | Nequi   | OK        |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  PAS    | Nequi   | OK        |
 
     @walletOkNuevoNequi @walletPayOk @walletHardLogin @digitalWallet
     Esquema del escenario: Compra de productos con billetera digital
@@ -253,7 +253,7 @@ Característica: Medio de Pago - billetera digital
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
       | registrado |    3     | Envio gratis      | otros datos    |  NIT    | Nequi   | PENDING   |
-      | registrado |    3     | Recoge en tienda  | guardada       |  CC     | Nequi   | PENDING   |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CC     | Nequi   | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  RUT    | Nequi   | PENDING   |
       | registrado |    3     | Entrega hoy       | otros datos    |  CE     | Nequi   | PENDING   |
 
@@ -284,9 +284,9 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Nequi   | FAILED    |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    | Nequi   | FAILED    |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Nequi   | FAILED    |
-      | registrado |    3     | Recoge en tienda  | registrada     |  CE     | Nequi   | FAILED    |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CE     | Nequi   | FAILED    |
       | registrado |    3     | Entrega hoy       | otros datos    |  PAS    | Nequi   | FAILED    |
 
   @walletPayFAILEDNuevoNequi @walletPayFAILED @walletHardLogin @digitalWallet
@@ -316,10 +316,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Nequi   | OK        |
+      | registrado |    3     | Envio gratis      | otros datos    |  NIT    | Nequi   | OK        |
       | registrado |    3     | Entrega hoy       | guardada       |  CC     | Nequi   | OK        |
       | registrado |    3     | Envio gratis      | registrada     |  CE     | Nequi   | OK        |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | Nequi   | OK        |
+      | registrado |    3     | Entrega hoy       | registrada     |  PAS    | Nequi   | OK        |
 
   @walletOkNuevoSoftLoginNequi @walletOk @walletSoftLogin @digitalWallet
   Esquema del escenario: Compra de productos con billetera digital
@@ -327,7 +327,7 @@ Característica: Medio de Pago - billetera digital
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
     Cuando inicia sesion y desea realizar la compra como un cliente "<cliente>"
     Y  desea ir a pagar con tipo de documento "<tipo_id>" con dirección "<direccion>"
-    Y realiza el pago mediante PSE cuya transacción es "<resultado>"
+    Y realiza el pago mediante billetera digital "<billetera>" cuyo resultado es "<resultado>"
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
@@ -348,10 +348,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Nequi   | PENDING   |
+      | registrado |    3     | Envio gratis      | registrada     |  NIT    | Nequi   | PENDING   |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Nequi   | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | Nequi   | PENDING   |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | Nequi   | PENDING   |
+      | registrado |    3     | Entrega hoy       | guardada       |  PAS    | Nequi   | PENDING   |
 
   @walletPayPENDINGNuevoSoftLoginNequi @walletPayPENDING @walletSoftLogin @digitalWallet
   Esquema del escenario: Compra de productos con billetera digital
@@ -380,10 +380,10 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |billetera| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Nequi   | FAILED    |
+      | registrado |    3     | Entrega hoy       | otros datos    |  NIT    | Nequi   | FAILED    |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Nequi   | FAILED    |
-      | registrado |    3     | Recoge en tienda  | registrada     |  CE     | Nequi   | FAILED    |
-      | registrado |    3     | Entrega hoy       | otros datos    |  PAS    | Nequi   | FAILED    |
+      | registrado |    3     | Envio gratis      | registrada     |  CE     | Nequi   | FAILED    |
+      | registrado |    3     | Entrega hoy       | registrada     |  PAS    | Nequi   | FAILED    |
 
   @walletPayFAILEDNuevoSoftLoginNequi @walletPayFAILED @walletSoftLogin @digitalWallet
   Esquema del escenario: Compra de productos con billetera digital

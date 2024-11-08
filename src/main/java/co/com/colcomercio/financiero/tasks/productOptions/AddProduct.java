@@ -33,6 +33,7 @@ public class AddProduct implements Task {
         }
         actor.attemptsTo(
                 WaitUntil.the(BUTTON_GO_TO_PAY, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(BUTTON_GO_TO_PAY)
                 //ClickOnElement.on(BUTTON_GO_TO_PAY_DOS)
         );

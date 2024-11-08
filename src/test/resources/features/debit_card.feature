@@ -24,9 +24,9 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
 
 
@@ -57,7 +57,7 @@ Característica: Medio de Pago - Tarjeta Debito
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
-      | registrado |      3   | Recoge en tienda  |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  NIT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
@@ -95,7 +95,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
 
   @tarjetaDebitoNuevoSoftlogin @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Debito
@@ -126,8 +126,8 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
       | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito o Debito con CVV | visa       | OK   |
-      | registrado |      2   | Recoge en tienda  |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | amex       | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | diners     | OK   |
 
     #______________________________________________________RECHAZADAS______________________________________________
     #******************************************************HARDLOGIN*********************************************
@@ -143,9 +143,9 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
       | registrado |      3   | Envio gratis      |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Entrega hoy       |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
 
 
@@ -178,8 +178,8 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
       | registrado |      2   | Entrega hoy       |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  otros datos   |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
 
 
   @tarjetaDebitoNuevoFallidoTokenisada @fallido @tarjetaCredito
@@ -213,7 +213,7 @@ Característica: Medio de Pago - Tarjeta Debito
       | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
 
   @tarjetaDebitoNuevoSoftloginFallido @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Debito
@@ -226,8 +226,8 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia| resultado |
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  RUT     | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
       | registrado |      3   | Envio gratis      |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
 
@@ -242,7 +242,7 @@ Característica: Medio de Pago - Tarjeta Debito
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta                             | franquicia | resultado |
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
-      | registrado |      2   | Recoge en tienda  |  guardada      |  CC      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito o Debito con CVV | diners     | FAILED   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito o Debito con CVV | mastercard | FAILED   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito o Debito con CVV | visa       | FAILED   |
-      | registrado |      3   | Recoge en tienda  |  registrada    |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito o Debito con CVV | amex       | FAILED   |

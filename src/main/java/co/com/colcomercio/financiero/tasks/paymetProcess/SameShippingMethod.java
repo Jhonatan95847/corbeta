@@ -26,21 +26,21 @@ public class SameShippingMethod implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("######################SELECCIONANDO MISMO METODO DE ENVIO####################");
         actor.attemptsTo(
-                //Wait.withDuration(7),
+                Wait.withDuration(5),
                 WaitUntil.the(BUTTON_CONTINUAR_ENVIO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(BUTTON_CONTINUAR_ENVIO)
         );
         if (EDITTEXT_NUMBERID_ENVIO.isVisibleFor(actor)){
             actor.attemptsTo(
-                    EnterText.intoField(newUser.getDataNewUsers().getCc(),EDITTEXT_NUMBERID_ENVIO),
-                    ClickOnElement.on(BUTTON_CONTINUAR_ENVIO)
-            );
-        } else {
-            actor.attemptsTo(
+                    EnterText.intoField(newUser.getDataNewUsers().getCc(),EDITTEXT_NUMBERID_ENVIO)
 
-                    ClickOnElement.on(BUTTON_CONTINUAR_ENVIO)
             );
         }
+        actor.attemptsTo(
+                ClickOnElement.on(BUTTON_CONTINUAR_ENVIO),
+                Wait.withDuration(5)
+        );
+
     }
     public static SameShippingMethod selectMethod(NewUser newUser) {
         return Tasks.instrumented(SameShippingMethod.class, newUser);

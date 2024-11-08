@@ -1,6 +1,6 @@
 # language: es
 @all
-@cashPayment
+@BancolombiaCompleto
 Característica: Medio de Pago - Boton Bancolombia
 
 
@@ -11,7 +11,7 @@ Característica: Medio de Pago - Boton Bancolombia
 
   #Resultado: pendiente | exitoso
 
-  @BancolombiaButton
+  @BancolombiaButtonregistrado @Bancolombia
   Esquema del escenario: Compra de productos con Boton Bancolombia
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante Boton Bancolombia
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -27,7 +27,7 @@ Característica: Medio de Pago - Boton Bancolombia
       | registrado |    3     | Recoge en tienda  | nuevo usuario  |  NIT    | OK        |
       | registrado |    2     | Recoge en tienda  | nuevo usuario  |  RUT    | OK        |
 
-  @BancolombiaButtonNew
+  @BancolombiaButtonNew @Bancolombia
   Esquema del escenario: Compra de productos con Boton Bancolombia
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante Boton Bancolombia
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -53,11 +53,11 @@ Característica: Medio de Pago - Boton Bancolombia
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | resultado |
-      | registrado |    2     | Envio gratis      | nuevo usuario  |  CC     | OK        |
-      | registrado |    1     | Recoge en tienda  | nuevo usuario  |  RUT    | OK        |
-      | registrado |    3     | Entrega hoy       | nuevo usuario  |  CE     | OK        |
-      | registrado |    2     | Envio gratis      | nuevo usuario  |  NIT    | OK        |
-      | registrado |    1     | Entrega hoy       | nuevo usuario  |  PAS    | OK        |
+      | registrado |    2     | Envio gratis      | guardada       |  CC     | OK        |
+      | registrado |    1     | Envio gratis      | registrada     |  RUT    | OK        |
+      | registrado |    3     | Entrega hoy       | otros datos    |  CE     | OK        |
+      | registrado |    2     | Envio gratis      | guardada       |  NIT    | OK        |
+      | registrado |    1     | Entrega hoy       | registrada     |  PAS    | OK        |
 
   @BancolombiaSoftLoginNuevo @exitoso @Bancolombia
   Esquema del escenario: Compra con T Alkosto

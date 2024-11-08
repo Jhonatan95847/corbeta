@@ -12,9 +12,10 @@ public class PickupInStore implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Wait.withDuration(MICRO_TIME),
+                Wait.withDuration(5),
                 ClickOnElement.on(SELECT_CITY_PICKUP),
                 ClickOnElement.on(SELECT_BOGOTA),
+                Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(RADIOBUTTON_TIENDA),
                 ClickOnElement.on(BUTTON_SELECT_TIENDA)
         );

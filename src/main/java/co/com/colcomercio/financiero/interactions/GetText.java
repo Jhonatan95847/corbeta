@@ -1,5 +1,6 @@
 package co.com.colcomercio.financiero.interactions;
 
+import co.com.colcomercio.financiero.utils.GuardarDatoEnJson;
 import co.com.colcomercio.financiero.utils.GuardarTextoEnArchivo;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -9,10 +10,12 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static co.com.colcomercio.financiero.utils.DataGenerator.DataGeneratorDate;
+
 public class GetText implements Interaction {
     private static final Logger logger = LogManager.getLogger(GetText.class);
     private final Target elemento;
-
+    String keyCompraJson = DataGeneratorDate();
     public GetText(Target elemento) {
         this.elemento = elemento;
     }
@@ -22,7 +25,7 @@ public class GetText implements Interaction {
         String texto = Text.of(elemento).answeredBy(actor);
         logger.info("El valor elemto es " + texto);
         GuardarTextoEnArchivo.guardarTexto(","+texto,"C:\\Users\\1049644474\\Documents\\Automatizacion\\Baseautomatizacion\\financiero-testing-qa\\src\\archivo.txt");
-
+        GuardarDatoEnJson.guardarDatoEnJson("compra"+keyCompraJson,texto,"C:\\Users\\1049644474\\Documents\\Automatizacion\\Baseautomatizacion\\financiero-testing-qa\\src\\pedido.json");
     }
 
     public static GetText ofElement(Target elemento) {

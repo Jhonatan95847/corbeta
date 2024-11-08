@@ -1,6 +1,6 @@
 # language: es
 @all
-@cashPayment
+@cashPaymentComplete
 Característica: Medio de Pago - Efectivo
 
 
@@ -16,7 +16,7 @@ Característica: Medio de Pago - Efectivo
  # ******************************************************HARDLOGIN*********************************************
  # ______________________________________________________PENDIENTE______________________________________________
 
-  @psePayPENDINGRegistrado @psePayPENDING @pseHardLogin @psePay
+  @cashPENDINGRegistrado @cashPENDING @cashHardLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -27,11 +27,11 @@ Característica: Medio de Pago - Efectivo
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |efectivo | resultado |
       | registrado |    3     | Envio gratis      | otros datos    |  NIT    | Su Red  | PENDING   |
-      | registrado |    3     | Recoge en tienda  | guardada       |  CC     | Su Red  | PENDING   |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CC     | Su Red  | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  RUT    | Su Red  | PENDING   |
       | registrado |    3     | Entrega hoy       | otros datos    |  CE     | Su Red  | PENDING   |
 
-  @psePayPENDINGNuevo @psePayPENDING @pseHardLogin @psePay
+  @cashPENDINGNuevo @cashPayPENDING @cashHardLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -50,7 +50,7 @@ Característica: Medio de Pago - Efectivo
 	  #******************************************************SOFTLOGIN*********************************************
   #______________________________________________________PENDIENTE______________________________________________
 
-  @psePayPENDINGRegistradoSoftLogin @psePayPENDING @pseSoftLogin @psePay
+  @cashPENDINGRegistradoSoftLogin @cashPENDING @cashSoftLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -60,12 +60,12 @@ Característica: Medio de Pago - Efectivo
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |efectivo | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Su Red  | PENDING   |
+      | registrado |    3     | Envio gratis      | registrada     |  NIT    | Su Red  | PENDING   |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Su Red  | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | Su Red  | PENDING   |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | Su Red  | PENDING   |
+      | registrado |    3     | Entrega hoy       | otros datos    |  PAS    | Su Red  | PENDING   |
 
-  @psePayPENDINGNuevoSoftLogin @psePayPENDING @pseSoftLogin @psePay
+  @cashPayPENDINGNuevoSoftLogin @cashPENDING @cashSoftLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -75,17 +75,17 @@ Característica: Medio de Pago - Efectivo
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |efectivo | resultado |
-      | nuevo      |    3     | Recoge en tienda  | nuevo usuario  |  NIT    | Su Red  | PENDING   |
+      | nuevo      |    3     | Entrega hoy       | nuevo usuario  |  NIT    | Su Red  | PENDING   |
       | nuevo      |    3     | Envio gratis      | nuevo usuario  |  CC     | Su Red  | PENDING   |
       | nuevo      |    3     | Entrega hoy       | nuevo usuario  |  RUT    | Su Red  | PENDING   |
-      | nuevo      |    3     | Recoge en tienda  | nuevo usuario  |  PAS    | Su Red  | PENDING   |
+      | nuevo      |    3     | Envio gratis      | nuevo usuario  |  PAS    | Su Red  | PENDING   |
 
 	  #================================================Efecty============================================
  # ******************************************************HARDLOGIN*********************************************
 
 	  #______________________________________________________PENDIENTE______________________________________________
 
-  @psePayPENDINGRegistrado @psePayPENDING @pseHardLogin @psePay
+  @cashPENDINGRegistrado @cashPENDING @cashHardLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -96,11 +96,11 @@ Característica: Medio de Pago - Efectivo
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |efectivo| resultado |
       | registrado |    3     | Envio gratis      | otros datos    |  NIT    | Efecty | PENDING   |
-      | registrado |    3     | Recoge en tienda  | guardada       |  CC     | Efecty | PENDING   |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CC     | Efecty | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  RUT    | Efecty | PENDING   |
       | registrado |    3     | Entrega hoy       | otros datos    |  CE     | Efecty | PENDING   |
 
-  @psePayPENDINGNuevo @psePayPENDING @pseHardLogin @psePay
+  @cashPENDINGNuevo @cashPENDING @cashHardLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -119,7 +119,7 @@ Característica: Medio de Pago - Efectivo
 	  #******************************************************SOFTLOGIN*********************************************
   #______________________________________________________PENDIENTE______________________________________________
 
-  @psePayPENDINGRegistradoSoftLogin @psePayPENDING @pseSoftLogin @psePay
+  @cashPENDINGRegistradoSoftLogin @cashPENDING @cashSoftLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -129,12 +129,12 @@ Característica: Medio de Pago - Efectivo
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id |efectivo| resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Efecty | PENDING   |
+      | registrado |    3     | Entrega hoy       | otros datos    |  NIT    | Efecty | PENDING   |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Efecty | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | Efecty | PENDING   |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | Efecty | PENDING   |
+      | registrado |    3     | Envio gratis      | guardada       |  PAS    | Efecty | PENDING   |
 
-  @psePayPENDINGNuevoSoftLogin @psePayPENDING @pseSoftLogin @psePay
+  @cashPayPENDINGNuevoSoftLoginEfecty @cashPENDING @cashSoftLogin @cashPay @pruebaja
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -154,7 +154,7 @@ Característica: Medio de Pago - Efectivo
 
 	  #______________________________________________________PENDIENTE______________________________________________
 
-  @psePayPENDINGRegistrado @psePayPENDING @pseHardLogin @psePay
+  @cashPENDINGRegistrado @cashPENDING @cashHardLogin @cashPay
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -165,11 +165,11 @@ Característica: Medio de Pago - Efectivo
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | efectivo     | resultado |
       | registrado |    3     | Envio gratis      | otros datos    |  NIT    | Consignación | PENDING   |
-      | registrado |    3     | Recoge en tienda  | guardada       |  CC     | Consignación | PENDING   |
+      | registrado |    3     | Recoge en tienda  | nuevo usuario  |  CC     | Consignación | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  RUT    | Consignación | PENDING   |
       | registrado |    3     | Entrega hoy       | otros datos    |  CE     | Consignación | PENDING   |
 
-  @psePayPENDINGNuevo @psePayPENDING @pseHardLogin @psePay
+  @cashPENDINGNuevo @cashPENDING @cashHardLogin @cashPay
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión y desea realizar una compra
@@ -188,7 +188,7 @@ Característica: Medio de Pago - Efectivo
 	  #******************************************************SOFTLOGIN*********************************************
   #______________________________________________________PENDIENTE______________________________________________
 
-  @psePayPENDINGRegistradoSoftLogin @psePayPENDING @pseSoftLogin @psePay
+  @cashPENDINGRegistradoSoftLogin @cashyPENDING @cashSoftLogin @cashPay
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"
@@ -198,12 +198,12 @@ Característica: Medio de Pago - Efectivo
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id | efectivo     | resultado |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  NIT    | Consignación | PENDING   |
+      | registrado |    3     | Envio gratis      | otros datos    |  NIT    | Consignación | PENDING   |
       | registrado |    3     | Envio gratis      | guardada       |  CC     | Consignación | PENDING   |
       | registrado |    3     | Entrega hoy       | registrada     |  CE     | Consignación | PENDING   |
-      | registrado |    3     | Recoge en tienda  | otros datos    |  PAS    | Consignación | PENDING   |
+      | registrado |    3     | Entrega hoy       | registrada     |  PAS    | Consignación | PENDING   |
 
-  @psePayPENDINGNuevoSoftLogin @psePayPENDING @pseSoftLogin @psePay
+  @cashPayPENDINGNuevoSoftLogin @cashPayPENDING @cashSoftLogin @cashPay
   Esquema del escenario: Compra de productos con PSE
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente busca un producto y selecciona cantidad "<cantidad>" y método de envío "<metodoEnvio>"

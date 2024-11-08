@@ -11,7 +11,7 @@ public class ActionsOnProducrPage extends PageObject {
     public static final Target BUTTON_STORE_PICKUP =Target.the("Boton Recoger en tienda").located(By.xpath("//div[contains(text(),'Recoge ')]"));
     public static final Target SELECT_CITY_PICKUP =Target.the("Select Ciudad recogida").located(By.xpath("//div[@class=\"modal-body__filters--city\"]//div[@class=\"float-select js-float-select active-click\"]"));
     public static final Target SELECT_BOGOTA =Target.the("Select Ciudad Bogota").located(By.xpath("//div[@class=\"modal-body__filters--city\"]//ul//li[contains(text(),'bogotá')]"));
-    public static final Target RADIOBUTTON_TIENDA =Target.the("Radiobutton tienda").located(By.xpath("//div[@class=\"form-check custom-radio radio-green\"]//label[@for=\"AKB68-pickup\"]"));
+    public static final Target RADIOBUTTON_TIENDA =Target.the("Radiobutton tienda").located(By.xpath("//div[@class=\"form-check custom-radio radio-green\"]//label[@for=\"AKB30-pickup\"]"));
     public static final Target BUTTON_SELECT_TIENDA =Target.the("Select tienda").located(By.xpath("//button[@id=\"locationAddToCart\"]"));
     //MISMO DIA REGISTRADO
     public static final Target BUTTON_SAME_DAY =Target.the("Boton Entrega hoy").located(By.xpath("//label[@for=\"delivery_same-day-delivery\"]"));

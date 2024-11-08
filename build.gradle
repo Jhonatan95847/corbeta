@@ -80,6 +80,8 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
     // Dependencia opcional para la integración con SLF4J
     implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.19.0'
+    //guardar datos en json
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
 
 }
 

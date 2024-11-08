@@ -34,10 +34,11 @@ public class AddNewAddress implements Task {
 
         logger.info("#########################AGREGANDO UNA NUEVA DIRECCION#########################");
         actor.attemptsTo(
-                //Wait.withDuration(LOW_TIME),
+                Wait.withDuration(5),
                 WaitUntil.the(LIST_TIPO_ID, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(LIST_TIPO_ID),
                 ClickOnElement.on(LIST_TIPO_ID),
+                Wait.withDuration(MICRO_TIME),
                 SelectID.type(newUser,tipoID),
                 ScrollToElement.to(EDITBOX_PHONE_ADDRES),
                 EnterText.intoField(newUser.getDataNewUsers().getPhone(),EDITBOX_PHONE_ADDRES),
@@ -70,7 +71,7 @@ public class AddNewAddress implements Task {
             actor.attemptsTo(
                     ScrollToElement.to(BUTTON_CONTINUAR_ADDRES),
                     ClickOnElement.on(BUTTON_CONTINUAR_ADDRES),
-                    Wait.withDuration(LOW_TIME)
+                    Wait.withDuration(MICRO_TIME)
             );
 
         }

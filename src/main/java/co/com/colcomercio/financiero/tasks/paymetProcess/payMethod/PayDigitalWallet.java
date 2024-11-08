@@ -3,6 +3,7 @@ package co.com.colcomercio.financiero.tasks.paymetProcess.payMethod;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.EnterText;
 import co.com.colcomercio.financiero.interactions.ScrollToElement;
+import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.interactions.selectOptions.SelectPayMethod;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -11,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.DigitalWalletPage.*;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class PayDigitalWallet implements Task {
 
@@ -25,14 +27,17 @@ public class PayDigitalWallet implements Task {
         logger.info("##############################PAGANDO MEDIANTE BILLETERA DIGITAL##############################");
         actor.attemptsTo(
                 SelectPayMethod.payMethod(payMethod),
+                Wait.withDuration(5),
                 ScrollToElement.to(RADIOBUTTON_NEQUI)
         );
         if (payMethod.equals("Nequi")){
             actor.attemptsTo(
+                    Wait.withDuration(MICRO_TIME),
                     ClickOnElement.on(RADIOBUTTON_NEQUI)
             );
         } else if (payMethod.equals("Daviplata")) {
             actor.attemptsTo(
+                    Wait.withDuration(MICRO_TIME),
                     ClickOnElement.on(RADIOBUTTON_DAVIPLATA)
             );
         }

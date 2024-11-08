@@ -2,6 +2,7 @@ package co.com.colcomercio.financiero.stepdefinitions;
 
 
 import co.com.colcomercio.financiero.userinterfaces.HomePage;
+import co.com.colcomercio.financiero.utils.Paralelo.AsignarUsuario;
 import co.com.colcomercio.financiero.utils.Paralelo.LiberarUsuario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -33,7 +34,8 @@ public class CommonStepdefinitions {
     @Dado("que el Cliente Colcomercio ingresa al storefront")
     public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar() {
         theActorCalled("actor").wasAbleTo(
-                Open.browserOn().  thePageNamed("pages.alkosto")
+                Open.browserOn().  thePageNamed("pages.alkosto"),
+                AsignarUsuario.alActor()
         );
     }
 

@@ -55,7 +55,7 @@ Característica: Medio de Pago - Tarjeta Credito
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | cantidad | metodoEnvio       | direccion      | tipo_id  | tarjeta            | franquicia | resultado |
-      | registrado |      3   | Recoge en tienda  |  otros datos   |  NIT     | Tarjeta de Crédito | diners     | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  NIT     | Tarjeta de Crédito | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  guardada      |  CC      | Tarjeta de Crédito | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  registrada    |  RUT     | Tarjeta de Crédito | visa       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  CE      | Tarjeta de Crédito | amex       | OK   |
@@ -93,7 +93,7 @@ Característica: Medio de Pago - Tarjeta Credito
       | registrado |      2   | Envio gratis      |  guardada      |  CC      | Tarjeta de Crédito | amex       | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito | diners     | OK   |
       | registrado |      2   | Entrega hoy       |  registrada    |  CE      | Tarjeta de Crédito | mastercard | OK   |
-      #| registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito | visa       | OK   |
+      | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito | visa       | OK   |
 
   @tarjetaCreditoNuevoSoftlogin @tarjetaCredito @exitoso
   Esquema del escenario: Compra con T Credito
@@ -124,7 +124,7 @@ Característica: Medio de Pago - Tarjeta Credito
       | registrado |      3   | Entrega hoy       |  otros datos   |  NIT     | Tarjeta de Crédito | diners     | OK   |
       | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CC      | Tarjeta de Crédito | mastercard | OK   |
       | registrado |      2   | Envio gratis      |  otros datos   |  RUT     | Tarjeta de Crédito | visa       | OK   |
-      | registrado |      2   | Recoge en tienda  |  registrada    |  CE      | Tarjeta de Crédito | amex       | OK   |
+      | registrado |      2   | Recoge en tienda  |  nuevo usuario |  CE      | Tarjeta de Crédito | amex       | OK   |
       | registrado |      3   | Recoge en tienda  |  nuevo usuario |  PAS     | Tarjeta de Crédito | diners     | OK   |
 
     #______________________________________________________RECHAZADAS______________________________________________

@@ -3,7 +3,6 @@ package co.com.colcomercio.financiero.tasks.login;
 import co.com.colcomercio.financiero.interactions.ClickOnElement;
 import co.com.colcomercio.financiero.interactions.Wait;
 import co.com.colcomercio.financiero.models.users.Usuario;
-import co.com.colcomercio.financiero.utils.Paralelo.AsignarUsuario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
@@ -28,7 +27,7 @@ public class SoftLogin implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO SOFTLOGIN####################");
-        actor.attemptsTo(AsignarUsuario.alActor());
+        //actor.attemptsTo(AsignarUsuario.alActor());
         Usuario usuario = actor.recall("usuario");
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
