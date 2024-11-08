@@ -1,0 +1,33 @@
+
+V	java:S125="<This block of commented-out lines of code should be removed.(¤‰÷êÿÿÿÿÿ
+V	java:S125U"<This block of commented-out lines of code should be removed.(ßóÜ‹ùÿÿÿÿ
+n
+java:S1128"SRemove this unused import 'co.com.colcomercio.financiero.userinterfaces.LoginPage'.(åúşÿÿÿÿ
+4
+java:S1128	"Remove this duplicated import.(‹Á¥ö
+G
+java:S1128"1Remove this unused import 'com.google.gson.Gson'.(–§
+W
+java:S1128"<Remove this unused import 'io.cucumber.datatable.DataTable'.(€ƒ›øÿÿÿÿ
+N
+java:S1128"3Remove this unused import 'io.cucumber.java.After'.(Äø¥ùÿÿÿÿ
+M
+java:S1128"7Remove this unused import 'io.cucumber.java.es.Cuando'.(¸óÁØ
+O
+java:S1128"9Remove this unused import 'io.cucumber.java.es.Entonces'.(¿ó·²
+X
+java:S1128"=Remove this unused import 'net.serenitybdd.screenplay.Actor'.(ÖÔœ”ùÿÿÿÿ
+c
+java:S1128"HRemove this unused import 'net.serenitybdd.core.pages.WebElementFacade'.(á¢èŞúÿÿÿÿ
+\
+java:S1128"ARemove this unused import 'net.thucydides.core.pages.PageObject'.(‡¥¤îùÿÿÿÿ
+_
+java:S1128"DRemove this unused import 'net.thucydides.core.steps.ScenarioSteps'.(ŸÇşŞıÿÿÿÿ
+n
+java:S1128"SRemove this unused import 'net.thucydides.core.webdriver.SerenityWebdriverManager'.(äëıüÿÿÿÿ
+P
+java:S1128":Remove this unused import 'org.openqa.selenium.WebDriver'.(ñšÿÀ
+J
+java:S1128""/Remove this unused import 'java.io.FileReader'.(Â¡¢äşÿÿÿÿ
+K
+java:S1128#"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ
