@@ -4,6 +4,7 @@
 Característica: Medio de Pago - Efectivo
 
 
+
   Antecedentes:
     Dado que el Cliente Colcomercio ingresa al storefront
     ####################################### Nueva Implementacion ############################################
