@@ -26,7 +26,7 @@ public class PayCash implements Task {
                 SelectPayMethod.payMethod(payMethod)
         );
         switch (payMethod) {
-            case "Su Red":
+                case "Su Red":
                 actor.attemptsTo(
                         ScrollToElement.to(RADIOBUTTON_SURED),
                         ClickOnElement.on(RADIOBUTTON_SURED)

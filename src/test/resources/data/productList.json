@@ -1,32 +1,98 @@
 [
   {
-    "key" : "lista_de_productos",
+    "key" : "garantia_extendida",
     "dataProductList": {
-      "productName" : "iPhone 11 64 GB \"Blanco"
+      "productName" : "Celular SAMSUNG Galaxy S21 FE 256GB Gris"
     }
   },
   {
-    "key" : "producto_garantia_extendida",
+    "key" : "promocion_precio_fijo",
     "dataProductList": {
-      "productName" : "TV KALLEY 32\" Pulgadas 81 cm TV32HDG HD LED Plano TV"
+      "productName" : "Parlante KALLEY K-BSK15W 15W Negro"
     }
   },
   {
-    "key" : "producto_davivienda",
+    "key" : "promocion_porcentaje",
     "dataProductList": {
-      "productName" : "iPhone 11 64 GB \"Blanco"
+      "productName" : "Parlante Portátil KALLEY Bluetooth Radio FM Puerto USB MicroSD K-GP4WA 4W Azul"
     }
   },
   {
-    "key" : "productos_codensa",
+    "key" : "promociones",
     "dataProductList": {
-      "productName" : "TV KALLEY 32\" Pulgadas 81 cm TV32HDG HD LED Plano TV"
+      "productName" : "Parlante KALLEY K-BSK15W 15W Negro"
     }
   },
   {
-    "key" : "productos_kasado",
+    "key" : "kasado",
     "dataProductList": {
-      "productName" : "TV TCL 55\" Pulgadas 139 cm 55P725 4K-UHD LED Plano Smart TV"
+      "productName" : "Consola XBOX Series S + 1 Control Inalámbrico"
+    }
+  },
+  {
+    "key" : "kasado_dos",
+    "dataProductList": {
+      "productName" : "Cargador APPLE MagSafe"
+    }
+  },
+  {
+    "key" : "preventa",
+    "dataProductList": {
+      "productName" : "Bombillo KALLEY Inteligente 8.5 Watts"
+    }
+  },
+  {
+    "key" : "cero_interes",
+    "dataProductList": {
+      "productName" : "iPhone 11 64 GB Blanco"
+    }
+  },
+  {
+    "key" : "cero_interes",
+    "dataProductList": {
+      "productName" : "Celular SAMSUNG Galaxy S21 FE 256GB Gris"
+    }
+  },
+  {
+    "key" : "cantidad_limitada",
+    "dataProductList": {
+      "productName" : "Celular SAMSUNG Galaxy S22+ 256GB 5G NEGRO"
+    }
+  },
+  {
+    "key" : "instalaciones",
+    "dataProductList": {
+      "productName" : "Servicio Instalación Armado Mueble/ Precio Mueble: Mayor a $ 850.001"
+    }
+  },
+  {
+    "key" : "normal",
+    "dataProductList": {
+      "productName" : "Juego PS5 Spider-Man: Miles Morales"
+    }
+  },
+  {
+    "key" : "kombo",
+    "dataProductList": {
+      "productName" : "Kombo IMUSA Wok 25 cm Mango Madera + 2 Sartenes 18 cm y 20 cm Talent"
+    }
+  },
+  {
+    "key" : "llantas",
+    "dataProductList": {
+      "productName" : "Llanta KONTROL 90 90-19 (Orig Del TTR) Tubetype"
+    }
+  },
+  {
+    "key" : "pines",
+    "dataProductList": {
+      "productName" : "Pin Virtual NETFLIX $40.000"
+    }
+  },
+  {
+    "key" : "corbeta",
+    "dataProductList": {
+      "productName" : "TV TCL 55 Pulgadas 139 cm 55P725 4K-UHD LED Plano Smart TV"
     }
   }
 ]

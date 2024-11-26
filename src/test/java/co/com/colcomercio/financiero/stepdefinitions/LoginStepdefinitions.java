@@ -18,12 +18,11 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 public class LoginStepdefinitions {
     private NewUser withTheData;
     private static final Logger logger = LogManager.getLogger(LoginStepdefinitions.class);
-
-    @Dado("que un cliente {string} inicia sesión y desea realizar una compra")
+//HARD LOGIN
+    @Dado("que un cliente {string} inicia sesión en ecomerce")
     public void queUnClienteDeseaRealizarUnaCompra(String cliente) {
 
         withTheData = GetDataModel.newUser("datos_nuevo_usuario");
-
         if (cliente.equals("nuevo")){
             logger.info("Inicia sesion con usuario nuevo");
             theActorInTheSpotlight().attemptsTo(
@@ -36,8 +35,8 @@ public class LoginStepdefinitions {
             );
         }
     }
-
-    @Cuando("inicia sesion y desea realizar la compra como un cliente {string}")
+//SOFT LOGIN
+    @Cuando("inicia sesion en la pagina de alkosto como un cliente {string}")
     public void iniciaSesionYDeseaRealizarLaCompraComoUnCliente(String cliente) {
         withTheData = GetDataModel.newUser("datos_nuevo_usuario");
         if (cliente.equals("registrado")){

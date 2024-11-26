@@ -11,21 +11,19 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class DeliveryToday implements Interaction {
 
-    private final String cliente;
-
-    public DeliveryToday(String cliente){
-        this.cliente = cliente;
-    }
     @Override
     public <T extends Actor> void performAs(T actor) {
-        if (cliente.equals("registrado")){
+        actor.attemptsTo(
+                Wait.withDuration(6)
+        );
+        if (RADIOBUTTON_ADDRESS.isVisibleFor(actor)){
             actor.attemptsTo(
                     WaitUntil.the(RADIOBUTTON_ADDRESS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     Wait.withDuration(5),
                     ClickOnElement.on(RADIOBUTTON_ADDRESS),
                     ClickOnElement.on(BUTTON_CONTINUAR_HOY)
             );
-        } else if (cliente.equals("nuevo")) {
+        } else if (SELECT_DEPRTAMENT_SAME.isVisibleFor(actor)) {
             actor.attemptsTo(
                     //WaitUntil.the(RADIOBUTTON_ADDRESS_CITY, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     //ClickOnElement.on(RADIOBUTTON_ADDRESS_CITY),
@@ -43,6 +41,6 @@ public class DeliveryToday implements Interaction {
             );
         }
     }
-    public static DeliveryToday delivery(String cliente){return Tasks.instrumented(DeliveryToday.class, cliente);
+    public static DeliveryToday delivery(){return Tasks.instrumented(DeliveryToday.class);
     }
 }

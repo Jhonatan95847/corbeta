@@ -12,12 +12,10 @@ import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class SelectShippingMetod implements Task {
     private static final Logger logger = LogManager.getLogger(SelectShippingMetod.class);
-    private String metodo;
-    private String cliente;
+    private final String metodo;
 
-    public SelectShippingMetod(String metodo, String cliente){
+    public SelectShippingMetod(String metodo){
         this.metodo = metodo;
-        this.cliente = cliente;
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -43,14 +41,14 @@ public class SelectShippingMetod implements Task {
                 actor.attemptsTo(
                         ScrollToElement.to(BUTTON_SAME_DAY),
                         ClickOnElement.on(BUTTON_SAME_DAY),
-                        DeliveryToday.delivery(cliente)
+                        DeliveryToday.delivery()
                 );
                 break;
             default:
                 break;
         }
     }
-    public static SelectShippingMetod selectMethod(String metodo, String cliente) {
-        return Tasks.instrumented(SelectShippingMetod.class, metodo, cliente);
+    public static SelectShippingMetod selectMethod(String metodo) {
+        return Tasks.instrumented(SelectShippingMetod.class, metodo);
     }
 }

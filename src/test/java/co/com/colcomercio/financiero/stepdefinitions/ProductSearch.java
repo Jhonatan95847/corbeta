@@ -6,11 +6,13 @@ import co.com.colcomercio.financiero.tasks.SelectProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.AddProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectQuantitiProduct;
 import co.com.colcomercio.financiero.tasks.productOptions.SelectShippingMetod;
+import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteCard;
 import co.com.colcomercio.financiero.tasks.shoppingCar.DeleteProducts;
 import co.com.colcomercio.financiero.tasks.shoppingCar.GoToPay;
 import co.com.colcomercio.financiero.utils.GetDataModel;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Y;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -18,58 +20,49 @@ public class ProductSearch {
 
     private ProductList withTheData;
 
-    @Cuando("el cliente {string} busca un producto y selecciona cantidad {string} y método de envío {string}")
-    public void elClienteBuscaUnProductoYSeleccionaY(String cliente, String cantidad, String metodoEnvio) {
-        withTheData = GetDataModel.productList("lista_de_productos");
 
-        theActorInTheSpotlight().attemptsTo(
-                DeleteProducts.delete(),
-                //DeleteCard.delete(),
-                SearchProduct.addProduct(withTheData),
-                SelectProduct.productSelect(),
-                SelectShippingMetod.selectMethod(metodoEnvio,cliente),
-                SelectQuantitiProduct.selectQuantity(cantidad),
-                AddProduct.goToPay(),
-                GoToPay.pay()
-        );
-    }
-
-    @Dado("que un cliente busca un producto y selecciona cantidad {string} y método de envío {string}")
-    public void queUnClienteBuscaUnProductoYSeleccionaCantidadYMétodoDeEnvío(String cantidad, String metodoEnvio) {
-        withTheData = GetDataModel.productList("lista_de_productos");
-        theActorInTheSpotlight().attemptsTo(
-                SearchProduct.addProduct(withTheData),
-                SelectProduct.productSelect(),
-                SelectShippingMetod.selectMethod(metodoEnvio,"nuevo"),
-                SelectQuantitiProduct.selectQuantity(cantidad),
-                AddProduct.goToPay(),
-                GoToPay.pay()
-        );
-    }
-
-    @Cuando("el cliente {string} busca un producto y selecciona la cantidad {string} y método de envío {string}")
-    public void elClienteBuscaUnProductoYSeleccionaLaCantidadYMétodoDeEnvío(String cliente, String cantidad, String metodoEnvio) {
-        withTheData = GetDataModel.productList("lista_de_productos");
+    //HARD LOGIN
+    @Cuando("el cliente busca un producto {string} y selecciona {string} unidades")
+    public void elClienteBuscaUnProductoYSeleccionaY(String producto, String cantidad) {
+        withTheData = GetDataModel.productList(producto);
         theActorInTheSpotlight().attemptsTo(
                 DeleteProducts.delete(),
                 SearchProduct.addProduct(withTheData),
                 SelectProduct.productSelect(),
-                SelectShippingMetod.selectMethod(metodoEnvio,cliente),
-                SelectQuantitiProduct.selectQuantity(cantidad),
-                AddProduct.goToPay(),
-                GoToPay.pay()
-        );
-    }
-
-    @Cuando("el cliente {string} busca el producto y selecciona cantidad {string} y método de envío {string}")
-    public void elClienteBuscaElProductoYSeleccionaCantidadYMétodoDeEnvío(String cliente, String cantidad, String metodoEnvio) {
-        withTheData = GetDataModel.productList("lista_de_productos");
-        theActorInTheSpotlight().attemptsTo(
-                DeleteProducts.delete(),
-                SearchProduct.addProduct(withTheData),
-                SelectProduct.productSelect(),
-                SelectShippingMetod.selectMethod(metodoEnvio,cliente),
                 SelectQuantitiProduct.selectQuantity(cantidad)
+        );
+    }
+
+    //HARD LOGIN CARD
+    @Cuando("el usuario busca un producto {string} y selecciona {string} unidades")
+    public void queUnClienteBuscaUnProductoYSeleccionaCantidadYMétodoDeEnvío(String producto, String cantidad) {
+        withTheData = GetDataModel.productList(producto);
+        theActorInTheSpotlight().attemptsTo(
+                DeleteProducts.delete(),
+                DeleteCard.delete(),
+                SearchProduct.addProduct(withTheData),
+                SelectProduct.productSelect(),
+                SelectQuantitiProduct.selectQuantity(cantidad)
+        );
+    }
+    //SOFT LOGIN
+    @Dado("que el usuario inicialmente busca un producto {string} y selecciona {string} unidades")
+    public void elClienteBuscaUnProductoYSeleccionaLaCantidadYMétodoDeEnvío(String producto, String cantidad) {
+        withTheData = GetDataModel.productList(producto);
+        theActorInTheSpotlight().attemptsTo(
+                SearchProduct.addProduct(withTheData),
+                SelectProduct.productSelect(),
+                SelectQuantitiProduct.selectQuantity(cantidad)
+        );
+    }
+
+
+    @Y("selecciona el método de envío {string}")
+    public void seleccionaElMétodoDeEnvío(String metodoEnvio){
+        theActorInTheSpotlight().attemptsTo(
+                SelectShippingMetod.selectMethod(metodoEnvio),
+                AddProduct.goToPay(),
+                GoToPay.pay()
         );
     }
 }
