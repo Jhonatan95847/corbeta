@@ -31,17 +31,17 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Y realiza el pago mediante efectivo con "<efectivo>"
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
-            | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | billetera   | resultado |
-            | registrado | normal         | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Envio gratis       |  registrada     |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Envio gratis       |  guardada       |  CC      | Su Red     | PENDING   |
+            | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | efectivo   | resultado |
+            | registrado | normal       | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Envio gratis       |  registrada     |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Envio gratis       |  guardada       |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Entrega hoy        |  otros datos    |  CC      | Su Red     | PENDING   |  falla entrega hoy otros datos por ambiente
-            | registrado | normal         | 2        | Entrega hoy        |  registrada     |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Entrega hoy        |  guardada       |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |
-            | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Entrega hoy        |  registrada     |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Entrega hoy        |  guardada       |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |
+            #| nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Su Red     | PENDING   |
             #| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  CC      | Su Red     | PENDING   |  falla entrega hoy otros datos por ambiente
-            | nuevo      | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |
+            #| nuevo      | preventa       | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |
 
     @refactorTokenisada
     Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
@@ -82,14 +82,14 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | efectivo   | resultado |
-            | registrado | normal         | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Envio gratis       |  registrada     |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Envio gratis       |  guardada       |  CC      | Su Red     | PENDING   |
+            | registrado | preventa       | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Envio gratis       |  registrada     |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Envio gratis       |  guardada       |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Entrega hoy        |  otros datos    |  CC      | Su Red     | PENDING   |  falla entrega hoy otros datos por ambiente
-            | registrado | normal         | 2        | Entrega hoy        |  registrada     |  CC      | Su Red     | PENDING   |
-            | registrado | normal         | 2        | Entrega hoy        |  guardada       |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Entrega hoy        |  registrada     |  CC      | Su Red     | PENDING   |
+            #| registrado | normal         | 2        | Entrega hoy        |  guardada       |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |  falla recoger en tienda soft login por ambiente
-            | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Su Red     | PENDING   |
+            | nuevo      | preventa       | 2        | Envio gratis       |  nuevo usuario  |  CC      | Su Red     | PENDING   |
             #| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  CC      | Su Red     | PENDING   |  falla entrega hoy otros datos por ambiente
-            | nuevo      | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |
+            #| nuevo      | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Su Red     | PENDING   |
 

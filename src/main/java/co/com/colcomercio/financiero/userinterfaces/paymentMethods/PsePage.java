@@ -8,7 +8,7 @@ public class PsePage extends PageObject {
     public static final Target LIST_BANCO =Target.the("Lista banco PSE").locatedBy("//div[@class=\"float-select--list js-float-list js-bank-custom open\"]//li[text()='BANCO UNION COLOMBIANO']");
     public static final Target SELECT_TIPO_CLIENTE_PSE =Target.the("Select tipo de cliente PSE").locatedBy("//label[@for=\"personTypeId\"]/ancestor::div[3]");
     public static final Target LIST_TIPO_CLIENTE =Target.the("Lista tipo de cliente PSE").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[text()='Natural']");
-    public static final Target SELECT_TIPO_ID_PSE =Target.the("Select tipo de ID PSE").locatedBy("(//label[contains(text(),' Tipo identificación ')]/ancestor::div[3])[5]");
+    public static final Target SELECT_TIPO_ID_PSE =Target.the("Select tipo de ID PSE").locatedBy("//div[@class=\"z-content z-active\"]//label[contains(text(),' Tipo identificación ')]/ancestor::div[3]");
     public static final Target LIST_TIPO_ID =Target.the("Lista tipo de ID PSE").locatedBy("//div[@class=\"float-select--list js-float-list open\"]//li[text()='C.C']");
     public static final Target EDITBOX_TIPO_ID =Target.the("Campo de texto de ID PSE").locatedBy("//div[@class=\"z-content z-active\"]//input[@id=\"documentId\"]");
     public static final Target BUTTON_CONTINUAR_PSE =Target.the("Boton continuar PSE").locatedBy("//div[@class=\"z-content z-active\"]//button[contains(text(),'Continuar')]");

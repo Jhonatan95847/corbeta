@@ -23,7 +23,7 @@ public class ReviewAndAproval implements Task {
 
         actor.attemptsTo(
 
-                Wait.withDuration(MICRO_TIME),
+                Wait.withDuration(5),
                 WaitUntil.the(BUTTON_CONTINIAR_APROVADO, WebElementStateMatchers.isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(BUTTON_CONTINIAR_APROVADO),
                 ClickOnElement.on(BUTTON_CONTINIAR_APROVADO)

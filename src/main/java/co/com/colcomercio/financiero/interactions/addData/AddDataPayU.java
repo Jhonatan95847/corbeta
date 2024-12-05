@@ -1,9 +1,6 @@
 package co.com.colcomercio.financiero.interactions.addData;
 
-import co.com.colcomercio.financiero.interactions.ClickOnElement;
-import co.com.colcomercio.financiero.interactions.EnterByDigit;
-import co.com.colcomercio.financiero.interactions.EnterText;
-import co.com.colcomercio.financiero.interactions.ScrollToElement;
+import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.paymentCard.PaymentCard;
 
 import net.serenitybdd.screenplay.Actor;
@@ -17,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.*;
 import static co.com.colcomercio.financiero.userinterfaces.paymentMethods.CardsPage.EDITBOX_NUMID_PAYU;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class AddDataPayU implements Interaction {
@@ -37,7 +35,8 @@ public class AddDataPayU implements Interaction {
                 EnterByDigit.onTargetTheString(paymentCard.getDataPaymentCard().getCardNumber(),EDITBOX_CVCDATENOMNUM_PAYU.of("Número de la tarjeta")),
                 EnterText.intoField(paymentCard.getDataPaymentCard().getExpirationDate(),EDITBOX_CVCDATENOMNUM_PAYU.of("Fecha de expiración")),
                 EnterText.intoField(paymentCard.getDataPaymentCard().getName(),EDITBOX_CVCDATENOMNUM_PAYU.of("Nombre y Apellido como figura en la tarjeta")),
-                EnterByDigit.onTargetTheString(paymentCard.getDataPaymentCard().getCvv(), EDITBOX_CVCDATENOMNUM_PAYU.of("CVC")),
+                Wait.withDuration(MICRO_TIME),
+                EnterText.intoField(paymentCard.getDataPaymentCard().getCvv(), EDITBOX_CVCDATENOMNUM_PAYU.of("CVC")),
                 ScrollToElement.to(LIST_CUOTASID_PAYU.of("Cuotas")),
                 ClickOnElement.on(LIST_CUOTASID_PAYU.of("Cuotas")),
                 //Wait.withDuration(1),

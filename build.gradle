@@ -85,6 +85,10 @@ dependencies {
 
 }
 
+tasks.withType(Test).configureEach {
+    maxParallelForks = 5 // Define el número de navegadores para ejecución paralela
+}
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }

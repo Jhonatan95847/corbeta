@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class ActionsOnProducrPage extends PageObject {
-    public static final Target BUTTON_ADD_CAR =Target.the("Boton agregar al carrito").located(By.xpath("//div[@class=\"product-main-info\"]//button[@id=\"addToCartButton\"]"));
+    public static final Target BUTTON_ADD_CAR =Target.the("Boton agregar al carrito").located(By.xpath("//div[@class=\"addtocart-component\"]//button[contains(text(),'Agregar al carrito')]"));
     public static final Target BUTTON_FREESHIPPING =Target.the("Boton Envio gratis").located(By.xpath("//label[@for=\"delivery_ship-to-address\"]"));
     //RECOGER EN TIENDA
     public static final Target BUTTON_STORE_PICKUP =Target.the("Boton Recoger en tienda").located(By.xpath("//div[contains(text(),'Recoge ')]"));
@@ -17,6 +17,13 @@ public class ActionsOnProducrPage extends PageObject {
     public static final Target BUTTON_SAME_DAY =Target.the("Boton Entrega hoy").located(By.xpath("//label[@for=\"delivery_same-day-delivery\"]"));
     public static final Target RADIOBUTTON_ADDRESS =Target.the("Radiobutton seleccionar direccion hoy").located(By.xpath("(//div[@data-line1=\"CL 84 # 24 - 78\"]//label)[2]"));
     public static final Target RADIOBUTTON_ADDRESS_CITY =Target.the("Radiobutton seleccionar direccion hoy Ciudad").located(By.xpath("//div[@class=\"form-check custom-radio\"]//label[@for=\"Bogotá\"]"));
+    //SELECCION CIUDAD INSTALACION
+    public static final Target BUTTON_SELECT_INSTALACION =Target.the("Boton seleccionar ciudad instalacion").located(By.xpath("//span[contains(text(),'Selecciona la ciudad')]"));
+    public static final Target TEXTBOX_CITY_INSTALACION =Target.the("Campo de texto ciudad instalacion").located(By.xpath("(//input[@class=\"js-float-input float-input-group__input js-search-input\"])[1]"));
+    public static final Target SELECT_CITY_INSTALACION =Target.the("Select ciudad instalacion").located(By.xpath("//button[contains(text(),'Bogotá, Bogota DC')]"));
+    public static final Target CKECK_CITY_INSTALACION =Target.the("Check ciudad instalacion").located(By.xpath("//div[@class=\"form-check custom-radio js-custom-radio\"]//label[@for=\"11001-Bogotá\"]"));
+    public static final Target BUTTON_CONTINUAR_INSTALACION =Target.the("Boton continuar instalacion").located(By.xpath("(//button[@id=\"addToCartButton\"])[1]"));
+
     //MISMO DIA NUEVO
     public static final Target SELECT_DEPRTAMENT_SAME =Target.the("Select Departamento cliente nuevo").located(By.xpath("//div[@class=\"modal-body__form--department\"]//div[@class=\"float-select js-float-select\"]"));
     public static final Target SELECT_BOGOTADC =Target.the("Select Departamento Bogota").located(By.xpath("//div[@class=\"float-select--list js-float-list open\"]//li[contains(text(),'Bogota DC')]"));

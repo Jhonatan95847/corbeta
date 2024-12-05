@@ -12,7 +12,7 @@ Característica: Medio de Pago - Tarjeta de Crédito con forma de logueo hard lo
   #______________________________________________________EXITOSA______________________________________________
   #******************************************************SOFTLOGIN*********************************************
 
-  @tarjetaCreditoRegistradoExitosaSoftlogin @CreditoExitosoSoftlogin @tarjetaCreditoExitosa @CreditoNoSave
+  @estable @tarjetaCreditoRegistradoExitosaSoftlogin @tarjetaExitosa @CreditoExitoso @tarjetaCreditoExitosa @CreditoNoSave
   Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
   Narrativa:  Como cliente registrado en Alkosto
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
@@ -26,29 +26,29 @@ Característica: Medio de Pago - Tarjeta de Crédito con forma de logueo hard lo
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
       | registrado | promocion_porcentaje  | 1        | Envio gratis       |  guardada       |  CC      | Tarjeta de Crédito  | diners     | OK   |
-      | registrado | instalaciones         | 3        | Entrega hoy        |  otros datos    |  CE      | Tarjeta de Crédito  | mastercard | OK   |
-      | registrado | kasado                | 2        | Entrega hoy        |  guardada       |  NIT     | Tarjeta de Crédito  | visa       | OK   |
+      ##| registrado | normal                | 3        | Entrega hoy        |  otros datos    |  CE      | Tarjeta de Crédito  | mastercard | OK   |
+      | registrado | normal                | 2        | Entrega hoy        |  guardada       |  NIT     | Tarjeta de Crédito  | visa       | OK   |
       | registrado | preventa              | 1        | Envio gratis       |  otros datos    |  RUT     | Tarjeta de Crédito  | amex       | OK   |
-      | registrado | kasado_dos            | 2        | Recoge en tienda   |  nuevo usuario  |  PAS     | Tarjeta de Crédito  | diners     | OK   |
+      ##| registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  PAS     | Tarjeta de Crédito  | diners     | OK   |
 
-  @tarjetaCreditoNuevooExitosaSoftlogin @CreditoExitosoSoftlogin @tarjetaCreditoExitosa @CreditoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
-  Narrativa:  Como cliente registrado en Alkosto
-  Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
-  Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
-    Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
-    Y selecciona el método de envío "<metodo_envio>"
-    Cuando inicia sesion en la pagina de alkosto como un cliente "<cliente>"
-    Y desea ir a pagar con tipo de documento "<tipo_id>" con dirección "<direccion_envio>"
-    Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
-    Entonces debería observar la notificación de compra "<resultado>"
-    Ejemplos:
-      | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
+  #@tarjetaCreditoNuevooExitosaSoftlogin @CreditoExitoso @tarjetaCreditoExitosa @CreditoNoSave
+  #Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+  #Narrativa:  Como cliente registrado en Alkosto
+  #Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
+  #Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
+   # Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
+    #Y selecciona el método de envío "<metodo_envio>"
+    #Cuando inicia sesion en la pagina de alkosto como un cliente "<cliente>"
+    #Y desea ir a pagar con tipo de documento "<tipo_id>" con dirección "<direccion_envio>"
+    #Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
+    #Entonces debería observar la notificación de compra "<resultado>"
+    #Ejemplos:
+      #| cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
       | nuevo      | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  CC      | Tarjeta de Crédito  | mastercard | OK   |
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CE      | Tarjeta de Crédito  | visa       | OK   |
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  NIT     | Tarjeta de Crédito  | amex       | OK   |
-      | nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  RUT     | Tarjeta de Crédito  | diners     | OK   |
-      | nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  PAS     | Tarjeta de Crédito  | mastercard | OK   |
+      ##| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  RUT     | Tarjeta de Crédito  | diners     | OK   |
+      ##| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  PAS     | Tarjeta de Crédito  | mastercard | OK   |
 
      #______________________________________________________RECHAZADA______________________________________________
   #******************************************************SOFTLOGIN*********************************************

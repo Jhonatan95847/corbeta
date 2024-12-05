@@ -9,7 +9,7 @@ public class AddCarPage extends PageObject {
     public static final Target BUTTON_GO_TO_PAY_DOS =Target.the("Boton Ir al carrito y pagar dos").located(By.xpath("(//a[contains(text(),'Ir al carrito')])[1]"));
     public static final Target BUTTON_CONTINUE_BUY =Target.the("Boton Continuar compra").located(By.xpath("//div[@class=\"modal-content modal-alkosto\"]//span[contains(text(),'Continuar comprando')]"));
     public static final Target BUTTON_CLOSE =Target.the("Boton Cerrar").located(By.xpath("//div[@class=\"modal-content modal-alkosto\"]//button[@class=\"close js-sf-keep-shopping\"]"));
-    public static final Target TEXT_GARANTIA =Target.the("Text Quiere agregar garantia").located(By.xpath("//div[contains(text(),'¿Quieres proteger tu producto con un (1) año')]"));
+    public static final Target TEXT_GARANTIA =Target.the("Text Quiere agregar garantia").located(By.xpath("//span[contains(text(),'Garantía extendida por 1 año adicional')]"));  //div[contains(text(),'¿Quieres proteger tu producto con un (1) año')]
     public static final Target CHECK_NO_GARANTIA =Target.the("Check No gracias").located(By.xpath("//label[@for=\"extendedWarrantyOverlay1\"]"));
     public static final Target CHECK_SI_GARANTIA =Target.the("Check Si gracias").located(By.xpath("//label[@for=\"extendedWarrantyOverlay2\"]"));
     public static final Target CHECK_SI_INSTALACION =Target.the("Check instalacion").located(By.xpath("//label[@for=\"extendedWarrantyOverlay2\"]"));

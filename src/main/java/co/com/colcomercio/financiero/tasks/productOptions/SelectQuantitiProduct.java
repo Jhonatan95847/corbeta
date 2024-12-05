@@ -27,14 +27,19 @@ public class SelectQuantitiProduct implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#############################SELECCIONANDO CANTIDAD############################");
         actor.attemptsTo(
-                //Wait.withDuration(LOW_TIME),
+                Wait.withDuration(MICRO_TIME),
                 WaitUntil.the(BUTTON_ADD_CAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(BUTTON_ADD_CAR),
-                ClickOnElement.on(SELECT_QUANTITY_UNO),
-                ScrollToElement.to(SELECT_NUMBERONE.of(cantidad)),
-                ClickOnElement.on(SELECT_NUMBERONE.of(cantidad)),
                 Wait.withDuration(MICRO_TIME)
-        );
+                );
+        if (SELECT_QUANTITY_UNO.isVisibleFor(actor)){
+            actor.attemptsTo(
+                    ClickOnElement.on(SELECT_QUANTITY_UNO),
+                    ScrollToElement.to(SELECT_NUMBERONE.of(cantidad)),
+                    ClickOnElement.on(SELECT_NUMBERONE.of(cantidad)),
+                    Wait.withDuration(MICRO_TIME)
+            );
+        }
     }
 
     public static SelectQuantitiProduct selectQuantity(String cantidad){

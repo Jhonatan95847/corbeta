@@ -57,6 +57,7 @@ public class PayCards implements Task {
                 break;
         }
         actor.attemptsTo(
+                Wait.withDuration(4),
                 ScrollToElement.to(BUTTON_CONTINUAR_REVISAR),
                 ClickOnElement.on(BUTTON_CONTINUAR_REVISAR),
                 Wait.withDuration(5)

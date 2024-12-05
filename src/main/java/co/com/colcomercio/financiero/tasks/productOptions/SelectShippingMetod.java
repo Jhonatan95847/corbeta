@@ -44,6 +44,11 @@ public class SelectShippingMetod implements Task {
                         DeliveryToday.delivery()
                 );
                 break;
+            case "No aplica":
+                actor.attemptsTo(
+                       Wait.withDuration(MICRO_TIME)
+                );
+                break;
             default:
                 break;
         }

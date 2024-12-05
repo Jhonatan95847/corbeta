@@ -14,5 +14,7 @@ public class ActionsOnCar extends PageObject {
     public static final Target VALIDATE_NAME_PRODUCT =Target.the("Nombre del producto").located(By.xpath("//span[@class=\"item__name\"]"));
     public static final Target VALIDATE_IMAGE_PRODUCT =Target.the("Imagen del producto").located(By.xpath("//div[@class=\"item-column item__image\"]"));
     public static final Target VALIDATE_PRICE =Target.the("Precio del producto").located(By.xpath("//div[@class=\"item__price__main\"]"));
+    public static final Target BUTTON_VER_PROMOCION =Target.the("Boton ver promeciones").located(By.xpath("//button[contains(text(),'Ver promociones')]"));
+    public static final Target BUTTON_AGREGAR_PROMOCION =Target.the("Boton agregar promeciones").located(By.xpath("//button[contains(text(),' Agregar al carrito')]"));
 
 }
