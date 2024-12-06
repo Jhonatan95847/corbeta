@@ -27,11 +27,10 @@ Característica: Medio de Pago - Boton Bancolombia
       | registrado | normal                | 2        | Envio gratis       |  otros datos    |  NIT        | OK   |
       | registrado | normal                | 1        | Recoge en tienda   |  nuevo usuario  |  RUT        | OK   |
       | registrado | normal                | 2        | Envio gratis       |  otros datos    |  PAS        | OK   |
-
-      | nuevo      | normal         | 1        | Envio gratis       |  nuevo usuario  |  CC      | OK   |
-      ##| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  CE      | OK   |
-      | nuevo      | normal         | 3        | Recoge en tienda   |  nuevo usuario  |  NIT     | OK   |
-      | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  RUT     | OK   |
-      | nuevo      | normal         | 3        | Recoge en tienda   |  nuevo usuario  |  PAS     | OK   |
+      | nuevo      | normal                | 1        | Envio gratis       |  nuevo usuario  |  CC      | OK   |
+      ##| nuevo      | normal              | 2        | Entrega hoy        |  nuevo usuario  |  CE      | OK   |
+      | nuevo      | normal                | 3        | Recoge en tienda   |  nuevo usuario  |  NIT     | OK   |
+      | nuevo      | normal                | 2        | Envio gratis       |  nuevo usuario  |  RUT     | OK   |
+      | nuevo      | normal                | 3        | Recoge en tienda   |  nuevo usuario  |  PAS     | OK   |
 
 

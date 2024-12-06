@@ -16,7 +16,7 @@ Característica: Medio de Pago - billetera digital
 #______________________________________________________EXITOSA______________________________________________
 
   @walletPayOkRegistradoSoftLoginDaviplata @walletPayOk @walletSoftLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital daviplata exitosa soft login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -41,7 +41,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________PENDIENTE______________________________________________
 
   @walletPayPENDINGRegistradoSoftLoginDaviplata @walletPayPENDING @walletSoftLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital daviplata pendiente soft login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"
@@ -67,7 +67,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________FALLIDA______________________________________________
 
   @walletFAILEDRegistradoSoftLoginDaviplata @walletFAILED @walletSoftLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital daviplata fallida soft login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"
@@ -94,7 +94,7 @@ Característica: Medio de Pago - billetera digital
 #______________________________________________________EXITOSA______________________________________________
 
   @walletOkRegistradoSoftLoginNequi @walletOk @walletSoftLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital nequi exitosa soft loginl
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"
@@ -119,7 +119,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________PENDIENTE______________________________________________
 
   @walletPENDINGRegistradoSoftLoginNequi @walletPayPENDING @walletSoftLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital nequi pendiente soft loginl
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"
@@ -144,7 +144,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________FALLIDA______________________________________________
 
   @walletPayFAILEDRegistradoSoftLoginNequi @walletPayFAILED @walletSoftLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital nequi fallida soft loginl
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"

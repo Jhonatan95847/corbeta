@@ -13,7 +13,6 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.financiero.userinterfaces.paymentPage.ReviewAndApprovalPage.BUTTON_CONTINIAR_APROVADO;
 import static co.com.colcomercio.financiero.utils.WaitingTime.LOW_TIME;
-import static co.com.colcomercio.financiero.utils.WaitingTime.MICRO_TIME;
 
 public class ReviewAndAproval implements Task {
     private static final Logger logger = LogManager.getLogger(ReviewAndAproval.class);

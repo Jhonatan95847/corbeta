@@ -15,7 +15,7 @@ Característica: Medio de Pago - PSE
 #______________________________________________________EXITOSA______________________________________________
 
   @estable @psePayOkRegistradoSoftLogin @psePayOk @pseSoftLogin @psePay
-Esquema del escenario: Compra de productos con PSE
+Esquema del escenario: Compra de productos con pse exitosa soft login
 Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
 Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
 Y selecciona el método de envío "<metodo_envio>"
@@ -40,7 +40,7 @@ Ejemplos:
   #______________________________________________________PENDIENTE______________________________________________
 
   @estable @psePayPENDINGRegistradoSoftLogin @psePayPENDING @pseSoftLogin @psePay
-Esquema del escenario: Compra de productos con PSE
+Esquema del escenario: Compra de productos con pse pendiente soft login
 Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
 Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
 Y selecciona el método de envío "<metodo_envio>"
@@ -65,7 +65,7 @@ Ejemplos:
   #______________________________________________________FALLIDA______________________________________________
 
   @estable @psePayFAILEDRegistradoSoftLogin @psePayFAILED @pseSoftLogin @psePay
-Esquema del escenario: Compra de productos con PSE
+Esquema del escenario: Compra de productos con pse fallida soft login
 Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
 Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
 Y selecciona el método de envío "<metodo_envio>"

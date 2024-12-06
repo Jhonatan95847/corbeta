@@ -23,7 +23,6 @@ public class AddEmailLogin implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        //actor.attemptsTo(AsignarUsuario.alActor());
         Usuario usuario = actor.recall("usuario");
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),

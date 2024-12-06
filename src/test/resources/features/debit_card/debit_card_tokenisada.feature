@@ -12,7 +12,7 @@ Característica: Medio de Pago - Tarjeta de Crédito o Debito con CVV con forma 
   #______________________________________________________EXITOSA______________________________________________
 
   @tarjetaDebitoRegistradoExitosaTokenisada @DebitoExitosoSoftlogin @tarjetaDebitoExitosa @DebitoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+  Esquema del escenario: Compra con Tarjeta debito guardada exitosa hard login
   Narrativa:  Como cliente registrado en Alkosto
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
@@ -33,7 +33,7 @@ Característica: Medio de Pago - Tarjeta de Crédito o Debito con CVV con forma 
     #______________________________________________________FALLIDA______________________________________________
 
   @tarjetaDebitoRegistradoExitosaTokenisada @DebitoExitosoTokenisada @tarjetaDebitoRechazada @DebitoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+  Esquema del escenario: Compra con Tarjeta debito guardada fallida hard login
   Narrativa:  Como cliente registrado en Alkosto
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.

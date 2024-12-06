@@ -13,7 +13,7 @@ Característica: Medio de Pago - Crédito Fácil CODENSA con forma de logueo har
   #******************************************************SOFTLOGIN*********************************************
 
   @estable @tarjetaCodensaRegistradoExitosaSoftlogin @tarjetaExitosa @CodensaExitoso @tarjetaCodensaExitosa @CodensaNoSave
-  Esquema del escenario: Compra exitosa en codensa con métodos variados.
+  Esquema del escenario: Compra con Tarjeta codensa exitosa soft login
   Narrativa:  Como cliente registrado en codensa
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
@@ -41,7 +41,7 @@ Característica: Medio de Pago - Crédito Fácil CODENSA con forma de logueo har
   #******************************************************SOFTLOGIN*********************************************
 
   @tarjetaCodensaRegistradoExitosaSoftlogin @CodensaExitosoSoftlogin @tarjetaCodensaRechazada @CodensaNoSave
-  Esquema del escenario: Compra exitosa en codensa con métodos variados.
+  Esquema del escenario: Compra con Tarjeta codensa fallida Soft login
   Narrativa:  Como cliente registrado en codensa
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
@@ -60,19 +60,6 @@ Característica: Medio de Pago - Crédito Fácil CODENSA con forma de logueo har
       | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     | Crédito Fácil CODENSA  | codensa    | FAILED   |
 
 
-  @tarjetaCodensaNuevooExitosaSoftlogin @CodensaExitosoSoftlogin @tarjetaCodensaRechazada @CodensaNoSave
-  Esquema del escenario: Compra exitosa en codensa con métodos variados.
-  Narrativa:  Como cliente registrado en codensa
-  Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
-  Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
-    Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
-    Y selecciona el método de envío "<metodo_envio>"
-    Cuando inicia sesion en la pagina de alkosto como un cliente "<cliente>"
-    Y desea ir a pagar con tipo de documento "<tipo_id>" con dirección "<direccion_envio>"
-    Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
-    Entonces debería observar la notificación de compra "<resultado>"
-    Ejemplos:
-      | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta                | franquicia | resultado |
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Crédito Fácil CODENSA  | codensa    | FAILED   |
       #| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  CE      | Crédito Fácil CODENSA  | codensa    | FAILED   |
       | nuevo      | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Crédito Fácil CODENSA  | codensa    | FAILED   |

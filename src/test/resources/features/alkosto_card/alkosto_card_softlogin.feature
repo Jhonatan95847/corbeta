@@ -13,7 +13,7 @@ Característica: Medio de Pago - Tarjeta Alkosto con forma de logueo hard login
   #******************************************************SOFTLOGIN*********************************************
 
       @estable @tarjetaAlkostoRegistradoExitosaSoftlogin @tarjetaExitosa @alkostoExitoso @alkostoExitosoSoftlogin
-      Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+      Esquema del escenario: Compra con Tarjeta Alkosto exitosa soft login
       Narrativa:  Como cliente registrado en Alkosto
                   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
                   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
@@ -42,7 +42,7 @@ Característica: Medio de Pago - Tarjeta Alkosto con forma de logueo hard login
   #******************************************************SOFTLOGIN*********************************************
 
   @tarjetaAlkostoRegistradoFailedSoftlogin @alkostoRechazadaSoftlogin @tarjetaAlkostoRechazada @alkostoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+  Esquema del escenario: Compra con Tarjeta Alkosto fallida soft login
   Narrativa:  Como cliente registrado en Alkosto
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
@@ -60,20 +60,6 @@ Característica: Medio de Pago - Tarjeta Alkosto con forma de logueo hard login
       | registrado | kombo                 | 3        | Entrega hoy        |  registrada     |  RUT     | Tarjeta Alkosto  | alkosto    | FAILED   |
       | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     | Tarjeta Alkosto  | alkosto    | FAILED   |
 
-
-  @tarjetaAlkostoNuevooFailedSoftlogin @alkostoRechazadaSoftlogin @tarjetaAlkostoRechazada @alkostoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
-  Narrativa:  Como cliente registrado en Alkosto
-  Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
-  Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
-    Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
-    Y selecciona el método de envío "<metodo_envio>"
-    Cuando inicia sesion en la pagina de alkosto como un cliente "<cliente>"
-    Y desea ir a pagar con tipo de documento "<tipo_id>" con dirección "<direccion_envio>"
-    Y realiza el pago mediante tarjeta "<tarjeta>" de la franquicia "<franquicia>"
-    Entonces debería observar la notificación de compra "<resultado>"
-    Ejemplos:
-      | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Tarjeta Alkosto  | alkosto    | FAILED   |
       #| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  CE      | Tarjeta Alkosto  | alkosto    | FAILED   |
       | nuevo      | normal         | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Tarjeta Alkosto  | alkosto    | FAILED   |

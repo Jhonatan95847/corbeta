@@ -15,7 +15,7 @@ Característica: Medio de Pago - PSE
 #______________________________________________________EXITOSA______________________________________________
 
   @estable @psePayOkRegistrado @psePayOk @pseHardLogin @psePay
-  Esquema del escenario: Compra de productos con PSE
+  Esquema del escenario: Compra de productos con pse exitosa hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -40,7 +40,7 @@ Característica: Medio de Pago - PSE
   #______________________________________________________PENDIENTE______________________________________________
 
   @estable @psePayPENDINGRegistrado @psePayPENDING @pseHardLogin @psePay
-  Esquema del escenario: Compra de productos con PSE
+  Esquema del escenario: Compra de productos con pse pendiente hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -65,7 +65,7 @@ Característica: Medio de Pago - PSE
   #______________________________________________________FALLIDA______________________________________________
 
   @estable  @psePayFAILEDRegistrado @psePayFAILED @pseHardLogin @psePay
-  Esquema del escenario: Compra de productos con PSE
+  Esquema del escenario: Compra de productos con pse fallida hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades

@@ -27,7 +27,6 @@ public class SoftLogin implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("####################INICIANDO SESION CON USUARIO REGISTRADO SOFTLOGIN####################");
-        //actor.attemptsTo(AsignarUsuario.alActor());
         Usuario usuario = actor.recall("usuario");
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),

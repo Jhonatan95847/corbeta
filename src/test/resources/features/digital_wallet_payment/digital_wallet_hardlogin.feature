@@ -17,7 +17,7 @@ Característica: Medio de Pago - billetera digital
  #______________________________________________________EXITOSA______________________________________________
 
   @walletOkRegistradoDaviplata @walletOk @walletHardLogin @walletDaviplata @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital daviplata exitosa hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -42,7 +42,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________PENDIENTE______________________________________________
 
   @walletPENDINGRegistradoDaviplata @walletPENDING @walletHardLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario:  Compra de productos con billetera digital daviplata pendiente hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -68,7 +68,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________FALLIDA______________________________________________
 
   @walletFAILEDRegistradoDaviplata @walletPayFAILED @walletHardLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario:  Compra de productos con billetera digital daviplata fallida hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -96,7 +96,7 @@ Característica: Medio de Pago - billetera digital
 #______________________________________________________EXITOSA______________________________________________
 
   @walletOkRegistradoNequi @walletPayOk @walletHardLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario:  Compra de productos con billetera digital nequi exitosa hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -121,7 +121,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________PENDIENTE______________________________________________
 
   @walletPENDINGRegistradoNequi @walletPENDING @walletHardLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital nequi pendiente hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
@@ -147,7 +147,7 @@ Característica: Medio de Pago - billetera digital
   #______________________________________________________FALLIDA______________________________________________
 
   @walletFAILEDRegistradoNequi @walletFAILED @walletHardLogin @digitalWallet
-  Esquema del escenario: Compra de productos con billetera digital
+  Esquema del escenario: Compra de productos con billetera digital nequi fallida hard login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante billetera digital
     Dado que un cliente "<cliente>" inicia sesión en ecomerce
     Cuando el cliente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades

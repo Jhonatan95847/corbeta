@@ -18,7 +18,7 @@ Característica: Medio de Pago - Efectivo
   #______________________________________________________PENDIENTE SURED______________________________________________
 
  @cashPENDINGRegistradoSoftLogin @cashPENDING @cashSoftLogin @cashPay @pruebaja
-  Esquema del escenario: Compra de productos con PSE
+  Esquema del escenario: Compra de productos con efectivo Sured soft login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"
@@ -47,7 +47,7 @@ Característica: Medio de Pago - Efectivo
   #______________________________________________________PENDIENTE EFECTY______________________________________________
 
   @cashPENDINGRegistradoSoftLogin @cashPENDING @cashSoftLogin @cashPay @pruebaja
-  Esquema del escenario: Compra de productos con PSE
+  Esquema del escenario: Compra de productos con efectivo efecty soft login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"
@@ -76,7 +76,7 @@ Característica: Medio de Pago - Efectivo
   #______________________________________________________PENDIENTE CONSIGNACION______________________________________________
 
   @cashPENDINGRegistradoSoftLogin @cashyPENDING @cashSoftLogin @cashPay
-  Esquema del escenario: Compra de productos con PSE
+  Esquema del escenario: Compra de productos con efectivo consignacion soft login
   Narrativa: El cliente registrado en Alkosto desea realizar una compra mediante PSE
     Dado que el usuario inicialmente busca un producto "<tipo_producto>" y selecciona "<cantidad>" unidades
     Y selecciona el método de envío "<metodo_envio>"

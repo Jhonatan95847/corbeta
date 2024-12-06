@@ -12,7 +12,7 @@ Característica: Medio de Pago - Tarjeta Alkosto con forma de logueo hard login
   #______________________________________________________EXITOSA______________________________________________
 
   @tarjetaAlkostoRegistradoExitosaTokenisada  @tarjetaAlkostoExitosa @alkostoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+  Esquema del escenario: Compra con Tarjeta Alkosto guardada exitosa hard login
   Narrativa:  Como cliente registrado en Alkosto
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.
@@ -33,7 +33,7 @@ Característica: Medio de Pago - Tarjeta Alkosto con forma de logueo hard login
     #______________________________________________________FALLIDA______________________________________________
 
   @tarjetaAlkostoRegistradoExitosaTokenisada @alkostoExitosoTokenisada @tarjetaAlkostoRechazada @alkostoNoSave
-  Esquema del escenario: Compra exitosa en Alkosto con métodos variados.
+  Esquema del escenario: Compra con Tarjeta Alkosto guardada fallida hard login
   Narrativa:  Como cliente registrado en Alkosto
   Quiero realizar compras seleccionando productos, métodos de envío y formas de pago
   Para recibir mis productos correctamente y disfrutar de una experiencia de compra eficiente.

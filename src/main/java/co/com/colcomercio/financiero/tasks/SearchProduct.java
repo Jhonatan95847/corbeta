@@ -2,12 +2,11 @@ package co.com.colcomercio.financiero.tasks;
 
 import co.com.colcomercio.financiero.interactions.*;
 import co.com.colcomercio.financiero.models.productList.ProductList;
-import co.com.colcomercio.financiero.questions.IsElementPresent;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.ensure.Ensure;
+
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,6 +30,8 @@ public class SearchProduct implements Task {
         actor.attemptsTo(
                 WaitUntil.the(EDITBOX_SEARCH_BAR_ADICIONAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //TakeScreenshot.at("target/site/serenity"),
+                Wait.withDuration(MICRO_TIME),
+                ScrollToElement.to(EDITBOX_SEARCH_BAR_ADICIONAL),
                 ClickOnElement.on(EDITBOX_SEARCH_BAR_ADICIONAL),
                 WaitUntil.the(EDITBOX_SEARCH_BAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 EnterText.intoField(productList.getDataProductList().getProductName(),EDITBOX_SEARCH_BAR),
