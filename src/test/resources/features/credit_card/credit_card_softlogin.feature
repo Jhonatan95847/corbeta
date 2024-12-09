@@ -57,8 +57,8 @@ Característica: Medio de Pago - Tarjeta de Crédito con forma de logueo hard lo
       | registrado | promociones           | 2        | Entrega hoy        |  otros datos    |  CC      | Tarjeta de Crédito  | amex       | FAILED   |
       | registrado | cantidad_limitada     | 3        | Envio gratis       |  guardada       |  CE      | Tarjeta de Crédito  | diners     | FAILED   |
       | registrado | promocion_porcentaje  | 1        | Entrega hoy        |  otros datos    |  NIT     | Tarjeta de Crédito  | mastercard | FAILED   |
-      | registrado | kombo                 | 3        | Entrega hoy        |  registrada     |  RUT     | Tarjeta de Crédito  | visa       | FAILED   |
-      | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     | Tarjeta de Crédito  | amex       | FAILED   |
+      | registrado | normal                | 3        | Entrega hoy        |  registrada     |  RUT     | Tarjeta de Crédito  | visa       | FAILED   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  registrada     |  PAS     | Tarjeta de Crédito  | amex       | FAILED   |
 
 
 

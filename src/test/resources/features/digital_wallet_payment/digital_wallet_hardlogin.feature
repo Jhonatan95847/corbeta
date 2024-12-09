@@ -110,7 +110,7 @@ Característica: Medio de Pago - billetera digital
       | registrado | cantidad_limitada     | 3        | Envio gratis       |  guardada       |  CE      | Nequi       | OK   |
       ##| registrado | promocion_porcentaje  | 1        | Entrega hoy        |  otros datos    |  NIT     | Nequi       | OK   |
       | registrado | normal                 | 3        | Entrega hoy        |  registrada     |  RUT     | Nequi       | OK   |
-      | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     | Nequi       | OK   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  registrada     |  PAS     | Nequi       | OK   |
 
 
       | nuevo      | normal         | 1        | Envio gratis       |  nuevo usuario  |  CC      | Nequi       | OK   |

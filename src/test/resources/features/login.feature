@@ -32,7 +32,7 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | efectivo   | resultado |
-            | registrado | normal       | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
+            | registrado | kombo          | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Envio gratis       |  registrada     |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Envio gratis       |  guardada       |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Entrega hoy        |  otros datos    |  CC      | Su Red     | PENDING   |  falla entrega hoy otros datos por ambiente
@@ -82,7 +82,7 @@ Característica: Medio de Pago - Tarjeta Alkosto
         Entonces debería observar la notificación de compra "<resultado>"
         Ejemplos:
             | cliente    | tipo_producto  | cantidad | metodo_envio       | direccion_envio | tipo_id  | efectivo   | resultado |
-            | registrado | preventa       | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
+            | registrado | normal       | 2        | Envio gratis       |  otros datos    |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Envio gratis       |  registrada     |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Envio gratis       |  guardada       |  CC      | Su Red     | PENDING   |
             #| registrado | normal         | 2        | Entrega hoy        |  otros datos    |  CC      | Su Red     | PENDING   |  falla entrega hoy otros datos por ambiente

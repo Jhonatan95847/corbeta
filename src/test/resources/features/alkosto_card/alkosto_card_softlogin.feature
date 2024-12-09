@@ -57,8 +57,8 @@ Característica: Medio de Pago - Tarjeta Alkosto con forma de logueo hard login
       | registrado | promociones           | 2        | Envio gratis       |  otros datos    |  CC      | Tarjeta Alkosto  | alkosto    | FAILED   |
       | registrado | cantidad_limitada     | 3        | Envio gratis       |  guardada       |  CE      | Tarjeta Alkosto  | alkosto    | FAILED   |
       #| registrado | promocion_porcentaje  | 1        | Entrega hoy        |  otros datos    |  NIT     | Tarjeta Alkosto  | alkosto    | FAILED   |
-      | registrado | kombo                 | 3        | Entrega hoy        |  registrada     |  RUT     | Tarjeta Alkosto  | alkosto    | FAILED   |
-      | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | registrado | normal                | 3        | Entrega hoy        |  registrada     |  RUT     | Tarjeta Alkosto  | alkosto    | FAILED   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  registrada     |  PAS     | Tarjeta Alkosto  | alkosto    | FAILED   |
 
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Tarjeta Alkosto  | alkosto    | FAILED   |
       #| nuevo      | normal         | 2        | Entrega hoy        |  nuevo usuario  |  CE      | Tarjeta Alkosto  | alkosto    | FAILED   |

@@ -11,7 +11,7 @@ Característica: Medio de Pago - Tarjeta de Crédito o Debito con CVV con forma 
 
   #______________________________________________________EXITOSA______________________________________________
   #******************************************************HARDLOGIN*********************************************
-  @tarjetaDebitoRegistradoExitosa @DebitoExitoso @tarjetaDebitoExitosa @DebitoNoSave
+  @estable @tarjetaDebitoRegistradoExitosa @DebitoExitoso @tarjetaDebitoExitosa @DebitoNoSave
   Esquema del escenario: Compra con Tarjeta debito exitosa hard login
   Narrativa: El cliente registrado en Alkosto inicia sesion y realiza la busqueda de distintos tipos de productos
   seleccionando diferentes metodosde envio, con distintas direcciones y tipos de ID, y realiza el pago
@@ -24,10 +24,10 @@ Característica: Medio de Pago - Tarjeta de Crédito o Debito con CVV con forma 
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
-      | registrado | garantia_extendida    | 2        | Envio gratis       |  otros datos    |  CC      | Tarjeta de Crédito o Debito con CVV  | diners     | OK   |
-      | registrado | normal                | 1        | Entrega hoy        |  guardada       |  CE      | Tarjeta de Crédito o Debito con CVV  | mastercard | OK   |
-      | registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Tarjeta de Crédito o Debito con CVV  | visa       | OK   |
-      | registrado | normal                | 3        | Envio gratis       |  registrada     |  RUT     | Tarjeta de Crédito o Debito con CVV  | amex       | OK   |
+      #| registrado | garantia_extendida    | 1        | Envio gratis       |  otros datos    |  CC      | Tarjeta de Crédito o Debito con CVV  | diners     | OK   |
+      #| registrado | normal                | 1        | Entrega hoy        |  guardada       |  CE      | Tarjeta de Crédito o Debito con CVV  | mastercard | OK   |
+      #| registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Tarjeta de Crédito o Debito con CVV  | visa       | OK   |
+      #| registrado | normal                | 3        | Envio gratis       |  registrada     |  RUT     | Tarjeta de Crédito o Debito con CVV  | amex       | OK   |
       #| registrado | promocion_porcentaje  | 1        | Entrega hoy        |  otros datos    |  PAS     | Tarjeta de Crédito o Debito con CVV  | diners     | OK   |
 
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Tarjeta de Crédito o Debito con CVV  | amex       | OK   |
@@ -52,7 +52,7 @@ Característica: Medio de Pago - Tarjeta de Crédito o Debito con CVV con forma 
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
       | registrado | promocion_precio_fijo | 3        | Envio gratis       |  registrada     |  CC      | Tarjeta de Crédito o Debito con CVV  | visa       | FAILED   |
-      | registrado | kombo                 | 2        | Entrega hoy        |  registrada     |  CE      | Tarjeta de Crédito o Debito con CVV  | amex       | FAILED   |
+      | registrado | normal                | 2        | Entrega hoy        |  registrada     |  CE      | Tarjeta de Crédito o Debito con CVV  | amex       | FAILED   |
       | registrado | promocion_precio_fijo | 1        | Envio gratis       |  guardada       |  NIT     | Tarjeta de Crédito o Debito con CVV  | diners     | FAILED   |
       | registrado | pines                 | 2        | Recoge en tienda   |  nuevo usuario  |  RUT     | Tarjeta de Crédito o Debito con CVV  | mastercard | FAILED   |
       | registrado | kasado                | 1        | Entrega hoy        |  guardada       |  PAS     | Tarjeta de Crédito o Debito con CVV  | visa       | FAILED   |

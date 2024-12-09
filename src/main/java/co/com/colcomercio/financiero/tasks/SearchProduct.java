@@ -28,6 +28,8 @@ public class SearchProduct implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("################################BUSCANDO PRODUCTO##############################");
         actor.attemptsTo(
+                Wait.withDuration(MICRO_TIME),
+                ScrollToElement.to(EDITBOX_SEARCH_BAR_ADICIONAL),
                 WaitUntil.the(EDITBOX_SEARCH_BAR_ADICIONAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 //TakeScreenshot.at("target/site/serenity"),
                 Wait.withDuration(MICRO_TIME),

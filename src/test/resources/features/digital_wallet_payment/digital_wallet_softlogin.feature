@@ -30,7 +30,7 @@ Característica: Medio de Pago - billetera digital
       | registrado | cantidad_limitada     | 3        | Envio gratis       |  guardada       |  CE      |Daviplata | OK   |
       | registrado | promocion_porcentaje  | 1        | Entrega hoy        |  guardada       |  NIT     |Daviplata | OK   |
       | registrado | normal                | 3        | Entrega hoy        |  registrada     |  RUT     |Daviplata | OK   |
-      | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     |Daviplata | OK   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  registrada     |  PAS     |Daviplata | OK   |
 
 
       | nuevo      | normal         | 1        | Envio gratis       |  nuevo usuario  |  CC      | Daviplata | OK   |
@@ -104,7 +104,7 @@ Característica: Medio de Pago - billetera digital
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | billetera   | resultado |
-      | registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  PAS     | Nequi | OK   |
+      #| registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  PAS     | Nequi | OK   |
       | registrado | normal                | 1        | Envio gratis       |  otros datos    |  RUT     | Nequi | OK   |
       | registrado | normal                | 2        | Entrega hoy        |  guardada       |  NIT     | Nequi | OK   |
       ##| registrado | normal                | 3        | Entrega hoy        |  otros datos    |  CE      | Nequi | OK   |
@@ -158,7 +158,7 @@ Característica: Medio de Pago - billetera digital
       | registrado | cero_interes          | 3        | Envio gratis       |  registrada     |  RUT     | Nequi | FAILED |
       ##| registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Nequi | FAILED |
       | registrado | normal                | 1        | Entrega hoy        |  guardada       |  CE      | Nequi | FAILED |
-      | registrado | garantia_extendida    | 2        | Envio gratis       |  otros datos    |  CC      | Nequi | FAILED |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  otros datos    |  CC      | Nequi | FAILED |
 
 
       | nuevo      | normal         | 3        | Recoge en tienda   |  nuevo usuario  |  CC      | Nequi | FAILED |

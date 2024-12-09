@@ -24,7 +24,7 @@ Característica: Medio de Pago - Crédito Fácil CODENSA con forma de logueo har
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
-      | registrado | garantia_extendida    | 2        | Envio gratis       |  otros datos    |  CC      | Crédito Fácil CODENSA  | codensa    | OK   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  otros datos    |  CC      | Crédito Fácil CODENSA  | codensa    | OK   |
       | registrado | normal                | 1        | Entrega hoy        |  guardada       |  CE      | Crédito Fácil CODENSA  | codensa    | OK   |
       | registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Crédito Fácil CODENSA  | codensa    | OK   |
       | registrado | cero_interes          | 3        | Envio gratis       |  registrada     |  RUT     | Crédito Fácil CODENSA  | codensa    | OK   |
@@ -52,7 +52,7 @@ Característica: Medio de Pago - Crédito Fácil CODENSA con forma de logueo har
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
       | registrado | promocion_precio_fijo | 3        | Envio gratis       |  registrada     |  CC      | Crédito Fácil CODENSA  | codensa    | FAILED   |
-      | registrado | kombo                 | 2        | Entrega hoy        |  registrada     |  CE      | Crédito Fácil CODENSA  | codensa    | FAILED   |
+      | registrado | normal                | 2        | Entrega hoy        |  registrada     |  CE      | Crédito Fácil CODENSA  | codensa    | FAILED   |
       | registrado | promocion_precio_fijo | 1        | Envio gratis       |  guardada       |  NIT     | Crédito Fácil CODENSA  | codensa    | FAILED   |
       | registrado | pines                 | 2        | Recoge en tienda   |  nuevo usuario  |  RUT     | Crédito Fácil CODENSA  | codensa    | FAILED   |
       | registrado | kasado                | 1        | Entrega hoy        |  guardada       |  PAS     | Crédito Fácil CODENSA  | codensa    | FAILED   |

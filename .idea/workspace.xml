@@ -4,30 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="ajustes serenity para el informe">
+    <list default="true" id="e2de03e9-f73c-4315-8f74-d1a78b10d356" name="Changes" comment="ajustes Descripcion escenarios y scroll a barra de busqueda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddEmailLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/interactions/addData/AddEmailLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/SearchProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/SoftLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/login/SoftLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ReviewAndAproval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/financiero/tasks/paymetProcess/ReviewAndAproval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/alkosto_card/alkosto_card_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/alkosto_card/alkosto_card_hardlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/alkosto_card/alkosto_card_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/alkosto_card/alkosto_card_softlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/alkosto_card/alkosto_card_tokenisada.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/alkosto_card/alkosto_card_tokenisada.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/bancolombia_button/bancolombia_button_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/bancolombia_button/bancolombia_button_hardlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/cash_payment/cash_payment_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cash_payment/cash_payment_hardlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/cash_payment/cash_payment_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cash_payment/cash_payment_softlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/codensa_card/codensa_card_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/codensa_card/codensa_card_hardlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/codensa_card/codensa_card_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/codensa_card/codensa_card_softlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/credit_card/credit_card_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/credit_card/credit_card_hardlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/credit_card/credit_card_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/credit_card/credit_card_softlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/credit_card/credit_card_tokenisada.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/credit_card/credit_card_tokenisada.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/debit_card/debit_card_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/debit_card/debit_card_hardlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/debit_card/debit_card_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/debit_card/debit_card_softlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/debit_card/debit_card_tokenisada.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/debit_card/debit_card_tokenisada.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/digital_wallet_payment/digital_wallet_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/digital_wallet_payment/digital_wallet_hardlogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/digital_wallet_payment/digital_wallet_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/digital_wallet_payment/digital_wallet_softlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/pse_payment/pse_hardlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/pse_payment/pse_hardlogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/pse_payment/pse_softlogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/pse_payment/pse_softlogin.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/eComerce/Ejecuciones/pipeline/sap-testing-alkosto",
+    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/financiero-testing-qa",
     "onboarding.tips.debug.path": "C:/Users/1049644474/Documents/Automatizacion/Base automatizacion/financiero-testing-qa/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
@@ -336,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733516057771</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ajustes Descripcion escenarios y scroll a barra de busqueda">
+      <option name="closed" value="true" />
+      <created>1733526234312</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733526234312</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,7 +366,8 @@
     <MESSAGE value="Ajustes pa aejecucion en paralelo, ajustes a featutes y localizadores" />
     <MESSAGE value="Ajustes para agregar el tipo de producto, ajustes al escenarios y didir features por tipo de login" />
     <MESSAGE value="ajustes serenity para el informe" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajustes serenity para el informe" />
+    <MESSAGE value="ajustes Descripcion escenarios y scroll a barra de busqueda" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajustes Descripcion escenarios y scroll a barra de busqueda" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

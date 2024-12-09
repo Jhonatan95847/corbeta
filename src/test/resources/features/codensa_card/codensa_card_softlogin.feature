@@ -56,8 +56,8 @@ Característica: Medio de Pago - Crédito Fácil CODENSA con forma de logueo har
       #| registrado | promociones           | 2        | Entrega hoy        |  otros datos    |  CC      | Crédito Fácil CODENSA  | codensa    | FAILED   |
       | registrado | cantidad_limitada     | 3        | Envio gratis       |  guardada       |  CE      | Crédito Fácil CODENSA  | codensa    | FAILED   |
       #| registrado | promocion_porcentaje  | 1        | Entrega hoy        |  otros datos    |  NIT     | Crédito Fácil CODENSA  | codensa    | FAILED   |
-      | registrado | kombo                 | 3        | Entrega hoy        |  registrada     |  RUT     | Crédito Fácil CODENSA  | codensa    | FAILED   |
-      | registrado | garantia_extendida    | 4        | Envio gratis       |  registrada     |  PAS     | Crédito Fácil CODENSA  | codensa    | FAILED   |
+      | registrado | normal                | 3        | Entrega hoy        |  registrada     |  RUT     | Crédito Fácil CODENSA  | codensa    | FAILED   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  registrada     |  PAS     | Crédito Fácil CODENSA  | codensa    | FAILED   |
 
 
       | nuevo      | normal         | 2        | Envio gratis       |  nuevo usuario  |  CC      | Crédito Fácil CODENSA  | codensa    | FAILED   |

@@ -24,7 +24,7 @@ Característica: Medio de Pago - Tarjeta de Crédito con forma de logueo hard lo
     Entonces debería observar la notificación de compra "<resultado>"
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta             | franquicia | resultado |
-      | registrado | garantia_extendida    | 2        | Envio gratis       |  otros datos    |  CC      | Tarjeta de Crédito  | visa       | OK   |
+      | registrado | garantia_extendida    | 1        | Envio gratis       |  otros datos    |  CC      | Tarjeta de Crédito  | visa       | OK   |
       | registrado | normal                | 1        | Entrega hoy        |  guardada       |  CE      | Tarjeta de Crédito  | amex       | OK   |
       | registrado | normal                | 2        | Recoge en tienda   |  nuevo usuario  |  NIT     | Tarjeta de Crédito  | diners     | OK   |
       | registrado | normal                | 3        | Envio gratis       |  registrada     |  RUT     | Tarjeta de Crédito  | mastercard | OK   |
@@ -52,7 +52,7 @@ Característica: Medio de Pago - Tarjeta de Crédito con forma de logueo hard lo
     Ejemplos:
       | cliente    | tipo_producto         | cantidad | metodo_envio       | direccion_envio | tipo_id  | tarjeta          | franquicia | resultado |
       | registrado | promocion_precio_fijo | 3        | Envio gratis       |  registrada     |  CC      | Tarjeta de Crédito  | mastercard | FAILED   |
-      | registrado | kombo                 | 2        | Entrega hoy        |  registrada     |  CE      | Tarjeta de Crédito  | visa       | FAILED   |
+      | registrado | normal                | 2        | Entrega hoy        |  registrada     |  CE      | Tarjeta de Crédito  | visa       | FAILED   |
       | registrado | promocion_precio_fijo | 1        | Envio gratis       |  guardada       |  NIT     | Tarjeta de Crédito  | amex       | FAILED   |
       #| registrado | pines                 | 2        | Recoge en tienda   |  nuevo usuario  |  RUT     | Tarjeta de Crédito  | diners     | FAILED   |
       | registrado | kasado                | 1        | Entrega hoy        |  guardada       |  PAS     | Tarjeta de Crédito  | mastercard | FAILED   |
