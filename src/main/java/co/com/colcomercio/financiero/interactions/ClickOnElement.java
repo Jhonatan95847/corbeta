@@ -31,7 +31,7 @@ public class ClickOnElement implements Interaction {
         if (element.isVisibleFor(actor)){
             logger.info("Hacer click en: " + element);
             actor.attemptsTo(
-                    WaitUntil.the(element, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                    //WaitUntil.the(element, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     Click.on(element)
             );
         } else {
