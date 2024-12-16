@@ -29,7 +29,7 @@ public class DeleteProducts implements Task {
         );
             while (VALIDATE_NAME_PRODUCT.isVisibleFor(actor)){
                 actor.attemptsTo(
-                        ScrollToElement.to(BUTTON_DELETE_PRODUCT),
+                        //ScrollToElement.to(BUTTON_DELETE_PRODUCT),
                         ClickOnElement.on(BUTTON_DELETE_PRODUCT),
                         Wait.withDuration(MICRO_TIME)
                 );
